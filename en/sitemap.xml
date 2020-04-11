@@ -5,6 +5,8 @@
   <url>
     <loc>https://avmapping.github.io/avmapping-hugo/en/musicians/</loc>
     <lastmod>2020-04-11T22:46:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -20,6 +22,8 @@
   <url>
     <loc>https://avmapping.github.io/avmapping-hugo/en/</loc>
     <lastmod>2020-04-11T22:44:58+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
