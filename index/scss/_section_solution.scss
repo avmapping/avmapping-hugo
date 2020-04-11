@@ -1,0 +1,89 @@
+.section-solution {
+	padding: 50px 0 200px;
+
+	@media screen and ($phone) {
+		padding: 50px 0;
+	}
+
+	& > .container {
+		& > .section-title {
+			margin-bottom: 130px;
+
+			@media screen and ($phone) {
+				margin-bottom: 80px;
+			}
+		}
+
+		& > .content {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+
+			@media screen and ($phone) {
+				flex-direction: column;
+			}
+
+			& > .left > img {
+				width: 260px;
+
+				@media screen and ($phone) {
+					width: 200px;
+					margin-bottom: 60px;
+				}
+			}
+
+			& > .right {
+				& > .block {
+					color: $white;
+
+					&:not(:last-child) {
+						margin-bottom: 70px;
+
+						@media screen and ($phone) {
+							margin-bottom: 40px;
+						}
+					}
+
+					& > .block-title {
+						font-size: 20px;
+						letter-spacing: 2px;
+						color: $white;
+						margin-bottom: 16px;
+
+						@media screen and ($phone) {
+							font-size: 16px;
+						}
+					}
+
+					& > .item {
+						display: flex;
+
+						&:not(:last-child) {
+							margin-bottom: 16px;
+
+							@media screen and ($phone) {
+								margin-bottom: 9px;
+							}
+						}
+
+						& > .icon {
+							color: $green;
+							margin-right: 10px;
+						}
+
+						& > .text {
+							font-size: 14px;
+							letter-spacing: 1px;
+							color: $white;
+							opacity: 0.9;
+
+							@media screen and ($phone) {
+								font-size: 13px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

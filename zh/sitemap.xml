@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://avmapping.github.io/avmapping-hugo/zh/musicians/</loc>
+    <lastmod>2020-04-11T21:42:06+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://avmapping.github.io/avmapping-hugo/en/musicians/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://avmapping.github.io/avmapping-hugo/zh/musicians/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://avmapping.github.io/avmapping-hugo/zh/</loc>
+    <lastmod>2020-04-11T19:09:57+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://avmapping.github.io/avmapping-hugo/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://avmapping.github.io/avmapping-hugo/zh/"
+                />
+  </url>
+  
+</urlset>

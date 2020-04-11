@@ -1,0 +1,80 @@
+.section-partner {
+	position: relative;
+	padding: 50px 0 200px;
+
+	@media screen and ($phone) {
+		padding: 50px 0;
+	}
+
+	& > .container {
+		& > .section-title {
+			margin-bottom: 130px;
+
+			@media screen and ($phone) {
+				margin-bottom: 50px;
+			}
+		}
+
+		& > .content {
+			position: relative;
+			padding: 0 100px;
+
+			@media screen and ($phone) {
+				padding: 0;
+			}
+
+			& .swiper-container {
+				position: relative;
+
+				& .swiper-slide {
+					& > .icon {
+						display: flex;
+						align-items: center;
+						height: 100px;
+
+						& > img {
+							width: auto;
+							height: 100%;
+						}
+					}
+				}
+			}
+			& .swiper-button-prev,
+			& .swiper-button-next {
+				position: absolute;
+				top: 50%;
+				color: $green;
+
+				&::after {
+					font-size: 30px;
+				}
+
+				@media screen and ($phone) {
+					display: none;
+				}
+			}
+
+			& .swiper-button-prev {
+				left: 30px;
+			}
+			& .swiper-button-next {
+				right: 30px;
+			}
+
+			& .swiper-pagination {
+				width: 100%;
+				margin: 40px auto 0;
+
+				& > .swiper-pagination-bullet {
+					background: $white;
+					opacity: 1;
+					margin: 8px;
+				}
+
+				& > .swiper-pagination-bullet-active {
+					background: #04335a;
+				}
+			}
+		}
+	}
+}

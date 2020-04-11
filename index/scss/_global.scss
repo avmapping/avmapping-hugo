@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC');
+
+* {
+	font-family: 'Open Sans', -apple-system, Helvetica Neue, Helvetica, Open Sans, Arial,
+		PingFang SC, PingFang TC, Hiragino Sans GB, Microsoft Yahei, Microsoft Jhenghei, sans-serif;
+	box-sizing: border-box;
+	outline: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	width: 100%;
+	background: $black;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:visited {
+		color: inherit;
+	}
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+textarea,
+input {
+	appearance: none;
+	border-radius: 0;
+}
+
+/* Remove the div wrap image unknown padding */
+img {
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+	margin: 0;
+	padding: 0;
+}
+
+.show-on-desktop {
+	@media screen and ($phone) {
+		display: none;
+	}
+}
+
+.show-on-phone {
+	@media screen and ($desktop) {
+		display: none;
+	}
+}
+
+.hide {
+	display: none !important;
+}
+
+.disable-scroll {
+	overflow-y: hidden;
+}
+
+section {
+	position: relative;
+}
+
+.anchor {
+	display: block;
+	position: absolute;
+	top: -72px;
+	visibility: hidden;
+
+	@media screen and ($phone) {
+		top: -59px;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: 1000px;
+	padding: 0 25px;
+	margin: 0 auto;
+
+	&.narrow {
+		max-width: 800px;
+	}
+}
+
+.section-title {
+	font-size: 38px;
+	font-weight: 500;
+	letter-spacing: 5px;
+	text-align: center;
+	color: $white;
+
+	@media screen and ($phone) {
+		font-size: 24px;
+	}
+}
+
+.section-subtitle {
+	text-align: center;
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 2.5px;
+	margin-top: 5px;
+	color: white;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 216px;
+	height: 56px;
+	background: $green;
+	border-radius: 56px;
+	background-color: #30c1b8;
+	font-size: 20px;
+	letter-spacing: 2px;
+	color: $black;
+
+	@media screen and ($phone) {
+		width: 154px;
+		height: 36px;
+		border-radius: 36px;
+		font-size: 16px;
+	}
+}
+
+.button-small {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 138px;
+	height: 36px;
+	border-radius: 4px;
+	border: solid 1px #2e5f87;
+	background-color: #04335a;
+
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	text-align: center;
+	color: $white !important;
+
+	@media screen and ($phone) {
+		width: 100%;
+	}
+}

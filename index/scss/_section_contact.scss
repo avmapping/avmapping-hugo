@@ -1,0 +1,118 @@
+.section-contact {
+	position: relative;
+	padding: 50px 0 200px;
+
+	@media screen and ($phone) {
+		padding: 50px 0;
+	}
+
+	& > .container {
+		& > .section-title {
+			margin-bottom: 140px;
+
+			@media screen and ($phone) {
+				margin-bottom: 50px;
+			}
+		}
+
+		& > .content {
+			display: flex;
+
+			@media screen and ($phone) {
+				flex-direction: column-reverse;
+			}
+
+			& > .left {
+				width: 50%;
+				margin-right: 80px;
+
+				@media screen and ($phone) {
+					width: 100%;
+					margin-right: 0;
+				}
+
+				& > form {
+					& > input[type='text'],
+					& > textarea {
+						display: block;
+						width: 100%;
+						background-color: $black !important;
+						padding: 10px;
+						font-size: 14px;
+						letter-spacing: 1px;
+						opacity: 0.79;
+						color: white;
+						margin-bottom: 10px;
+						border-radius: 2px;
+						border: solid 1px rgba(204, 204, 204, 0.6);
+					}
+
+					& > input[type='text'] {
+						height: 42px;
+					}
+
+					& > textarea {
+						resize: none;
+						height: 275px;
+					}
+
+					& > .submit {
+						display: flex;
+						width: 100%;
+						height: 42px;
+						justify-content: center;
+						align-items: center;
+						opacity: 1;
+						border: solid 1px #2e5f87;
+						background-color: #04335a;
+						border-radius: 2px;
+
+						font-size: 16px;
+						letter-spacing: 2px;
+						color: $white;
+
+						margin-top: 20px;
+					}
+				}
+			}
+
+			& > .right {
+				width: 50%;
+
+				@media screen and ($phone) {
+					width: 100%;
+					margin-bottom: 35px;
+				}
+
+				& > .item {
+					display: flex;
+					width: 100%;
+					margin-bottom: 28px;
+
+					@media screen and ($phone) {
+						margin-bottom: 15px;
+					}
+
+					& > .icon {
+						width: 20px;
+						color: $green;
+						font-size: 20px;
+						text-align: center;
+						margin-right: 17px;
+					}
+
+					& > .text {
+						opacity: 0.9;
+						font-size: 15px;
+						letter-spacing: 1.67px;
+						color: $white;
+
+						@media screen and ($phone) {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

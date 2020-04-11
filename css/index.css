@@ -1630,4 +1630,47 @@ section {
           @media screen and (max-width: 799px) {
             .section-contact > .container > .content > .right > .item > .text {
               font-size: 14px; } }
+
+  .footer {
+      position: relative;
+      height: 60px;
+      padding: 22px;
+      background: black;
+      color: #f4f4f4;
+      opacity: 0.5;
+      font-size: 15px;}
+      @media screen and (max-width: 799px) {
+        .footer {
+          height: 100px;
+          font-size: 14px;} }
+
+    .footer > .content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .footer > .content > .left {
+      text-align: right;
+      width: 55%; }
+    .footer > .content > .right {
+      text-align: left;
+      width: 45%; }
+    .footer > .content > .connect {
+      padding: 0 20px;}
+      @media screen and (max-width: 799px) {
+        .footer > .content {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column; }
+        .footer > .content > .left {
+          text-align: center;
+          width: 100%; 
+          margin-bottom: 20px; }
+        .footer > .content > .right {
+          text-align: center;
+          width: 100%; } 
+        .footer > .content > .connect {
+          display: none;} }
+
+    
 /*# sourceMappingURL=index.css.map */

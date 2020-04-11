@@ -1,0 +1,101 @@
+.section-history {
+	position: relative;
+	padding: 50px 0 200px;
+
+	@media screen and ($phone) {
+		padding: 50px 0;
+	}
+
+	& > .container {
+		& > .section-title {
+			margin-bottom: 130px;
+
+			@media screen and ($phone) {
+				margin-bottom: 50px;
+			}
+		}
+
+		& > .content {
+			width: 100%;
+			max-width: 600px;
+			margin: 0 auto;
+
+			& > .item {
+				display: flex;
+
+				& > .decoration {
+					position: relative;
+					margin-right: 60px;
+
+					@media screen and ($phone) {
+						margin-right: 20px;
+					}
+
+					& > .circle {
+						position: absolute;
+						top: 0;
+						left: -9px;
+						width: 18px;
+						height: 18px;
+						border-radius: 18px;
+						background-color: #04335a;
+
+						@media screen and ($phone) {
+							left: -6px;
+							width: 12px;
+							height: 12px;
+						}
+					}
+
+					& > .line {
+						width: 1px;
+						height: 100%;
+						background-color: #04335a;
+					}
+				}
+
+				& > .content {
+					position: relative;
+
+					& > .year {
+						font-size: 16px;
+						color: $green;
+						margin-bottom: 15px;
+
+						@media screen and ($phone) {
+							font-size: 13px;
+							margin-bottom: 5px;
+						}
+					}
+
+					& > .list-item {
+						font-size: 18px;
+						color: $white;
+
+						@media screen and ($phone) {
+							font-size: 15px;
+						}
+
+						&:not(:last-child) {
+							margin-bottom: 15px;
+
+							@media screen and ($phone) {
+								margin-bottom: 5px;
+							}
+						}
+					}
+				}
+
+				&:not(:last-child) {
+					& > .content {
+						padding-bottom: 65px;
+
+						@media screen and ($phone) {
+							padding-bottom: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

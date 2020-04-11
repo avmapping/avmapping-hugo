@@ -1,0 +1,264 @@
+.section-advantage {
+	padding: 50px 0 200px;
+
+	@media screen and ($phone) {
+		padding: 50px 0;
+	}
+
+	& > .container {
+		& > .section-title {
+			margin-bottom: 130px;
+
+			@media screen and ($phone) {
+				margin-bottom: 50px;
+			}
+		}
+
+		& > .advantages {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 200px;
+
+			@media screen and ($phone) {
+				flex-direction: column;
+				margin-bottom: 120px;
+			}
+
+			& > .item {
+				width: calc(33% - 30px);
+				color: $white;
+
+				@media screen and ($phone) {
+					width: 100%;
+
+					&:not(:last-child) {
+						margin-bottom: 70px;
+					}
+				}
+
+				& > .icon {
+					width: 120px;
+					margin: 0 auto;
+					margin-bottom: 15px;
+
+					@media screen and ($phone) {
+						width: 80px;
+					}
+
+					& > img {
+						width: 100%;
+					}
+				}
+
+				& > .title {
+					font-size: 20px;
+					letter-spacing: 2px;
+					text-align: center;
+
+					@media screen and ($phone) {
+						font-size: 16px;
+					}
+				}
+
+				& > .highlight {
+					font-size: 18px;
+					letter-spacing: 2px;
+					text-align: center;
+					color: $green;
+					margin-top: 15px;
+
+					@media screen and ($phone) {
+						font-size: 13px;
+					}
+				}
+
+				& > .text {
+					opacity: 0.5;
+					font-size: 14px;
+					letter-spacing: 1px;
+					line-height: 1.4;
+					color: #f4f4f4;
+					margin-top: 10px;
+
+					@media screen and ($phone) {
+						font-size: 13px;
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		& > .what-ai-do {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 200px;
+
+			@media screen and ($phone) {
+				flex-direction: column;
+				margin-bottom: 120px;
+			}
+
+			& > .left {
+				width: calc(30% - 15px);
+
+				@media screen and ($phone) {
+					width: 100%;
+				}
+
+				& > .title {
+					font-size: 36px;
+					font-weight: 600;
+					letter-spacing: 2px;
+					color: $white;
+					margin-bottom: 30px;
+				}
+
+				& > .wrapper {
+					& > .item {
+						display: flex;
+						align-items: center;
+
+						&:not(:last-child) {
+							margin-bottom: 18px;
+						}
+
+						& > .icon {
+							width: 30px;
+							margin-right: 20px;
+
+							& > img {
+								width: 100%;
+							}
+						}
+
+						& > .content {
+							& > .item-title {
+								font-size: 18px;
+								letter-spacing: 1.2px;
+								color: $green;
+								margin-bottom: 6px;
+
+								@media screen and ($phone) {
+									font-size: 15px;
+								}
+							}
+
+							& > .item-text {
+								opacity: 0.5;
+								font-size: 14px;
+								letter-spacing: 1px;
+								color: #f4f4f4;
+
+								@media screen and ($phone) {
+									font-size: 13px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			& > .right {
+				width: calc(70% - 15px);
+				padding: 20px;
+				background: #111111;
+
+				@media screen and ($phone) {
+					width: 100%;
+					padding: 0;
+					margin-top: 30px;
+				}
+
+				& > img {
+					width: 100%;
+				}
+			}
+		}
+
+		& > .we-care {
+			display: flex;
+			justify-content: space-between;
+
+			@media screen and ($phone) {
+				flex-direction: column;
+			}
+
+			& > .left {
+				width: calc(60% - 30px);
+
+				@media screen and ($phone) {
+					width: 100%;
+					margin: 0 auto;
+				}
+
+				& > img {
+					width: 100%;
+
+					@media screen and ($phone) {
+						max-width: 170px;
+						margin: 0 auto;
+					}
+				}
+			}
+
+			& > .right {
+				width: calc(40% - 30px);
+
+				@media screen and ($phone) {
+					width: 100%;
+				}
+
+				& > .title {
+					font-size: 36px;
+					font-weight: 600;
+					letter-spacing: 2px;
+					color: $white;
+					margin-bottom: 36px;
+				}
+
+				& > .item-wrapper {
+					margin-bottom: 50px;
+
+					@media screen and ($phone) {
+						margin-top: 50px;
+					}
+
+					& > .item {
+						&:not(:last-child) {
+							margin-bottom: 30px;
+
+							@media screen and ($phone) {
+								margin-bottom: 20px;
+							}
+						}
+
+						& > .item-title {
+							opacity: 0.95;
+							font-size: 18px;
+							letter-spacing: 2px;
+							color: $white;
+							margin-bottom: 5px;
+
+							@media screen and ($phone) {
+								font-size: 16px;
+							}
+						}
+
+						& > .item-text {
+							opacity: 0.5;
+							font-size: 14px;
+							letter-spacing: 1px;
+							color: #f4f4f4;
+							line-height: 1.5;
+
+							@media screen and ($phone) {
+								font-size: 13px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
