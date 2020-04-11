@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on My New Hugo i18n Site</title>
+    <title>Home on A.V. Mapping</title>
     <link>https://avmapping.github.io/avmapping-hugo/en/</link>
-    <description>Recent content in Home on My New Hugo i18n Site</description>
+    <description>Recent content in Home on A.V. Mapping</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 11 Apr 2020 22:44:58 +0800</lastBuildDate>
