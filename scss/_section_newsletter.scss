@@ -1,0 +1,44 @@
+.section-newsletter {
+	position: relative;
+	padding: 50px 0 200px;
+
+	@media screen and ($phone) {
+		padding: 100px 0 50px;
+	}
+
+	& > .container {
+		& > .text {
+			font-size: 24px;
+			letter-spacing: 5px;
+			color: $green;
+			text-align: center;
+			margin-bottom: 90px;
+
+			@media screen and ($phone) {
+				font-size: 16px;
+				margin-bottom: 50px;
+			}
+		}
+
+		& > .button {
+			width: 100%;
+			max-width: 430px;
+			margin: 0 auto;
+			height: 60px;
+			border: 1px solid $green;
+			border-radius: 30px;
+			background-color: unset;
+
+			font-size: 15px;
+			letter-spacing: 2px;
+			color: $green;
+			cursor: pointer;
+
+			@media screen and ($phone) {
+				max-width: 230px;
+				height: 50px;
+				font-size: 14px;
+			}
+		}
+	}
+}

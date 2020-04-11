@@ -1,0 +1,75 @@
+.section-intro-video {
+	padding: 100px 0 200px;
+
+	@media screen and ($phone) {
+		padding: 50px 0 100px;
+	}
+
+	& > .container {
+		& > .youtube-contianer {
+			position: relative;
+			width: 100%;
+			height: 0;
+			padding-bottom: 56%;
+			max-width: 860px;
+			margin: 0 auto;
+
+			& > iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		& > .text {
+			margin-top: 100px;
+			color: $white;
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 2;
+			letter-spacing: 1.8px;
+			text-align: center;
+
+			@media screen and ($phone) {
+				margin-top: 50px;
+				font-size: 14px;
+
+				& > span {
+					display: block;
+				}
+			}
+		}
+
+		& > .button {
+			width: 100%;
+			max-width: 766px;
+			height: 73px;
+			border-radius: 36.5px;
+			background-image: linear-gradient(to bottom, #04335a 89%, #30c1b8);
+
+			font-size: 24px;
+			font-weight: bold;
+			line-height: 2.17;
+			letter-spacing: 1.85px;
+			text-align: center;
+			color: $green;
+
+			margin: 100px auto 0;
+
+			@media screen and ($phone) {
+				display: block;
+				width: 100%;
+				height: unset;
+				background: unset;
+				font-size: 18px;
+				margin: 50px auto 0;
+
+				& span {
+					display: block;
+				}
+			}
+		}
+	}
+}
