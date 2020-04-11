@@ -3,36 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://avmapping.github.io/avmapping-hugo/en/musicians/</loc>
+    <loc>https://avmapping.co/en/musicians/</loc>
     <lastmod>2020-04-11T22:46:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://avmapping.github.io/avmapping-hugo/zh/musicians/"
+                href="https://avmapping.co/zh/musicians/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://avmapping.github.io/avmapping-hugo/en/musicians/"
+                href="https://avmapping.co/en/musicians/"
                 />
   </url>
   
   <url>
-    <loc>https://avmapping.github.io/avmapping-hugo/en/</loc>
+    <loc>https://avmapping.co/en/</loc>
     <lastmod>2020-04-11T22:44:58+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://avmapping.github.io/avmapping-hugo/zh/"
+                href="https://avmapping.co/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://avmapping.github.io/avmapping-hugo/en/"
+                href="https://avmapping.co/en/"
                 />
   </url>
   
