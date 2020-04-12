@@ -778,6 +778,7 @@ section {
             color: white; }
             @media screen and (max-width: 799px) {
               .section-product > .container > .function-wrapper > .others > .item > .content > .text {
+                letter-spacing: 0.5px;
                 font-size: 14px; } }
 
 .section-instruction {
