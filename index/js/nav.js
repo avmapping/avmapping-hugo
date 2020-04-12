@@ -147,4 +147,7 @@ $(document).ready(function() {
 
 	const naviServiceEl = document.getElementById('navi-item-service');
 	onLeaveNaviItem(naviServiceEl);
+
+	const naviLangEl = document.getElementById('navi-item-language');
+	onLeaveNaviItem(naviLangEl);
 });

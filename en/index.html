@@ -39,7 +39,7 @@
 			<nav class="main-navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 			<div class="container">
 				
-				<a class="icon left" href="/"><img src="https://avmapping.co/index/images/av-logo.png"/></a>
+				<a class="icon left" href='/en/'><img src="https://avmapping.co/index/images/av-logo.png"/></a>
 				<div
 					id="phone-menu-icon"
 					class="menu-icon show-on-phone"
@@ -59,37 +59,51 @@
 						id="navi-item-offical-website"
 						class="navi-item-container"
 						onmouseover="openDesktopDropdown(this)"
-					>
+					>	
+					
 						<div class="navi-item-padding">
-							<a class="navi-item active" href="/">
+							<a class="navi-item active" href="/en/">
 								Home
 							</a>
 						</div>
+
+						
 						<div class="dropdown-menu">
+							
 							<a class="menu-item" href="#solution">Solution</a>
-							<a class="menu-item" href="#product">Our Products</a>
+							
+							<a class="menu-item" href="#product">Our Service</a>
+							
 							<a class="menu-item" href="#advantage">Advantage</a>
 							
 							<a class="menu-item" href="#feedback">What Filmmakers said</a>
+							
 							<a class="menu-item" href="#history">Company Profile</a>
+							
 							<a class="menu-item" href="#offline-service">Offline Service</a>
+							
 							<a class="menu-item" href="#contact">Contact Us</a>
+							
 						</div>
+						
+					
 					</div>
 					<div
 						id="navi-item-musician"
 						class="navi-item-container"
 						onmouseover="openDesktopDropdown(this)"
-					>
+					>	
+					
 						<div class="navi-item-padding">
-							
 							<a class="navi-item" href="musicians">
 								Letter to Musicians
 							</a>
 						</div>
+
+						
 						<div class="dropdown-menu">
 							
-							<a class="menu-item" href="musicians#why-need-us">Our Beliefs</a>
+							<a class="menu-item" href="musicians#-why-need-us">Our Beliefs</a>
 							
 							<a class="menu-item" href="musicians#why-select-us">Our Advantage</a>
 							
@@ -103,37 +117,63 @@
 							
 							<a class="menu-item" href="musicians#results">Achievement Display</a>
 							
-							<a class="menu-item" href="musicians#statistics">Statistics</a>
+							<a class="menu-item" href="musicians#statistics]">Statistics</a>
+							
 						</div>
+						
+					
 					</div>
 					<div
 						id="navi-item-service"
+						class="navi-item-container"
+						onmouseover="openDesktopDropdown(this)"
+					>	
+					
+						<div class="navi-item-padding">
+							<a class="navi-item" href="">
+								Our Service
+							</a>
+						</div>
+
+						
+						<div class="dropdown-menu">
+							
+							<a class="menu-item" href="">A.V. Mapping</a>
+							
+							<a class="menu-item" href="">Your Personal Music</a>
+							
+						</div>
+						
+					
+					</div>
+					<a class="navi-item" onclick="login()">Sign In</a>
+					<a class="navi-item" onclick="signup()">Sign Up</a>
+					<div
+						id="navi-item-language"
 						class="navi-item-container"
 						onmouseover="openDesktopDropdown(this)"
 					>
 						<div class="navi-item-padding">
 							
 							<a class="navi-item" href="">
-								Our Services
+								<i class="fas fa-globe"></i>
 							</a>
 						</div>
 						<div class="dropdown-menu">
 							
-							<a class="menu-item" href=""></a>
+							<a class="menu-item" href="/">正體中文（臺灣）</a>
 							
-							<a class="menu-item" href="">Listen to Your Own Music</a>
+							<a class="menu-item" href="/en/">English</a>
 						</div>
 					</div>
-					<a class="navi-item" onclick="login()">Sign In</a>
-					<a class="navi-item" onclick="signup()">Sign Up</a>
 				</div>
 				<div id="nav-user-login" class="right user-login show-on-desktop hide">
 					
 					<a class="navi-item" href="">About Us</a>
 					
-					<a class="navi-item" href="">A.V. Mapping</a>
+					<a class="navi-item" href=""></a>
 					
-					<a class="navi-item" href="">Listen to Your Own Music</a>
+					<a class="navi-item" href=""></a>
 
 					<div id="user" class="user" onmouseover="openDesktopDropdown(this)">
 						<div id="user-avatar" class="avatar-container audio">
@@ -157,51 +197,50 @@
 			<div id="phone-navi-menu" class="phone-navi-menu">
 				<div class="navi-item-wrapper user-not-login">
 					<div id="phone-navi-official" class="navi-item navi-with-accordion">
+					
 						<div class="item">
-							<a class="navi-item" href="/">Home</a>
+							<a class="navi-item" href="/en/">Home</a>
 							<i
 								class="icon fas fa-chevron-down"
 								onclick="toggleAccordion('phone-navi-official')"
 							>
 							</i>
 						</div>
+						
 						<div class="accordion" style="height: 0">
 							<div class="wrapper">
+								
 								<a class="menu-item" href="#solution" onclick="closePhoneNaviMenu()"
-									>Solution</a
-								>
+									>Solution</a>
+								
 								<a class="menu-item" href="#product" onclick="closePhoneNaviMenu()"
-									>Our Products</a
-								>
-								<a
-									class="menu-item"
-									href="#advantage"
-									onclick="closePhoneNaviMenu()"
-									>Advantage</a
-								>
+									>Our Service</a>
+								
+								<a class="menu-item" href="#advantage" onclick="closePhoneNaviMenu()"
+									>Advantage</a>
 								
 								<a class="menu-item" href="#feedback" onclick="closePhoneNaviMenu()"
-									>What Filmmakers said</a
-								>
+									>What Filmmakers said</a>
+								
 								<a class="menu-item" href="#history" onclick="closePhoneNaviMenu()"
-									>Company Profile</a
-								>
-								<a
-									class="menu-item"
-									href="#offline-service"
-									onclick="closePhoneNaviMenu()"
-									>Offline Service</a
-								>
+									>Company Profile</a>
+								
+								<a class="menu-item" href="#offline-service" onclick="closePhoneNaviMenu()"
+									>Offline Service</a>
+								
 								<a class="menu-item" href="#contact" onclick="closePhoneNaviMenu()"
-									>Contact Us</a
-								>
+									>Contact Us</a>
+								
 							</div>
 						</div>
+						
+					
 					</div>
 					<div id="phone-navi-musician" class="navi-item navi-with-accordion">
+						
 						<div class="item">
 							
-							<a href="musicians">
+							<a class="navi-item" href="musicians">
 								Letter to Musicians
 							</a>
 							<i
@@ -210,45 +249,61 @@
 							>
 							</i>
 						</div>
+						
 						<div class="accordion" style="height: 0">
 							<div class="wrapper">
 								
-								<a class="menu-item" href="musicians#why-need-us" onclick="closePhoneNaviMenu()"
-									>Our Beliefs</a
-								>
+								<a class="menu-item" href="musicians#-why-need-us" onclick="closePhoneNaviMenu()"
+									>Our Beliefs</a>
 								
 								<a class="menu-item" href="musicians#why-select-us" onclick="closePhoneNaviMenu()"
-									>Our Advantage</a
-								>
+									>Our Advantage</a>
 								
 								<a class="menu-item" href="musicians#share-with-us" onclick="closePhoneNaviMenu()"
-									>Custom Price</a
-								>
+									>Custom Price</a>
 								
 								<a class="menu-item" href="musicians#musician-communicate" onclick="closePhoneNaviMenu()"
-									>What Musicians Said</a
-								>
+									>What Musicians Said</a>
 								
 								<a class="menu-item" href="musicians#feedback" onclick="closePhoneNaviMenu()"
-									>Feedback</a
-								>
+									>Feedback</a>
 								
 								<a class="menu-item" href="musicians#benefit" onclick="closePhoneNaviMenu()"
-									>Member-only Special Offers</a
-								>
+									>Member-only Special Offers</a>
 								
 								<a class="menu-item" href="musicians#results" onclick="closePhoneNaviMenu()"
-									>Achievement Display</a
-								>
+									>Achievement Display</a>
 								
-								<a class="menu-item" href="musicians#statistics" onclick="closePhoneNaviMenu()"
-									>Statistics</a
+								<a class="menu-item" href="musicians#statistics]" onclick="closePhoneNaviMenu()"
+									>Statistics</a>
+								
+							</div>
+						</div>
+						
+					
+					</div>
+					<a class="navi-item" onclick="login()">Sign In</a>
+					<a class="navi-item" onclick="signup()">Sign Up</a>
+					<div id="phone-navi-language" class="navi-item navi-with-accordion">
+						<div class="item">
+							<a href=""><i class="fas fa-globe"></i></a>
+							<i
+								class="icon fas fa-chevron-down"
+								onclick="toggleAccordion('phone-navi-language')"
+							>
+							</i>
+						</div>
+						<div class="accordion" style="height: 0">
+							<div class="wrapper">
+								<a class="menu-item" href="/" onclick="closePhoneNaviMenu()"
+									>正體中文（臺灣）</a
+								>
+								<a class="menu-item" href="/en/" onclick="closePhoneNaviMenu()"
+									>English</a
 								>
 							</div>
 						</div>
 					</div>
-					<a class="navi-item" onclick="login()">Sign In</a>
-					<a class="navi-item" onclick="signup()">Sign Up</a>
 				</div>
 
 				
@@ -256,9 +311,9 @@
 					
 					<a class="navi-item" href="">About Us</a>
 					
-					<a class="navi-item" href="">A.V. Mapping</a>
+					<a class="navi-item" href=""></a>
 					
-					<a class="navi-item" href="">Listen to Your Own Music</a>
+					<a class="navi-item" href=""></a>
 					
 					<a class="navi-item" href="">Profile</a>
 					

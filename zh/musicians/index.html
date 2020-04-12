@@ -38,7 +38,7 @@
 			<nav class="main-navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 			<div class="container">
 				
-				<a class="icon left" href="/"><img src="https://avmapping.co/index/images/av-logo.png"/></a>
+				<a class="icon left" href=''><img src="https://avmapping.co/index/images/av-logo.png"/></a>
 				<div
 					id="phone-menu-icon"
 					class="menu-icon show-on-phone"
@@ -58,37 +58,51 @@
 						id="navi-item-offical-website"
 						class="navi-item-container"
 						onmouseover="openDesktopDropdown(this)"
-					>
+					>	
+					
 						<div class="navi-item-padding">
 							<a class="navi-item" href="/">
-								主頁
+								首頁
 							</a>
 						</div>
+
+						
 						<div class="dropdown-menu">
-							<a class="menu-item" href="/#solution">解決問題</a>
-							<a class="menu-item" href="/#product">我們的產品</a>
-							<a class="menu-item" href="/#advantage">優勢</a>
 							
-							<a class="menu-item" href="/#feedback">大家怎麼說</a>
-							<a class="menu-item" href="/#history">沿革</a>
-							<a class="menu-item" href="/#offline-service">線下服務</a>
-							<a class="menu-item" href="/#contact">聯絡我們</a>
+							<a class="menu-item" href="/zh/#solution">解決問題</a>
+							
+							<a class="menu-item" href="/zh/#product">我們的產品</a>
+							
+							<a class="menu-item" href="/zh/#advantage">優勢</a>
+							
+							<a class="menu-item" href="/zh/#feedback">大家怎麼說</a>
+							
+							<a class="menu-item" href="/zh/#history">沿革</a>
+							
+							<a class="menu-item" href="/zh/#offline-service">線下服務</a>
+							
+							<a class="menu-item" href="/zh/#contact">聯絡我們</a>
+							
 						</div>
+						
+					
 					</div>
 					<div
 						id="navi-item-musician"
 						class="navi-item-container"
 						onmouseover="openDesktopDropdown(this)"
-					>
+					>	
+					
 						<div class="navi-item-padding">
-							
 							<a class="navi-item active" href="">
 								給音樂人的信
 							</a>
 						</div>
+
+						
 						<div class="dropdown-menu">
 							
-							<a class="menu-item" href="#why-need-us">核心理念</a>
+							<a class="menu-item" href="#-why-need-us">核心理念</a>
 							
 							<a class="menu-item" href="#why-select-us">我們的優勢</a>
 							
@@ -102,37 +116,63 @@
 							
 							<a class="menu-item" href="#results">成果展示</a>
 							
-							<a class="menu-item" href="#statistics">數據統計</a>
+							<a class="menu-item" href="#statistics]">數據統計</a>
+							
 						</div>
+						
+					
 					</div>
 					<div
 						id="navi-item-service"
+						class="navi-item-container"
+						onmouseover="openDesktopDropdown(this)"
+					>	
+					
+						<div class="navi-item-padding">
+							<a class="navi-item" href="">
+								我們的服務
+							</a>
+						</div>
+
+						
+						<div class="dropdown-menu">
+							
+							<a class="menu-item" href="">動態影像配樂</a>
+							
+							<a class="menu-item" href="">聽聽你的專屬配樂</a>
+							
+						</div>
+						
+					
+					</div>
+					<a class="navi-item" onclick="login()">登入</a>
+					<a class="navi-item" onclick="signup()">註冊</a>
+					<div
+						id="navi-item-language"
 						class="navi-item-container"
 						onmouseover="openDesktopDropdown(this)"
 					>
 						<div class="navi-item-padding">
 							
 							<a class="navi-item" href="">
-								我們的服務
+								<i class="fas fa-globe"></i>
 							</a>
 						</div>
 						<div class="dropdown-menu">
 							
-							<a class="menu-item" href=""></a>
+							<a class="menu-item" href="/zh/musicians">正體中文（臺灣）</a>
 							
-							<a class="menu-item" href="">聽聽你的專屬配樂</a>
+							<a class="menu-item" href="/en/musicians">English</a>
 						</div>
 					</div>
-					<a class="navi-item" onclick="login()">登入</a>
-					<a class="navi-item" onclick="signup()">註冊</a>
 				</div>
 				<div id="nav-user-login" class="right user-login show-on-desktop hide">
 					
 					<a class="navi-item" href="">關於我們</a>
 					
-					<a class="navi-item" href="">動態影像配樂</a>
+					<a class="navi-item" href=""></a>
 					
-					<a class="navi-item" href="">聽聽你的專屬配樂</a>
+					<a class="navi-item" href=""></a>
 
 					<div id="user" class="user" onmouseover="openDesktopDropdown(this)">
 						<div id="user-avatar" class="avatar-container audio">
@@ -156,51 +196,50 @@
 			<div id="phone-navi-menu" class="phone-navi-menu">
 				<div class="navi-item-wrapper user-not-login">
 					<div id="phone-navi-official" class="navi-item navi-with-accordion">
+					
 						<div class="item">
-							<a href="/">主頁</a>
+							<a class="navi-item" href="/">首頁</a>
 							<i
 								class="icon fas fa-chevron-down"
 								onclick="toggleAccordion('phone-navi-official')"
 							>
 							</i>
 						</div>
+						
 						<div class="accordion" style="height: 0">
 							<div class="wrapper">
-								<a class="menu-item" href="/#solution" onclick="closePhoneNaviMenu()"
-									>解決問題</a
-								>
-								<a class="menu-item" href="/#product" onclick="closePhoneNaviMenu()"
-									>我們的產品</a
-								>
-								<a
-									class="menu-item"
-									href="/#advantage"
-									onclick="closePhoneNaviMenu()"
-									>優勢</a
-								>
 								
-								<a class="menu-item" href="/#feedback" onclick="closePhoneNaviMenu()"
-									>大家怎麼說</a
-								>
-								<a class="menu-item" href="/#history" onclick="closePhoneNaviMenu()"
-									>沿革</a
-								>
-								<a
-									class="menu-item"
-									href="/#offline-service"
-									onclick="closePhoneNaviMenu()"
-									>線下服務</a
-								>
-								<a class="menu-item" href="/#contact" onclick="closePhoneNaviMenu()"
-									>聯絡我們</a
-								>
+								<a class="menu-item" href="/zh/#solution" onclick="closePhoneNaviMenu()"
+									>解決問題</a>
+								
+								<a class="menu-item" href="/zh/#product" onclick="closePhoneNaviMenu()"
+									>我們的產品</a>
+								
+								<a class="menu-item" href="/zh/#advantage" onclick="closePhoneNaviMenu()"
+									>優勢</a>
+								
+								<a class="menu-item" href="/zh/#feedback" onclick="closePhoneNaviMenu()"
+									>大家怎麼說</a>
+								
+								<a class="menu-item" href="/zh/#history" onclick="closePhoneNaviMenu()"
+									>沿革</a>
+								
+								<a class="menu-item" href="/zh/#offline-service" onclick="closePhoneNaviMenu()"
+									>線下服務</a>
+								
+								<a class="menu-item" href="/zh/#contact" onclick="closePhoneNaviMenu()"
+									>聯絡我們</a>
+								
 							</div>
 						</div>
+						
+					
 					</div>
 					<div id="phone-navi-musician" class="navi-item navi-with-accordion">
+						
 						<div class="item">
 							
-							<a class="navi-item" href="/musicians/">
+							<a class="navi-item" href="">
 								給音樂人的信
 							</a>
 							<i
@@ -209,45 +248,51 @@
 							>
 							</i>
 						</div>
+						
 						<div class="accordion" style="height: 0">
 							<div class="wrapper">
 								
-								<a class="menu-item" href="#why-need-us" onclick="closePhoneNaviMenu()"
-									>核心理念</a
-								>
+								<a class="menu-item" href="#-why-need-us" onclick="closePhoneNaviMenu()"
+									>核心理念</a>
 								
 								<a class="menu-item" href="#why-select-us" onclick="closePhoneNaviMenu()"
-									>我們的優勢</a
-								>
+									>我們的優勢</a>
 								
 								<a class="menu-item" href="#share-with-us" onclick="closePhoneNaviMenu()"
-									>自訂價格</a
-								>
+									>自訂價格</a>
 								
 								<a class="menu-item" href="#musician-communicate" onclick="closePhoneNaviMenu()"
-									>音樂人怎麼說</a
-								>
+									>音樂人怎麼說</a>
 								
 								<a class="menu-item" href="#feedback" onclick="closePhoneNaviMenu()"
-									>使用回饋</a
-								>
+									>使用回饋</a>
 								
 								<a class="menu-item" href="#benefit" onclick="closePhoneNaviMenu()"
-									>會員專屬優惠</a
-								>
+									>會員專屬優惠</a>
 								
 								<a class="menu-item" href="#results" onclick="closePhoneNaviMenu()"
-									>成果展示</a
-								>
+									>成果展示</a>
 								
-								<a class="menu-item" href="#statistics" onclick="closePhoneNaviMenu()"
-									>數據統計</a
-								>
+								<a class="menu-item" href="#statistics]" onclick="closePhoneNaviMenu()"
+									>數據統計</a>
+								
 							</div>
 						</div>
+						
+					
 					</div>
 					<a class="navi-item" onclick="login()">登入</a>
 					<a class="navi-item" onclick="signup()">註冊</a>
+					<div class="accordion" style="height: 0">
+							<div class="wrapper">
+								<a class="menu-item" href="/zh/musicians" onclick="closePhoneNaviMenu()"
+									>正體中文（臺灣）</a
+								>
+								<a class="menu-item" href="/en/musicians" onclick="closePhoneNaviMenu()"
+									>English</a
+								>
+							</div>
+						</div>
 				</div>
 
 				
@@ -255,9 +300,9 @@
 					
 					<a class="navi-item" href="">關於我們</a>
 					
-					<a class="navi-item" href="">動態影像配樂</a>
+					<a class="navi-item" href=""></a>
 					
-					<a class="navi-item" href="">聽聽你的專屬配樂</a>
+					<a class="navi-item" href=""></a>
 					
 					<a class="navi-item" href="">個人中心</a>
 					
