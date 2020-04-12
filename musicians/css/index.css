@@ -359,6 +359,8 @@ section {
     .main-navigation > .phone-navi-menu.active {
       opacity: 1;
       pointer-events: auto; }
+    .main-navigation > .phone-navi-menu a {
+      color: white !important; }
     .main-navigation > .phone-navi-menu > .navi-item-wrapper {
       width: 100%;
       height: calc(100vh - 60px);
@@ -1296,6 +1298,7 @@ section {
   .section-statistics > .container > .button {
     margin: 0 auto; }
 
+
   .footer {
       position: relative;
       height: 60px;
@@ -1336,4 +1339,5 @@ section {
           width: 100%; } 
         .footer > .content > .connect {
           display: none;} }
+          
 /*# sourceMappingURL=index.css.map */
