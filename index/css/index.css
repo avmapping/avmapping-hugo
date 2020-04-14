@@ -1661,14 +1661,13 @@ section {
     position: fixed;
     top: 15px;
     right: 25px;
-    height: 40px;
-    width: 40px;
     font-size: 20px;
     color: white;
     background-color: #30c1b8;
     border-radius: 50%;
     height: 30px;
     width: 30px;
+    opacity: 0.9;
   }
 
   .section-sign > .container > .sign-up-form {
