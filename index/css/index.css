@@ -1659,8 +1659,8 @@ section {
 
   .section-sign > .container > .close-btn {
     position: fixed;
-    top: 20px;
-    right: 10px;
+    top: 15px;
+    right: 25px;
     height: 40px;
     width: 40px;
     font-size: 20px;
@@ -1670,7 +1670,7 @@ section {
     height: 30px;
     width: 30px;
   }
-  
+
   .section-sign > .container > .sign-up-form {
     display: -webkit-box;
     display: -ms-flexbox;
