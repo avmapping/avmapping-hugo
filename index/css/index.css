@@ -1647,6 +1647,7 @@ section {
     background-color: rgba(216, 216, 216, .2); /* White/ opacity */ }
     @media screen and (max-width: 799px) {
       .section-sign {
+        background-color: #181818; 
         padding-top: 0;
         overflow: auto;} }
 
@@ -1654,8 +1655,22 @@ section {
     background-color: #181818; }
     @media screen and (max-width: 799px) {
       .section-sign > .container {
-        padding-top: 50px;} }
+        padding-top: 60px;} }
 
+  .section-sign > .container > .close-btn {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    color: white;
+    background-color: #30c1b8;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+  }
+  
   .section-sign > .container > .sign-up-form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1733,7 +1748,8 @@ section {
         .section-sign > .container > .sign-up-form > .right {
           width: 100%;
           padding: 0;
-          margin-top: 40px; } }
+          margin-top: 40px;
+          margin-left: 0; } }
       .section-sign > .container > .sign-up-form > .right > img {
         margin-left: calc( 50% - 110px);
         width: 220px; }

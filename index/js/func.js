@@ -68,6 +68,11 @@ const switchUser = (type = 'desktop') => {
 	closePhoneNaviMenu();
 };
 
+const closeSign = (type = 'phone') => {
+	document.getElementById('section-sign-in').style.display = 'none';
+	document.getElementById('section-sign-up').style.display = 'none';
+};
+
 var mouse_is_inside = true;
 $(document).ready(function()
 {
