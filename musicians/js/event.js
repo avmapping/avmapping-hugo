@@ -15,9 +15,13 @@ const switchNavDisplay = nextState => {
 
 const login = (type = 'desktop') => {
 	console.log('login');
-
+	
 	// on login
 	closePhoneNaviMenu();
+	console.log(document.getElementById('section-sign-in').style);
+	document.getElementById('section-sign-up').style.display = 'none';
+	document.getElementById('section-sign-in').style.display = 'block';
+	/*
 	if ((type = 'phone')) {
 		setTimeout(() => {
 			switchNavDisplay('login');
@@ -25,6 +29,7 @@ const login = (type = 'desktop') => {
 	} else {
 		switchNavDisplay('login');
 	}
+	*/
 };
 
 const logout = (type = 'desktop') => {
@@ -45,6 +50,8 @@ const signup = (type = 'desktop') => {
 	console.log('signup');
 
 	closePhoneNaviMenu();
+	document.getElementById('section-sign-in').style.display = 'none';
+	document.getElementById('section-sign-up').style.display = 'block';
 };
 
 const switchUser = (type = 'desktop') => {
@@ -60,3 +67,18 @@ const switchUser = (type = 'desktop') => {
 
 	closePhoneNaviMenu();
 };
+
+var mouse_is_inside = true;
+$(document).ready(function()
+{
+    $('.sign-in-form').hover(function(){ 
+        mouse_is_inside=true; 
+    }, function(){ 
+        mouse_is_inside=false; 
+    });
+
+    $("body").mouseup(function(){ 
+        if(! mouse_is_inside) $('#section-sign-in').hide();
+        if(! mouse_is_inside) $('#section-sign-up').hide();
+    });
+});
