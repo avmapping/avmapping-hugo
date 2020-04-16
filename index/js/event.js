@@ -136,6 +136,8 @@ function userSignUp() {
 	        	} else {
 	        		alert('Oops! Something went wrong.');
 	        		$("#form_signup")[0].reset();
+	        		$("#check-signup-email").html("");
+	        		$("#check-password").html("");
 	        	}
 			},
 			error: function(error){
