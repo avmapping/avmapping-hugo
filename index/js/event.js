@@ -161,7 +161,7 @@ function userSignIn() {
         		closeSign();
         		login_auth();
         	} else {
-        		alert('Oops! Something went wrong.');
+        		alert('Sorry! The email address or password is incorrect.');
         		$("#form_signin")[0].reset();
         	}
 		},
