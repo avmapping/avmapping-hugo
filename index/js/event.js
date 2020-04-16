@@ -100,7 +100,7 @@ function userSignUp() {
 	        		closeSign();
 	        		login_auth();
 	        	} else {
-	        		alert('Oops! Something went wrong.');
+	        		alert('You are already registered!');
 	        		form[0].reset();
 	        		$("#check-signup-email").html("");
 	        		$("#check-password").html("");
@@ -132,7 +132,7 @@ function userSignIn() {
         		login_auth();
         	} else {
         		alert('Sorry! The email address or password is incorrect.');
-        		$("#form_signin")[0].reset();
+        		form[0].reset();
         	}
 		},
 		error: function(error){
