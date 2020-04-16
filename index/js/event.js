@@ -1,4 +1,7 @@
 let userType = 'audio'; // user type can be 'audio', 'video' or ''
+const baseURL = 'https://beta.avmapping.co'
+var API = {'signup': baseURL+'/api/signup',
+		   'signin': baseURL+'/api/signin'}
 
 const switchNavDisplay = nextState => {
 	const loginNavEls = Array.from(document.getElementsByClassName('user-login'));
@@ -72,47 +75,10 @@ const closeSign = (type = 'phone') => {
 	document.getElementById('section-sign-up').style.display = 'none';
 };
 
-function userSignIn() {
-	console.log('sign-in-form');
-	var form= new FormData(document.getElementById("form_signin"));
-	$.ajax({
-        type :"POST",
-        url  : "http://localhost:8888/signin",
-        dataType: "json",
-        data: {
-        },
-        success : function(response) {
-        	console.log(response);
-        	return false
-		},
-		error: function(error){
-            console.log(error);
-        }
-    });
-};
-
-function login_auth() {
-	if (login_auth) {
-		if ((type = 'phone')) {
-			setTimeout(() => {
-				switchNavDisplay('login');
-			}, 500);
-		} else {
-			switchNavDisplay('login');
-		}
-	} else {
-		if ((type = 'phone')) {
-			setTimeout(() => {
-				switchNavDisplay('notLogin');
-			}, 500);
-		} else {
-			switchNavDisplay('notLogin');
-		}
-	}
-};
-
 function userSignUp() {
 	console.log('commitSignup');
+	var form = $('#form_signup');
+	var url = API['signup'];
 	var fields = $("#form_signup .required").find("input").serializeArray();
 	var isRequired = false;
 	$.each(fields, function(i, field) {
@@ -124,9 +90,9 @@ function userSignUp() {
 
 	if (!isRequired) {
 		$.ajax({
-	        type :"POST",
-	        url  :"http://localhost:8888/signup",
-	        data :$('#form_signup').serialize(),
+	        type : "POST",
+	        url  : url,
+	        data : form.serialize(),
 	        success : function(response) {
 	        	console.log(response);
 	        	if (response != 'err') {
@@ -135,7 +101,7 @@ function userSignUp() {
 	        		login_auth();
 	        	} else {
 	        		alert('Oops! Something went wrong.');
-	        		$("#form_signup")[0].reset();
+	        		form[0].reset();
 	        		$("#check-signup-email").html("");
 	        		$("#check-password").html("");
 	        	}
@@ -150,10 +116,14 @@ function userSignUp() {
 
 function userSignIn() {
 	console.log('commitSignin');
+
+	var form = $('#form_signin');
+	var url = API['signin'];
+	console.log('url> ',url);
 	$.ajax({
-        type :"POST",
-        url  :"http://localhost:8888/signin",
-        data :$('#form_signin').serialize(),
+        type : "POST",
+        url  : url,
+        data : form.serialize(),
         success : function(response) {
         	console.log(response);
         	if (response != 'err') {
@@ -195,6 +165,26 @@ function checkPassword() {
   	}
 };
 
+function login_auth() {
+	if (login_auth) {
+		if ((type = 'phone')) {
+			setTimeout(() => {
+				switchNavDisplay('login');
+			}, 500);
+		} else {
+			switchNavDisplay('login');
+		}
+	} else {
+		if ((type = 'phone')) {
+			setTimeout(() => {
+				switchNavDisplay('notLogin');
+			}, 500);
+		} else {
+			switchNavDisplay('notLogin');
+		}
+	}
+};
+
 var mouse_is_inside = true;
 var login_state = false;
 
@@ -205,7 +195,7 @@ $(document).ready(function()
 	console.log('{{ api/login/auth }}');
 	$.ajax({
         type :"POST",
-        url  :"http://localhost:8888/api/login/auth",
+        url  :"http://localhost:8888/api/login_auth",
         success : function(response) {
         	console.log('success');
         	console.log(response);
