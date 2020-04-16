@@ -683,12 +683,26 @@
 				<div class="sign-up-form">
 					<div class="left">
 						<div class="title show-on-desktop">創建您的帳戶</div>
-						<form action="" autocomplete="off" method="post">
-							<input type="text" name="username" placeholder='用戶名稱' />
-							<input type="email" name="email" placeholder='電子郵件地址' />
-							<input type="password" name="password" placeholder='建立密碼' />
-							<input type="password" name="check-password" placeholder='確認密碼' />
-							<input class="submit" type="submit" value='註冊帳號' />
+						<form autocomplete="off" method="post" id="form_signup">
+							<div class="item required">
+								<input type="text" name="username" placeholder='用戶名稱' />
+							</div>
+							<div class="item required">
+								<input type="email" name="email" id="signup-email" placeholder='電子郵件地址' onkeyup="checkEmail()" />
+							</div>
+							<div class="text">
+								<span id='check-signup-email'></span>
+							</div>
+							<div class="item required">
+								<input type="password" name="password" id="password" placeholder='建立密碼' />
+							</div>
+							<div class="item">
+								<input type="password" name="re-password" id="re-password" placeholder='確認密碼' onkeyup="checkPassword()" />
+							</div>
+							<div class="text">
+								<span id='check-password'></span>
+							</div>
+							<input class="submit" type="button" value='註冊帳號' onclick="userSignUp()"/>
 						</form>
 					</div>
 					<div class="right">
@@ -718,10 +732,10 @@
 					</div>
 					<div class="right">
 						<div class="title show-on-desktop">登入 A.V. Mapping</div>
-						<form action="" autocomplete="off" method="post">
+						<form autocomplete="off" method="post" id="form_signin">
 							<input type="email" name="email" placeholder='輸入您的電子郵件地址' />
 							<input type="password" name="password" placeholder='輸入密碼' />
-							<input class="submit" type="submit" value='註冊帳號' />
+							<input class="submit" type="button" value='登入' onclick="userSignIn()" />
 						</form>
 					</div>
 				</div>

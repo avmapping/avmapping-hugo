@@ -72,15 +72,162 @@ const closeSign = (type = 'phone') => {
 	document.getElementById('section-sign-up').style.display = 'none';
 };
 
+function userSignIn() {
+	console.log('sign-in-form');
+	var form= new FormData(document.getElementById("form_signin"));
+	$.ajax({
+        type :"POST",
+        url  : "http://localhost:8888/signin",
+        dataType: "json",
+        data: {
+        },
+        success : function(response) {
+        	console.log(response);
+        	return false
+		},
+		error: function(error){
+            console.log(error);
+        }
+    });
+};
+
+function login_auth() {
+	if (login_auth) {
+		if ((type = 'phone')) {
+			setTimeout(() => {
+				switchNavDisplay('login');
+			}, 500);
+		} else {
+			switchNavDisplay('login');
+		}
+	} else {
+		if ((type = 'phone')) {
+			setTimeout(() => {
+				switchNavDisplay('notLogin');
+			}, 500);
+		} else {
+			switchNavDisplay('notLogin');
+		}
+	}
+};
+
+function userSignUp() {
+	console.log('commitSignup');
+	var fields = $("#form_signup .required").find("input").serializeArray();
+	var isRequired = false;
+	$.each(fields, function(i, field) {
+		if (!field.value) {
+			alert(field.name + ' is required');
+			isRequired = true;
+		} 
+	});
+
+	if (!isRequired) {
+		$.ajax({
+	        type :"POST",
+	        url  :"http://localhost:8888/signup",
+	        data :$('#form_signup').serialize(),
+	        success : function(response) {
+	        	console.log(response);
+	        	if (response != 'err') {
+	        		login_state = true;
+	        		closeSign();
+	        		login_auth();
+	        	} else {
+	        		alert('Oops! Something went wrong.');
+	        		$("#form_signup")[0].reset();
+	        	}
+			},
+			error: function(error){
+	            console.log(error);
+	        }
+	    });
+	}
+	//console.log(fields);
+};
+
+function userSignIn() {
+	console.log('commitSignin');
+	$.ajax({
+        type :"POST",
+        url  :"http://localhost:8888/signin",
+        data :$('#form_signin').serialize(),
+        success : function(response) {
+        	console.log(response);
+        	if (response != 'err') {
+        		login_state = true;
+        		closeSign();
+        		login_auth();
+        	} else {
+        		alert('Oops! Something went wrong.');
+        		$("#form_signin")[0].reset();
+        	}
+		},
+		error: function(error){
+            console.log(error);
+        }
+    });
+};
+
+function checkEmail() {
+	var email = document.getElementById('signup-email');
+	var check_signup_email = document.getElementById('check-signup-email');
+	if (!email.value.includes('@')) {
+		check_signup_email.style.color = '#ef7873';
+		check_signup_email.innerHTML = "please enter correct email address."
+	} else {
+		check_signup_email.innerHTML = ""	
+	}
+}
+
+function checkPassword() {
+	var pass = document.getElementById('password');
+	var re_pass = document.getElementById('re-password');
+	var check_pass = document.getElementById('check-password');
+  	if (pass.value == re_pass.value) {
+    	check_pass.style.color = '#30c1b8';
+    	check_pass.innerHTML = 'matching!';
+  	} else {
+    	check_pass.style.color = '#ef7873';
+    	check_pass.innerHTML = 'not matching!';
+  	}
+};
+
 var mouse_is_inside = true;
+var login_state = false;
+
 $(document).ready(function()
-{
+{	
+	/*
+	console.log(url);
+	console.log('{{ api/login/auth }}');
+	$.ajax({
+        type :"POST",
+        url  :"http://localhost:8888/api/login/auth",
+        success : function(response) {
+        	console.log('success');
+        	console.log(response);
+        	if (response != 'err') {
+        		login_state = true;
+        		closeSign();
+        		login_auth();
+        	} else {
+        		closeSign();
+        		alert('Oops! Something went wrong.');
+        	}
+		},
+		error: function(error){
+            console.log(error);
+        }
+    });
+    */
+
     $('.sign-in-form').hover(function(){ 
         mouse_is_inside=true; 
     }, function(){ 
         mouse_is_inside=false; 
     });
-
+    
     $('.sign-up-form').hover(function(){ 
         mouse_is_inside=true; 
     }, function(){ 
