@@ -35,7 +35,19 @@
 		<link rel="stylesheet" href="https://avmapping.co/musicians/css/index.css" />
 	</head>
 	<body>
-			<nav class="main-navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+			<div id="youtube-modal" class="youtube-modal">
+			<div class="modal-container">
+				<iframe
+					id="youtube-iframe"
+					src=""
+					frameborder="0"
+					allow="autoplay; encrypted-media"
+					allowfullscreen
+				></iframe>
+				<i class="close fas fa-times-circle" onclick="closeYoutubeModal()"></i>
+			</div>
+		</div>
+		<nav class="main-navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 			<div class="container">
 				
 				<a class="icon left" href='/en/'><img src="https://avmapping.co/index/images/av-logo.png"/></a>
@@ -158,21 +170,27 @@
 								<i class="fas fa-globe"></i>
 							</a>
 						</div>
+						
+						
 						<div class="dropdown-menu">
 							
-							<a class="menu-item" href="/zh/musicians">繁體中文</a>
+							<a class="menu-item" href="/">繁體中文</a>
 							
-							<a class="menu-item" href="/en/musicians">English</a>
+							<a class="menu-item" href="/en/">English</a>
+							
 						</div>
+						
+						
 					</div>
 				</div>
 				<div id="nav-user-login" class="right user-login show-on-desktop hide">
-					
+				
 					<a class="navi-item" href="">About Us</a>
-					
-					<a class="navi-item" href=""></a>
-					
-					<a class="navi-item" href=""></a>
+				
+					<a class="navi-item" href="">A.V. Mapping</a>
+				
+					<a class="navi-item" href="">Your Personal Music</a>
+				
 
 					<div id="user" class="user" onmouseover="openDesktopDropdown(this)">
 						<div id="user-avatar" class="avatar-container audio">
@@ -182,14 +200,19 @@
 								<img src="https://avmapping.co/index/images/mock/user.png" />
 							</div>
 						</div>
+						
+						
 						<div class="dropdown-menu">
 							
 							<a class="menu-item" href="">Profile</a>
 							
 							<a class="menu-item" href="">Settings</a>
+							
 							<div class="menu-item" onclick="switchUser()">Choose Your Role</div>
 							<div class="menu-item" onclick="logout()">Sign Out</div>
 						</div>
+						
+						
 					</div>
 				</div>
 			</div>
@@ -284,29 +307,43 @@
 					<a class="navi-item" onclick="login()">Sign In</a>
 					<a class="navi-item" onclick="signup()">Sign Up</a>
 					<div class="accordion" style="height: 0">
+							
+							
 							<div class="wrapper">
-								<a class="menu-item" href="/zh/musicians" onclick="closePhoneNaviMenu()"
+								
+								<a class="menu-item" href="/" onclick="closePhoneNaviMenu()"
 									>繁體中文</a
 								>
-								<a class="menu-item" href="/en/musicians" onclick="closePhoneNaviMenu()"
+								
+								<a class="menu-item" href="/en/" onclick="closePhoneNaviMenu()"
 									>English</a
 								>
+								
 							</div>
+							
+							
 						</div>
 				</div>
 
-				
 				<div class="navi-item-wrapper user-login hide">
-					
+				
 					<a class="navi-item" href="">About Us</a>
-					
-					<a class="navi-item" href=""></a>
-					
-					<a class="navi-item" href=""></a>
+				
+					<a class="navi-item" href="">A.V. Mapping</a>
+				
+					<a class="navi-item" href="">Your Personal Music</a>
+				
+				
+				
+				
 					
 					<a class="navi-item" href="">Profile</a>
 					
 					<a class="navi-item" href="">Settings</a>
+					
+				
+				
+
 					<div class="navi-item" onclick="switchUser()">Choose Your Role</div>
 					<div class="navi-item" onclick="logout()">Sign Out</div>
 				</div>
@@ -707,7 +744,7 @@
 	
 			</body>
 	<script src="https://avmapping.co/index/js/nav.js"></script>
-	<script src="https://avmapping.co/index/js/func.js"></script>
+	<script src="https://avmapping.co/index/js/event.js"></script>
 	<script src="https://avmapping.co/musicians/js/swiper.js"></script>
 	<script src="https://avmapping.co/musicians/js/youtubeEmbed.js"></script>
 </html>	

@@ -18,7 +18,6 @@ const login = (type = 'desktop') => {
 
 	// on login
 	closePhoneNaviMenu();
-	console.log(document.getElementById('section-sign-in').style);
 	document.getElementById('section-sign-up').style.display = 'none';
 	document.getElementById('section-sign-in').style.display = 'block';
 	/*
@@ -68,10 +67,21 @@ const switchUser = (type = 'desktop') => {
 	closePhoneNaviMenu();
 };
 
+const closeSign = (type = 'phone') => {
+	document.getElementById('section-sign-in').style.display = 'none';
+	document.getElementById('section-sign-up').style.display = 'none';
+};
+
 var mouse_is_inside = true;
 $(document).ready(function()
 {
     $('.sign-in-form').hover(function(){ 
+        mouse_is_inside=true; 
+    }, function(){ 
+        mouse_is_inside=false; 
+    });
+
+    $('.sign-up-form').hover(function(){ 
         mouse_is_inside=true; 
     }, function(){ 
         mouse_is_inside=false; 

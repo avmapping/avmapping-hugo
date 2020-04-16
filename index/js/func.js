@@ -18,10 +18,9 @@ const login = (type = 'desktop') => {
 
 	// on login
 	closePhoneNaviMenu();
-	console.log(document.getElementById('section-sign-in').style);
-	document.getElementById('section-sign-up').style.display = 'none';
-	document.getElementById('section-sign-in').style.display = 'block';
-	/*
+	//document.getElementById('section-sign-up').style.display = 'none';
+	//document.getElementById('section-sign-in').style.display = 'block';
+	
 	if ((type = 'phone')) {
 		setTimeout(() => {
 			switchNavDisplay('login');
@@ -29,7 +28,7 @@ const login = (type = 'desktop') => {
 	} else {
 		switchNavDisplay('login');
 	}
-	*/
+	
 };
 
 const logout = (type = 'desktop') => {
@@ -77,6 +76,12 @@ var mouse_is_inside = true;
 $(document).ready(function()
 {
     $('.sign-in-form').hover(function(){ 
+        mouse_is_inside=true; 
+    }, function(){ 
+        mouse_is_inside=false; 
+    });
+
+    $('.sign-up-form').hover(function(){ 
         mouse_is_inside=true; 
     }, function(){ 
         mouse_is_inside=false; 
