@@ -1,7 +1,8 @@
 let userType = 'audio'; // user type can be 'audio', 'video' or ''
-const baseURL = 'https://beta.avmapping.co'
+//const baseURL = 'http://localhost:8888';
+const baseURL = 'https://beta.avmapping.co';
 var API = {'signup': baseURL+'/api/signup',
-		   'signin': baseURL+'/api/signin'}
+		   'signin': baseURL+'/api/signin'};
 
 const switchNavDisplay = nextState => {
 	const loginNavEls = Array.from(document.getElementsByClassName('user-login'));
@@ -97,6 +98,9 @@ function userSignUp() {
 	        	console.log(response);
 	        	if (response != 'err') {
 	        		login_state = true;
+	        		form[0].reset();
+	        		$("#check-signup-email").html("");
+	        		$("#check-password").html("");
 	        		closeSign();
 	        		login_auth();
 	        	} else {
@@ -128,6 +132,7 @@ function userSignIn() {
         	console.log(response);
         	if (response != 'err') {
         		login_state = true;
+        		form[0].reset();
         		closeSign();
         		login_auth();
         	} else {
