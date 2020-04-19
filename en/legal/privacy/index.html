@@ -161,9 +161,9 @@
 						
 						<div class="dropdown-menu">
 							
-							<a class="menu-item" href="/zh//legal/privacy">繁體中文</a>
+							<a class="menu-item" href="/zh/legal/privacy">繁體中文</a>
 							
-							<a class="menu-item" href="/en//legal/privacy">English</a>
+							<a class="menu-item" href="/en/legal/privacy">English</a>
 							
 						</div>
 						
@@ -293,16 +293,25 @@
 					</div>
 					<a class="navi-item" onclick="login()">Sign In</a>
 					<a class="navi-item" onclick="signup()">Sign Up</a>
-					<div class="accordion" style="height: 0">
+					<div id="phone-navi-language" class="navi-item navi-with-accordion">
+						<div class="item">
+							<a href=""><i class="fas fa-globe"></i></a>
+							<i
+								class="icon fas fa-chevron-down"
+								onclick="toggleAccordion('phone-navi-language')"
+							>
+							</i>
+						</div>
+						<div class="accordion" style="height: 0">
 							
 							
 							<div class="wrapper">
 								
-								<a class="menu-item" href="/zh/" onclick="closePhoneNaviMenu()"
+								<a class="menu-item" href="/zh/legal/privacy" onclick="closePhoneNaviMenu()"
 									>繁體中文</a
 								>
 								
-								<a class="menu-item" href="/en/" onclick="closePhoneNaviMenu()"
+								<a class="menu-item" href="/en/legal/privacy" onclick="closePhoneNaviMenu()"
 									>English</a
 								>
 								
@@ -310,6 +319,7 @@
 							
 							
 						</div>
+					</div>
 				</div>
 
 				<div class="navi-item-wrapper user-login hide">
@@ -340,7 +350,7 @@
 			<div class="container">
 				<div class="title">
 					<h1>Privacy Policy</h1>
-					<h2>The A.V. Mapping Privacy Policy was updated on April 19, 2020.</h2>
+					<h2>The A.V. Mapping Terms of Use was updated on April 19, 2020.</h2>
 					<p>
 						Your privacy is important to A.V. Mapping so we’ve developed a Privacy Policy that covers how we collect, use, disclose, transfer, and store your personal information.
 					</p>
@@ -538,13 +548,13 @@
 		<footer class="footer">
 		<div class="content">
 			<div class="left">
-			Copyright © 2020 A.V. Mapping Inc. All Rights Reserved
+			Copyright © 2020 A.V. Mapping Inc. All Rights Reserved.
 			</div>
 			<div class="connect">|</div>
 			<div class="right">
 			<span>
 				<a class="text" href='/en/legal/privacy' target="_blank">Privacy Policy</a> & 
-				<a href='/en/legal/privacy' target="_blank">Terms of Use</a>
+				<a href='/en/legal/terms' target="_blank">Terms of Use</a>
 			</span>
 			</div>
 		</div>

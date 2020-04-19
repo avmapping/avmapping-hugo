@@ -526,11 +526,23 @@ section {
       color: rgba(254, 254, 254, 0.9);
       opacity: 0.95; 
       margin-bottom: 16px;}
+      .section-index > .container > .content > h2 {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.8;
+      letter-spacing: 2px;
+      color: rgba(254, 254, 254, 0.9);
+      opacity: 0.95; 
+      margin: 16px auto;}
       @media screen and (max-width: 799px) {
         .section-index > .container > .content > h1 {
           font-size: 20px;
           line-height: 1.5;
-          letter-spacing: 0.49px;} }
+          letter-spacing: 0.49px;}
+        .section-index > .container > .content > h2 {
+          font-size: 18px;
+          line-height: 1.5;
+          letter-spacing: 0.49px; } }
       .section-index > .container > .content > .text {
       opacity: 0.9;
       opacity: 0.9;
@@ -543,17 +555,20 @@ section {
           font-size: 16px;
           line-height: 1.81;
           letter-spacing: 0.49px; } }
+      .section-index > .container > .content > .text > a{
+      text-decoration: underline;
+      color: #30c1b8; }
       .section-index > .container > .content > ul {
       list-style-type: disc;
       padding-left: 24px; }
-      @media screen and (max-width: 799px) {
-        .section-index > .container > .content > ul {
-          padding-left: 24px; } }
       .section-index > .container > .content > ul > li {
       margin: 10px 0; }
       .section-index > .container > .content > ul > li > a{
       text-decoration: underline;
       color: #30c1b8; }
+      .section-index > .container > .content > ul > li > ul {
+      list-style-type: decimal;
+      padding-left: 28px; }
 
   .section-sign {
     display: none;
