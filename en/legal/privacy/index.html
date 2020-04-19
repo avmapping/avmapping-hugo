@@ -1,0 +1,555 @@
+	<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="Description" content="A.V. Mapping is a service to automatically match musics from hundreds of musicians to your movie.">
+		<meta name="keywords" content="AV Mapping, Licensed Music, Video Music, Music">
+
+		<title>A.V. Mapping</title>
+		<link rel="shortcut icon" href="https://avmapping.co/index/images/av-icon.png" type="image/x-icon" />
+
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+		
+		<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+		<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/fontawesome.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/solid.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/brands.min.js"></script>
+		<script src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+
+		
+		<script src="https://www.youtube.com/iframe_api"></script>
+			
+		<link rel="stylesheet" href="https://avmapping.co/legal/lib/normalize/normalize.css" />
+		<link rel="stylesheet" href="https://avmapping.co/legal/css/index.css" />
+	</head>
+	<body>
+			<nav class="main-navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+			<div class="container">
+				
+				<a class="icon left" href='/en/'><img src="https://avmapping.co/index/images/av-logo.png"/></a>
+				<div
+					id="phone-menu-icon"
+					class="menu-icon show-on-phone"
+					onclick="togglePhoneNaviMenu()"
+				>
+					<img src="https://avmapping.co/index/images/icon-menu.png" />
+				</div>
+				<div
+					id="phone-close-icon"
+					class="close-icon show-on-phone hide"
+					onclick="togglePhoneNaviMenu()"
+				>
+					<i class="fas fa-times-circle"></i>
+				</div>
+				<div id="nav-user-not-login" class="right user-not-login show-on-desktop">
+					<div
+						id="navi-item-offical-website"
+						class="navi-item-container"
+						onmouseover="openDesktopDropdown(this)"
+					>	
+					
+						<div class="navi-item-padding">
+							<a class="navi-item" href="/en/">
+								Home
+							</a>
+						</div>
+
+						
+						<div class="dropdown-menu">
+							
+							<a class="menu-item" href="/en/#solution">The Issue</a>
+							
+							<a class="menu-item" href="/en/#product">Our Service</a>
+							
+							<a class="menu-item" href="/en/#advantage">Advantage</a>
+							
+							<a class="menu-item" href="/en/#feedback">Feedback</a>
+							
+							<a class="menu-item" href="/en/#history">Company History</a>
+							
+							<a class="menu-item" href="/en/#offline-service">Offline Service</a>
+							
+							<a class="menu-item" href="/en/#contact">Contact Us</a>
+							
+						</div>
+						
+					
+					</div>
+					<div
+						id="navi-item-musician"
+						class="navi-item-container"
+						onmouseover="openDesktopDropdown(this)"
+					>	
+					
+						<div class="navi-item-padding">
+							<a class="navi-item" href="/musicians">
+								Dear Musician
+							</a>
+						</div>
+
+						
+						<div class="dropdown-menu">
+							
+							<a class="menu-item" href="/musicians#why-need-us">Vision</a>
+							
+							<a class="menu-item" href="/musicians#why-select-us">Advantage</a>
+							
+							<a class="menu-item" href="/musicians#share-with-us">Custom Price</a>
+							
+							<a class="menu-item" href="/musicians#musician-communicate">What Musicians Said</a>
+							
+							<a class="menu-item" href="/musicians#feedback">Feedback</a>
+							
+							<a class="menu-item" href="/musicians#benefit">Special Offers</a>
+							
+							<a class="menu-item" href="/musicians#results">Achievement</a>
+							
+							<a class="menu-item" href="/musicians#statistics]">Statistics</a>
+							
+						</div>
+						
+					
+					</div>
+					<div
+						id="navi-item-service"
+						class="navi-item-container"
+						onmouseover="openDesktopDropdown(this)"
+					>	
+					
+						<div class="navi-item-padding">
+							<a class="navi-item" href="">
+								Service
+							</a>
+						</div>
+
+						
+						<div class="dropdown-menu">
+							
+							<a class="menu-item" href="">A.V. Mapping</a>
+							
+							<a class="menu-item" href="">Your Personal Music</a>
+							
+						</div>
+						
+					
+					</div>
+					<a class="navi-item" onclick="login()">Sign In</a>
+					<a class="navi-item" onclick="signup()">Sign Up</a>
+					<div
+						id="navi-item-language"
+						class="navi-item-container"
+						onmouseover="openDesktopDropdown(this)"
+					>
+						<div class="navi-item-padding">
+							
+							<a class="navi-item" href="">
+								<i class="fas fa-globe"></i>
+							</a>
+						</div>
+						
+						
+						<div class="dropdown-menu">
+							
+							<a class="menu-item" href="/zh//legal/privacy">繁體中文</a>
+							
+							<a class="menu-item" href="/en//legal/privacy">English</a>
+							
+						</div>
+						
+						
+					</div>
+				</div>
+				<div id="nav-user-login" class="right user-login show-on-desktop hide">
+				
+					<a class="navi-item" href="">About Us</a>
+				
+					<a class="navi-item" href="">A.V. Mapping</a>
+				
+					<a class="navi-item" href="">Your Personal Music</a>
+				
+
+					<div id="user" class="user" onmouseover="openDesktopDropdown(this)">
+						<div id="user-avatar" class="avatar-container audio">
+							<div class="avatar empty"></div>
+							<div class="avatar">
+								
+								<img src="https://avmapping.co/index/images/mock/user.png" />
+							</div>
+						</div>
+						
+						
+						<div class="dropdown-menu">
+							
+							<a class="menu-item" href="">Profile</a>
+							
+							<a class="menu-item" href="">Settings</a>
+							
+							<div class="menu-item" onclick="switchUser()">Choose Your Role</div>
+							<div class="menu-item" onclick="logout()">Sign Out</div>
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+			<div id="phone-navi-menu" class="phone-navi-menu">
+				<div class="navi-item-wrapper user-not-login">
+					<div id="phone-navi-official" class="navi-item navi-with-accordion">
+					
+						<div class="item">
+							<a class="navi-item" href="/en/">Home</a>
+							<i
+								class="icon fas fa-chevron-down"
+								onclick="toggleAccordion('phone-navi-official')"
+							>
+							</i>
+						</div>
+						
+						<div class="accordion" style="height: 0">
+							<div class="wrapper">
+								
+								<a class="menu-item" href="/en/#solution" onclick="closePhoneNaviMenu()"
+									>The Issue</a>
+								
+								<a class="menu-item" href="/en/#product" onclick="closePhoneNaviMenu()"
+									>Our Service</a>
+								
+								<a class="menu-item" href="/en/#advantage" onclick="closePhoneNaviMenu()"
+									>Advantage</a>
+								
+								<a class="menu-item" href="/en/#feedback" onclick="closePhoneNaviMenu()"
+									>Feedback</a>
+								
+								<a class="menu-item" href="/en/#history" onclick="closePhoneNaviMenu()"
+									>Company History</a>
+								
+								<a class="menu-item" href="/en/#offline-service" onclick="closePhoneNaviMenu()"
+									>Offline Service</a>
+								
+								<a class="menu-item" href="/en/#contact" onclick="closePhoneNaviMenu()"
+									>Contact Us</a>
+								
+							</div>
+						</div>
+						
+					
+					</div>
+					<div id="phone-navi-musician" class="navi-item navi-with-accordion">
+						
+						<div class="item">
+							
+							<a class="navi-item" href="">
+								Dear Musician
+							</a>
+							<i
+								class="icon fas fa-chevron-down"
+								onclick="toggleAccordion('phone-navi-musician')"
+							>
+							</i>
+						</div>
+						
+						<div class="accordion" style="height: 0">
+							<div class="wrapper">
+								
+								<a class="menu-item" href="#why-need-us" onclick="closePhoneNaviMenu()"
+									>Vision</a>
+								
+								<a class="menu-item" href="#why-select-us" onclick="closePhoneNaviMenu()"
+									>Advantage</a>
+								
+								<a class="menu-item" href="#share-with-us" onclick="closePhoneNaviMenu()"
+									>Custom Price</a>
+								
+								<a class="menu-item" href="#musician-communicate" onclick="closePhoneNaviMenu()"
+									>What Musicians Said</a>
+								
+								<a class="menu-item" href="#feedback" onclick="closePhoneNaviMenu()"
+									>Feedback</a>
+								
+								<a class="menu-item" href="#benefit" onclick="closePhoneNaviMenu()"
+									>Special Offers</a>
+								
+								<a class="menu-item" href="#results" onclick="closePhoneNaviMenu()"
+									>Achievement</a>
+								
+								<a class="menu-item" href="#statistics]" onclick="closePhoneNaviMenu()"
+									>Statistics</a>
+								
+							</div>
+						</div>
+						
+					
+					</div>
+					<a class="navi-item" onclick="login()">Sign In</a>
+					<a class="navi-item" onclick="signup()">Sign Up</a>
+					<div class="accordion" style="height: 0">
+							
+							
+							<div class="wrapper">
+								
+								<a class="menu-item" href="/zh/" onclick="closePhoneNaviMenu()"
+									>繁體中文</a
+								>
+								
+								<a class="menu-item" href="/en/" onclick="closePhoneNaviMenu()"
+									>English</a
+								>
+								
+							</div>
+							
+							
+						</div>
+				</div>
+
+				<div class="navi-item-wrapper user-login hide">
+				
+					<a class="navi-item" href="">About Us</a>
+				
+					<a class="navi-item" href="">A.V. Mapping</a>
+				
+					<a class="navi-item" href="">Your Personal Music</a>
+				
+				
+				
+				
+					
+					<a class="navi-item" href="">Profile</a>
+					
+					<a class="navi-item" href="">Settings</a>
+					
+				
+				
+
+					<div class="navi-item" onclick="switchUser()">Choose Your Role</div>
+					<div class="navi-item" onclick="logout()">Sign Out</div>
+				</div>
+			</div>
+		</nav>
+		<section class="section-index">
+			<div class="container">
+				<div class="title">
+					<h1>Privacy Policy</h1>
+					<h2>The A.V. Mapping Privacy Policy was updated on April 19, 2020.</h2>
+					<p>
+						Your privacy is important to A.V. Mapping so we’ve developed a Privacy Policy that covers how we collect, use, disclose, transfer, and store your personal information.
+					</p>
+				</div>
+				<div class="content">
+					<h1>隱私權保護政策的適用範圍</h1>
+					<p class="text">
+						隱私權保護政策內容，包括本站如何處理在您使用站服務時收集到的個人識別資料。隱私權保護政策不適用於本站以外的相關連結網站，也不適用於非本站所委託或參與管理的人員。
+					</p>
+				</div>
+				<div class="content">
+					<h1>個人資料的蒐集、處理及利用方式</h1>
+					<ul class="text">
+						<li>
+							當您使用本站或使用本站所提供之功能服務時，我們將視該網站功能性質，請您提供必要的個人資料，並在該特定目的範圍內處理及利用您的個人資料；非經您書面同意，本站不會將個人資料用於其他用途。
+						</li>
+						<li>
+							本站在您使用服務信箱、問卷調查等互動性功能時，會保留您所提供 的姓名、電子郵件地址、聯絡方式及使用時間等。 
+						</li>
+						<li>
+							於一般使用時，伺服器會自行記錄相關行徑，包括您使用連線設備的 IP 位址、使用時間、使用的功能及點選資料記錄等，做為我們增進本站服務的參考依據，此記錄為內部應用，決不對外公佈。
+						</li>
+						<li>
+							為提供精確的服務，我們會將收集的問卷調查內容進行統計與分析，分析結果之統計數據或說明文字呈現，除供內部研究外，我們會視需要公佈統計數據及說明文字，但不涉及特定個人之資料。
+						</li>
+					</ul>
+				</div>
+				<div class="content">
+					<h1>資料之安全及保護</h1>
+					<ul class="text">
+						<li>
+							為保護您的隱私，本公司提供必要之技術及措施保護個人資料。
+						</li>
+						<li>
+							您的個人資料、註冊帳號及密碼等，請您妥善保管，避免外洩。於個人或非個人電腦上使用本公司A.V. Mapping服務時，必要時請登出或關閉軟體與瀏覽器視窗，以免您的資料遭人盜用。您的付費資訊(含信用卡資料)，請您妥善保管，避免為他人之不法用途。
+						</li>
+						<li>
+							本站主機設於亞馬遜(AWS)上均設有防火牆、防毒系統等相關的各項 資訊安全設備及必要的安全防護措施，加以保護本站及您的個人資料採用嚴格的保護措施，只由經過授權的人員才能接觸您的個人資料，相關處理人員皆簽有保密合約，如有違反保密義務者，將會受到相關的法律處分。
+						</li>
+						<li>
+							如因業務需要有必要委託其他單位提供服務時，本公司亦會嚴格要求其遵守保密義務，並且採取必要檢查程序以確定其將確實遵守。
+						</li>
+						<li>
+							A.V. Mapping服務均有可能包含其他非本公司網站或網頁連結，若您個人同意該網站蒐集、處理或利用您的個人資料，本公司不負任何連帶責任。
+						</li>
+						<li>
+							您同意在A.V. Mapping服務進行之消費時所留存的資料與事實相符，如嗣後發現你的個人資料遭他人非法使用或有任何異常時，應即時通知本公司。
+						</li>
+						<li>
+							您同意於使用A.V. Mapping服務時，所提供及使用之資料皆為合法，並無侵害第三人權利、違反第三方協議或涉及任何違法行為。如因使用服務而致第三人損害，除本公司故意或重大過失外，本公司並不負擔相關賠償責任。
+						</li>
+					</ul>
+				</div>
+				<div class="content">
+					<h1>網站對外的相關連結</h1>
+					<ul class="text">
+						<li>
+							本站提供其他網站的網路連結，您也可經由本站所提供的連結，點選進入其他網站。但該連結網站不適用本站的隱私權保護政策，您必須參考該連結網站中的隱私權保護政策。
+						</li>
+					</ul>
+				</div>
+				<div class="content">
+					<h1>個人資料的自主權</h1>
+					<ul class="text">
+						<li>
+							您本人可查詢、複製或申請變動屬於您個人資料範圍，若非本人或於本公司尚未查證您為本人前，您不得申請查詢、複製、請求閱覽或申請變動不屬於您帳號之個人資料及帳號服務。如非前述情況之申請者，必要時您應提供相關個人資料及書面資訊，使本公司可協助處理作業程序。
+						</li>
+						<li>
+							於您為本站會員的期間內，本公司將保存您的個人資料。您本人可要求停止利用或刪除屬於您的個人資料；但一經停止或刪除，您將無法繼續使用本站的服務。
+						</li>
+						<li>
+							於妨害國家重大利益、妨害公務機關執行法定職務、妨害蒐集機關或第三人重大利益時，本公司有權拒絕您主動提出變更、刪除或異動個人資料之請求。
+						</li>
+					</ul>
+				</div>
+				<div class="content">
+					<h1>與第三人共用個人資料之政策</h1>
+					<p class="text">
+						本站絕不會提供、交換、出租或出售任何您的個人資料給其他個人、團體、 私人企業或公務機關，但有法律依據或合約義務者，不在此限。前項但書之情形包括不限於：
+					</p>
+					<ul class="text">
+						<li>
+							經由您書面同意。
+						</li>
+						<li>
+							法律明文規定。
+						</li>
+						<li>
+							為免除您生命、身體、自由或財產上之危險。
+						</li>
+						<li>
+							與公務機關或學術研究機構合作，基於公共利益為統計或學術研究而有 必要，且資料經過提供者處理或蒐集者依其揭露方式無從識別特定之當事人。
+						</li>
+						<li>
+							當您在網站的行為，違反服務條款或可能損害或妨礙網站與其他使用者權益或導致任何人遭受損害時，經網站管理單位研析揭露您的個人資料是為了辨識、聯絡或採取法律行動所必要者。
+						</li>
+						<li>
+							有利於您的權益。
+						</li>
+						<li>
+							本站委託廠商協助蒐集、處理或利用您的個人資料時，將對委外廠商或個人善盡監督管理之責。
+						</li>
+					</ul>
+				</div>
+				<div class="content">
+					<h1>Cookie之使用</h1>
+					<p class="text">
+						為了提供您最佳的服務，本站會在您的電腦中放置並取用我們的Cookie，您可以透過設定您的個人電腦或上網設備，決定是否允許 Cookie 技術的使用，若您關閉 Cookie 時，可能會造成您使用本網站服務時之不便利或部分功能限制。
+					</p>
+				</div>
+				<div class="content">
+					<h1>隱私權保護政策之修正</h1>
+					<ul class="text">
+						<li>
+							將不定時更新本政策，並遵循當地隱私權與個人資料保護相關法令，當本公司做出重大修改時，會於官方網站公布。
+						</li>
+						<li>
+							本政策構成服務條款的一部分。如您不同意本政策之任何條款或修改變更之內容，請您立即停止使用本站。
+						</li>
+						<li>
+							如果您對本公司的隱私權或個人資料保護政策有任何問題，請<a href="mailto:av.imapping@gmail.com">與我們聯絡</a>。
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+			<section class="section-sign" id="section-sign-up">
+			<div id="signup" class="anchor"></div>
+			<div class="container">
+				<div class="section-title show-on-phone">Create Your Account</div>
+				<button class="close-btn show-on-phone" aria-label="Close" onclick="closeSign()">
+					<i class="fas fa-times"></i>
+				</button>
+				<div class="sign-up-form">
+					<div class="left">
+						<div class="title show-on-desktop">Create Your Account</div>
+						<form autocomplete="off" method="post" id="form_signup">
+							<div class="item required">
+								<input type="text" name="username" placeholder='Username' />
+							</div>
+							<div class="item required">
+								<input type="email" name="email" id="signup-email" placeholder='Email address' onkeyup="checkEmail()" />
+							</div>
+							<div class="text">
+								<span id='check-signup-email'></span>
+							</div>
+							<div class="item required">
+								<input type="password" name="password" id="password" placeholder='Password' />
+							</div>
+							<div class="item">
+								<input type="password" name="re-password" id="re-password" placeholder='Confirmed password' onkeyup="checkPassword()" />
+							</div>
+							<div class="text">
+								<span id='check-password'></span>
+							</div>
+							<input class="submit" type="button" value='Register' onclick="userSignUp()"/>
+						</form>
+					</div>
+					<div class="right">
+						<img src="https://avmapping.co/index/images/section-solution.png"/>
+						<div class="text">
+							<button onclick="login()">I am already a member</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-sign"  id="section-sign-in">
+			<div id="signin" class="anchor"></div>
+			<div class="container">
+				<div class="section-title show-on-phone">Sign in to A.V. Mapping</div>
+				<button class="close-btn show-on-phone" aria-label="Close" onclick="closeSign()">
+					<i class="fas fa-times"></i>
+				</button>
+				<div class="sign-in-form">
+					<div class="left">
+						<img src="https://avmapping.co/index/images/section-solution.png"/>
+						<div class="text">
+							<span>New to A.V. Mapping?</span>
+							<button onclick="signup()">Create an accont.</button>
+							<span> </span>
+						</div>
+					</div>
+					<div class="right">
+						<div class="title show-on-desktop">Sign in to A.V. Mapping</div>
+						<form autocomplete="off" method="post" id="form_signin">
+							<input type="email" name="email" placeholder='Email address' />
+							<input type="password" name="password" placeholder='Password' />
+							<input class="submit" type="button" value='Sign In' onclick="userSignIn()" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>	
+		<footer class="footer">
+		<div class="content">
+			<div class="left">
+			Copyright © 2020 A.V. Mapping Inc. All Rights Reserved
+			</div>
+			<div class="connect">|</div>
+			<div class="right">
+			<span>
+				<a class="text" href='/en/legal/privacy' target="_blank">Privacy Policy</a> & 
+				<a href='/en/legal/privacy' target="_blank">Terms of Use</a>
+			</span>
+			</div>
+		</div>
+	</footer>
+	
+		</body>
+	<script src="https://avmapping.co/index/js/nav.js"></script>
+</html>	

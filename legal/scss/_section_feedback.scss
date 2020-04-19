@@ -1,0 +1,106 @@
+.section-feedback {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	background-image: url('../images/section-feedback-bg.jpg');
+	background-position: center;
+	background-size: cover;
+	min-height: calc(100vh - 72px);
+	padding: 80px 0;
+
+	@media screen and ($phone) {
+		display: block;
+		min-height: calc(100vh - 60px);
+		background-image: linear-gradient(to bottom, #090909 -82%, #202020 130%);
+		border-bottom: solid 1px #707070;
+	}
+
+	& > .section-title {
+		margin-bottom: 70px;
+
+		@media screen and ($phone) {
+			margin-bottom: 40px;
+		}
+	}
+
+	& > .container {
+		& > .content {
+			display: flex;
+			justify-content: space-between;
+
+			@media screen and ($phone) {
+				flex-wrap: wrap;
+			}
+		}
+	}
+
+	& .block {
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 270px;
+		height: 222px;
+		padding: 25px;
+		margin: 10px;
+		border-radius: 5px;
+		background-color: rgba(107, 107, 107, 0.3);
+		cursor: pointer;
+
+		@media screen and ($phone) {
+			width: 100%;
+			max-width: 270px;
+			margin: 10px auto;
+		}
+
+		&.mid {
+			margin-top: 70px;
+
+			@media screen and ($phone) {
+				margin-top: 10px;
+			}
+		}
+
+		& > .play {
+			position: absolute;
+			width: 35px;
+			top: 10px;
+			right: 10px;
+			pointer-events: none;
+
+			& > img {
+				width: 100%;
+				pointer-events: none;
+			}
+		}
+
+		& > .title {
+			font-size: 20px;
+			letter-spacing: 3px;
+			text-align: center;
+			color: white;
+			text-shadow: 0 15px 20px #000000;
+			margin-bottom: 30px;
+			pointer-events: none;
+		}
+
+		& > .content {
+			font-size: 18px;
+			letter-spacing: 3px;
+			text-align: center;
+			line-height: 1.3;
+			color: white;
+			pointer-events: none;
+		}
+	}
+
+	& .swiper-slide {
+		transition: 0.2s ease-in-out;
+	}
+
+	& .swiper-slide-active {
+		margin-top: 50px;
+	}
+}

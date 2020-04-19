@@ -1552,6 +1552,8 @@ section {
     .footer > .content > .right {
       text-align: left;
       width: 45%; }
+    .footer > .content > .right > span a {
+      color: #f4f4f4; }  
     .footer > .content > .connect {
       padding: 0 20px;}
       @media screen and (max-width: 799px) {

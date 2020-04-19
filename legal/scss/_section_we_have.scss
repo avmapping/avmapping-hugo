@@ -1,0 +1,144 @@
+.section-we-have {
+	padding: 80px 0;
+	background: #e1e1e1;
+
+	@media screen and ($phone) {
+		padding: 70px 0 0;
+	}
+
+	& > .section-title {
+		margin-bottom: 60px;
+		color: #707070;
+
+		@media screen and ($phone) {
+			margin-bottom: 35px;
+		}
+	}
+
+	& > .container {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+
+		@media screen and ($phone) {
+			flex-wrap: wrap;
+		}
+
+		& > .border.show-on-phone {
+			width: calc(100% + 50px);
+			height: 1px;
+			background: rgba(44, 44, 44, 0.6);
+			margin-left: -25px;
+			margin-right: -25px;
+			margin-bottom: 30px;
+		}
+
+		& > .card {
+			position: relative;
+			width: 33%;
+
+			@media screen and ($phone) {
+				width: 100%;
+			}
+
+			&:not(:last-child) {
+				margin-right: 20px;
+
+				@media screen and ($phone) {
+					margin-right: unset;
+				}
+			}
+
+			& > .top {
+				display: flex;
+				position: relative;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 200px;
+				border-radius: 4px;
+				background: #5f3d3d;
+				margin-bottom: 5px;
+
+				@media screen and ($phone) {
+					height: 0;
+					padding-bottom: 77%;
+				}
+
+				& > img {
+					position: absolute;
+
+					&.icon {
+						height: 23%;
+
+						@media screen and ($phone) {
+							top: 38%;
+						}
+					}
+
+					&.decoration {
+						height: 70%;
+
+						@media screen and ($phone) {
+							top: 15%;
+						}
+					}
+				}
+			}
+
+			& > .bottom {
+				position: relative;
+				width: 100%;
+				min-height: 200px;
+				border-radius: 4px;
+				border: solid 1px rgba(0, 0, 0, 0.3);
+				background: white;
+				padding: 20px;
+				z-index: 2;
+
+				@media screen and ($phone) {
+					border: unset;
+					background: unset;
+					min-height: unset;
+					padding: 30px 8px 50px;
+				}
+
+				& > h5 {
+					font-size: 20px;
+					font-weight: 500;
+					text-align: center;
+					letter-spacing: 2px;
+
+					&.green {
+						color: #16bac5;
+					}
+
+					&.yellow {
+						color: #fbb13c;
+					}
+
+					&.red {
+						color: #fb3c3c;
+					}
+				}
+
+				& > p {
+					font-size: 14px;
+					line-height: 1.31;
+					letter-spacing: 1.2px;
+					color: #808988;
+				}
+			}
+
+			& > .shadow.show-on-desktop {
+				position: absolute;
+				bottom: -10px;
+				width: 100%;
+				height: 20px;
+				border-radius: 8px;
+				filter: blur(35px);
+				background-color: #171d1c;
+			}
+		}
+	}
+}
