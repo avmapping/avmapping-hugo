@@ -110,7 +110,7 @@ $(document).ready(function() {
 		spaceBetween: 20,
 		initialSlide: 1,
 		on: {
-			slideChange: () => playActiveUserVideo(true),
+			slideChange: () => playActiveUserVideo(false),
 			click: event => {
 				const element = event.target;
 				const isPrev = element.classList.contains('swiper-slide-prev');
