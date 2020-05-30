@@ -3,6 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://avmapping.co/en/member/</loc>
+    <lastmod>2020-05-30T17:56:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://avmapping.co/zh/member/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://avmapping.co/en/member/"
+                />
+  </url>
+  
+  <url>
     <loc>https://avmapping.co/en/legal/terms/</loc>
     <lastmod>2020-04-19T21:38:09+08:00</lastmod>
     <changefreq>weekly</changefreq>

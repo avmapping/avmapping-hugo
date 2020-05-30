@@ -41,23 +41,11 @@
 		</script>
 
 			
-		<link rel="stylesheet" href="https://avmapping.co/musicians/lib/normalize/normalize.css" />
-		<link rel="stylesheet" href="https://avmapping.co/musicians/css/index.css" />
+		<link rel="stylesheet" href="https://avmapping.co/member/lib/normalize/normalize.css" />
+		<link rel="stylesheet" href="https://avmapping.co/member/css/index.css" />
 	</head>
 	<body>
-			<div id="youtube-modal" class="youtube-modal">
-			<div class="modal-container">
-				<iframe
-					id="youtube-iframe"
-					src=""
-					frameborder="0"
-					allow="autoplay; encrypted-media"
-					allowfullscreen
-				></iframe>
-				<i class="close fas fa-times-circle" onclick="closeYoutubeModal()"></i>
-			</div>
-		</div>
-		<nav class="main-navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+			<nav class="main-navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 			<div class="container">
 				
 				<a class="icon left" href='/'><img src="https://avmapping.co/index/images/av-logo.png"/></a>
@@ -116,7 +104,7 @@
 					>	
 					
 						<div class="navi-item-padding">
-							<a class="navi-item active" href="/zh/musicians">
+							<a class="navi-item" href="/zh/musicians">
 								給音樂人的信
 							</a>
 						</div>
@@ -151,7 +139,7 @@
 					>	
 					
 						<div class="navi-item-padding">
-							<a class="navi-item" href="/zh/member">
+							<a class="navi-item active" href="/zh/member">
 								加入會員
 							</a>
 						</div>
@@ -184,9 +172,9 @@
 						
 						<div class="dropdown-menu">
 							
-							<a class="menu-item" href="/zh/musicians">繁體中文</a>
+							<a class="menu-item" href="/zh/member">繁體中文</a>
 							
-							<a class="menu-item" href="/en/musicians">English</a>
+							<a class="menu-item" href="/en/member">English</a>
 							
 						</div>
 						
@@ -356,11 +344,11 @@
 							
 							<div class="wrapper">
 								
-								<a class="menu-item" href="/zh/musicians" onclick="closePhoneNaviMenu()"
+								<a class="menu-item" href="/zh/member" onclick="closePhoneNaviMenu()"
 									>繁體中文</a
 								>
 								
-								<a class="menu-item" href="/en/musicians" onclick="closePhoneNaviMenu()"
+								<a class="menu-item" href="/en/member" onclick="closePhoneNaviMenu()"
 									>English</a
 								>
 								
@@ -393,328 +381,440 @@
 				</div>
 			</div>
 		</nav>
-		<section class="section-index">
+		<section id="section-index">
+			<div class="content">
+				<h1>加入會員</h1>
+				<p>
+					享有優惠價格、更快速的通道，<br />
+					還能更近距離接觸到喜歡的音樂。
+				</p>
+			</div>
+			<div class="image"><img src="https://avmapping.co/member/images/musician＿cover.png" /></div>
+		</section>
+		<section id="section-payment-method">
+			<h3 class="section-title">付費方式</h3>
 			<div class="container">
-				<h1>影像配樂智能平台</h1>
-				<div class="decoration-mobile"></div>
-				<div class="decoration"></div>
-				<div class="text">
-					讓我們與您一同打造<br />
-					更美好的音樂創作環境
-				</div>
-				
-				<a class="button" href=""><button type="button">加入我們</button></a>
-			</div>
-		</section>
-		<section class="section-why-need-us">
-			<div id="why-need-us" class="anchor"></div>
-			<div id="swiper-why-need-us" class="swiper-container">
-				<h2 class="section-title show-on-phone">為什麼需要我們？</h2>
-				<div class="swiper-wrapper">
-					<div class="swiper-slide slide slide-1">
-						<div class="background-image"></div>
-						<div class="container narrow">
-							<h2 class="section-title show-on-desktop">為什麼需要我們？</h2>
-							<div class="content">
-								<h3>#YourMusicYourFuture</h3>
-								<p class="content-text">
-									每個人都具有誓死捍衛自己作品的權利。
-								</p>
+				<div class="left">
+					<div class="block">
+						<div class="icon"><img src="https://avmapping.co/member/images/icon＿method＿1.png" /></div>
+						<div class="content">
+							<div class="block-title">
+								<span class="no"><img src="https://avmapping.co/member/images/icon＿num＿1.png" /></span>
+								<span class="text">購買使用卷</span>
+							</div>
+							<div class="block-content">
+								<div class="item">
+									<span class="list-deco"></span>
+									<span class="list-text">輸入使用卷（單次200元）後開始使用</span>
+								</div>
+								<div class="item">
+									<span class="list-deco"></span>
+									<span class="list-text">選購會員方案更划算</span>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="swiper-slide slide slide-2">
-						<div class="background-image"></div>
-						<div class="container narrow">
-							<h2 class="section-title show-on-desktop">為什麼需要我們？</h2>
-							<div class="content">
-								<h3>#讓每部作品再現光輝</h3>
-								<p class="content-text">
-									有新作品了嗎？ 讓那些深藏硬碟許久、甚至胎死腹中的音樂作品們，重拾第二人生，站上新的舞台吧！
-								</p>
+					<div class="block">
+						<div class="icon"><img src="https://avmapping.co/member/images/icon＿method＿2.png" /></div>
+						<div class="content">
+							<div class="block-title">
+								<span class="no"><img src="https://avmapping.co/member/images/icon＿num＿2.png" /></span>
+								<span class="text">進入主程式，輸入預算</span>
 							</div>
-						</div>
-					</div>
-					<div class="swiper-slide slide slide-3">
-						<div class="background-image"></div>
-						<div class="container narrow">
-							<h2 class="section-title show-on-desktop">為什麼需要我們？</h2>
-							<div class="content">
-								<h3>#給充滿音樂才華的你</h3>
-								<p class="content-text">
-									又是新的一天，被夢想叫醒的你，只想窩在家裡繼續將音樂完成，但心想著：我需要被更多人看見啊！
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide slide slide-4">
-						<div class="background-image"></div>
-						<div class="container narrow">
-							<h2 class="section-title show-on-desktop">為什麼需要我們？</h2>
-							<div class="content">
-								<h3>#提升整體音樂創作環境</h3>
-								<p class="content-text">
-									曝光、公平、零溝通 作品傳播全球、讓更多好作品被看見、並且一鍵完成授權
-								</p>
+							<div class="block-content">
+								<div class="item">
+									<span class="list-deco"></span>
+									<span class="list-text"
+										>開始體驗全球最新潮自動影像配樂AI程式</span
+									>
+								</div>
+								<div class="item">
+									<span class="list-deco"></span>
+									<span class="list-text">直接跟程式談預算、得到授權合約</span>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div id="pagination-why-need-us" class="swiper-pagination"></div>
-			</div>
-		</section>
-		<section class="section-why-select-us">
-			<div id="why-select-us" class="anchor"></div>
-			<div class="container narrow">
-				<h2 class="section-title">為什麼選擇我們呢?</h2>
-				<div class="row row-1">
-					<div class="image"></div>
-					<div class="content">
-						<h4>放心地把您的作品交給我們吧!</h4>
-						<p>
-							在這裡，你可以與來自全球各樣曲風的作品並列在架上，播來聽聽，撞出火花，讓更多人愛上你的作品！
-						</p>
+				<div class="right">
+					<div class="block">
+						<div class="icon"><img src="https://avmapping.co/member/images/icon＿method＿3.png" /></div>
+						<div class="content">
+							<div class="block-title">
+								<span class="no"><img src="https://avmapping.co/member/images/icon＿num＿3.png" /></span>
+								<span class="text">得到影像配樂結果及估價單</span>
+							</div>
+							<div class="block-content">
+								<div class="item">
+									<span class="list-deco"></span>
+									<span class="list-text">價格透明、下載試聽</span>
+								</div>
+								<div class="item">
+									<span class="list-deco"></span>
+									<span class="list-text"
+										>得到完成配樂的影像，直接示範給業主聽！</span
+									>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="decoration"></div>
-				</div>
-				<div class="border show-on-phone"></div>
-				<div class="row row-2 reverse">
-					<div class="image"></div>
-					<div class="content">
-						<h4>我們可以提高音樂人交易的效率</h4>
-						<p>
-							我們擁有全球唯一的影像配樂A.I.，學習知名影像配樂家的經驗，走入實質市場的驗證，用科學方法打造「最貼近使用情境的專業影像配樂A.I.」，提升使用者交易效率與品質。
-						</p>
+					<div class="block">
+						<div class="icon"><img src="https://avmapping.co/member/images/icon＿method＿4.png" /></div>
+						<div class="content">
+							<div class="block-title">
+								<span class="no"><img src="https://avmapping.co/member/images/icon＿num＿4.png" /></span>
+								<span class="text">選擇付費購買獲得合約授權</span>
+							</div>
+							<div class="block-content">
+								<div class="item">
+									<span class="list-deco"></span>
+									<span class="list-text">還需要思考時間嗎？</span>
+								</div>
+								<div class="item">
+									<span class="list-deco"></span>
+									<span class="list-text"
+										>系統會保留這筆交易14天，期間內隨時都可以回來購買哦！</span
+									>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="decoration"></div>
-				</div>
-				<div class="border show-on-phone"></div>
-				<div class="row row-3">
-					<div class="image"></div>
-					<div class="content">
-						<h4>透過我們的平台公平公正地交易</h4>
-						<p>
-							曝光、公平、零溝通<br />
-							作品傳播全球、讓你與更多好作品同時被看見、創作及授權一鍵完成
-						</p>
-					</div>
-					<div class="decoration"></div>
 				</div>
 			</div>
 		</section>
-		<section class="section-we-have">
-			<div id="why-have" class="anchor"></div>
-			<h2 class="section-title">因為我們擁有</h2>
-			<div class="container">
+		<section id="section-plan">
+			<h3 class="section-title">選取方案</h3>
+			<h4 class="section-subtitle">找到最適合您需求的 A.V.Mapping 方案</h4>
+			<div class="actions">
+				<div class="button active" id="video-member" onClick="selectPlan('video')">
+					影像會員
+				</div>
+				<div class="button" id="business-member" onClick="selectPlan('business')">
+					企業會員
+				</div>
+				<div class="button" id="musician-member" onClick="selectPlan('musician')">
+					音樂會員
+				</div>
+			</div>
+			<div class="switch-button hide" id="plan-switch-button">
+				<div class="selection">計月</div>
+				<label class="switch">
+					<input
+						type="checkbox"
+						id="plan-switch-button-input"
+						onChange="onChangeSwitchValue()"
+					/>
+					<span class="slider round"></span>
+				</label>
+				<div class="selection">計年</div>
+			</div>
+			<div class="container cards-4 active" id="video-member-content">
 				<div class="card">
 					<div class="top">
-						<img class="icon" src="https://avmapping.co/musicians/images/icon-teamwork.png" />
-						<img class="decoration" src="https://avmapping.co/musicians/images/icon-decor-blue.png" />
+						<div class="plan-name">教育方案</div>
+						<div class="price">
+							<span class="main">$300</span>
+						</div>
 					</div>
 					<div class="bottom">
-						<h5 class="green">熱忱與決心</h5>
-						<p>
-							以出於對「影視音工作者」處境的感同身受、持續致力改變產業面貌的熱忱與決心，投入極大的時間與精力而打造出A.V. Mapping。
-						</p>
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">使用卷6張</div>
+							</div>
+							<div class="item">
+								<div class="text">依據每次專案報價付費</div>
+							</div>
+							<div class="item">
+								<div class="text">需提供學校官方證明文件審核</div>
+								<div class="small-text">(例：學生證、在學或教職證明)</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
 					</div>
-					<div class="shadow show-on-desktop"></div>
 				</div>
-				<div class="border show-on-phone"></div>
 				<div class="card">
 					<div class="top">
-						<img class="icon" src="https://avmapping.co/musicians/images/icon-checklist.png" />
-						<img class="decoration" src="https://avmapping.co/musicians/images/icon-decor-yellow.png" />
+						<div class="plan-name">基本方案</div>
+						<div class="price">
+							<span class="main">$200</span>
+						</div>
 					</div>
 					<div class="bottom">
-						<h5 class="yellow">專業經驗</h5>
-						<p>
-							運用第七年持續在影視音樂產業上的毅力與專業經驗，知悉影像業者的需求，打造出本平台來幫助影音業者雙方溝通與交流。
-						</p>
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">單次購買使用卷</div>
+								<div class="small-text">（內含100元程式使用費）</div>
+							</div>
+							<div class="item">
+								<div class="text">依據每次專案報價付費</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
 					</div>
-					<div class="shadow show-on-desktop"></div>
 				</div>
-				<div class="border show-on-phone"></div>
 				<div class="card">
 					<div class="top">
-						<img class="icon" src="https://avmapping.co/musicians/images/icon-development.png" />
-						<img class="decoration" src="https://avmapping.co/musicians/images/icon-decor-red.png" />
+						<div class="label">最划算</div>
+						<div class="plan-name">進階方案</div>
+						<div class="price">
+							<span class="main">$1,900</span><span class="time">/月</span>
+						</div>
 					</div>
 					<div class="bottom">
-						<h5 class="red">技術與資源</h5>
-						<p>
-							由台灣原生團隊自籌資源，先拓「全球首創影視配樂A.I.聲音技術」－A.I.偵測、自動音訊後處理、自動音樂分類與辨識等。
-						</p>
-					</div>
-					<div class="shadow show-on-desktop"></div>
-				</div>
-			</div>
-		</section>
-		<section class="section-share-with-us">
-			<div id="share-with-us" class="anchor"></div>
-			<div class="container">
-				<h2 class="section-title">與我們共享</h2>
-				<div class="content">
-					<div class="text">您可以自訂價格</div>
-					<img class="icon" src="https://avmapping.co/musicians/images/icon-share.png" />
-					<div class="text">宣傳個人音樂頁面</div>
-				</div>
-			</div>
-		</section>
-		<section class="section-musician-communicate">
-			<div id="musician-communicate" class="anchor"></div>
-			<div class="container">
-				<h2 class="section-title">音樂人交流</h2>
-				<div class="content">
-					<div class="text show-on-desktop">出專(合)輯</div>
-					<div class="play" onClick="openYoutubeModal('musician')">
-						<img class="icon" src="https://avmapping.co/musicians/images/icon-play.png" alt="" />
-						<div class="video show-on-phone"></div>
-						<div class="text show-on-desktop">音樂人串聯影片</div>
-					</div>
-					<div class="text show-on-desktop">
-						線上研討會
-						<br />
-						和定期聚會
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="section-feedback">
-			<div id="feedback" class="anchor"></div>
-			<h2 class="section-title">使用回饋</h2>
-			<div class="container show-on-desktop">
-				<div class="content">
-					<div class="block play" onclick="openYoutubeModal('noncreatorFeedback')">
-						<div class="play">
-							<img class="icon" src="https://avmapping.co/musicians/images/icon-play.png" alt="" />
-						</div>
-						<div class="title">非創作者</div>
-						<div class="content">
-							音樂要怎麼製作<br/ >
-							音樂要怎麼製作<br/ >
-							不知道音樂人多苦
-						</div>
-					</div>
-					<div class="block play mid" onclick="openYoutubeModal('videomanFeedback')">
-						<div class="play">
-							<img class="icon" src="https://avmapping.co/musicians/images/icon-play.png" alt="" />
-						</div>
-						<div class="title">影像人</div>
-						<div class="content">
-							溝通時間<br/ >
-							幫助音樂人<br/ >
-							更多選擇
-						</div>
-					</div>
-					<div class="block play" onclick="openYoutubeModal('studioFeedback')">
-						<div class="play">
-							<img class="icon" src="https://avmapping.co/musicians/images/icon-play.png" alt="" />
-						</div>
-						<div class="title">錄音室</div>
-						<div class="content">
-							工作更快<br/ >
-							更多選擇<br/ >
-							認識新音樂人
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="swiper-feedback" class="swiper-container show-on-phone">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="block play" onclick="openYoutubeModal('noncreatorFeedback')">
-							<div class="play">
-								<img class="icon" src="https://avmapping.co/musicians/images/icon-play.png" alt="" />
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">4次使用卷</div>
+								<div class="small-text">(限一年內使用完畢)</div>
 							</div>
-							<div class="title">非創作者</div>
-							<div class="content">
-								音樂要怎麼製作<br/ >
-								音樂要怎麼製作<br/ >
-								不知道音樂人多苦
+							<div class="item">
+								<div class="text">儲值1,180元</div>
 							</div>
 						</div>
+						<a class="button">選擇此方案</a>
 					</div>
-					<div class="swiper-slide">
-						<div class="block play mid" onclick="openYoutubeModal('videomanFeedback')">
-							<div class="play">
-								<img class="icon" src="https://avmapping.co/musicians/images/icon-play.png" alt="" />
-							</div>
-							<div class="title">影像人</div>
-							<div class="content">
-								溝通時間<br/ >
-								幫助音樂人<br/ >
-								更多選擇
-							</div>
+				</div>
+				<div class="card">
+					<div class="top">
+						<div class="plan-name">專業方案</div>
+						<div class="price">
+							<span class="main">$10,000</span><span class="time">/年</span>
 						</div>
 					</div>
-					<div class="swiper-slide">
-						<div class="block play" onclick="openYoutubeModal('studioFeedback')">
-							<div class="play">
-								<img class="icon" src="https://avmapping.co/musicians/images/icon-play.png" alt="" />
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">15次使用卷</div>
 							</div>
-							<div class="title">錄音室</div>
-							<div class="content">
-								工作更快<br/ >
-								更多選擇<br/ >
-								認識新音樂人
+							<div class="item">
+								<div class="text">儲值7,375元</div>
+								<div class="small-text">(限一年內使用完畢)</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div id="pagination-why-need-us" class="swiper-pagination"></div>
-			</div>
-		</section>
-		<section class="section-benefit">
-			<div id="benefit" class="anchor"></div>
-			<div class="container">
-				<h2 class="section-title">會員專屬優惠</h2>
-				<div class="content">
-					<div class="item">廠商聯繫</div>
-					<div class="item">形象拍攝</div>
-					<div class="item">最新消息</div>
-					<div class="item">廣告優惠</div>
-				</div>
-			</div>
-		</section>
-		<section class="section-results">
-			<div id="results" class="anchor"></div>
-			<div class="container">
-				<div class="title-group">
-					<h2>成果展示</h2>
-					<h4>配對廣告/影像人串聯影片</h4>
-					<div class="decoration"></div>
-				</div>
-				<div class="content">
-					<div class="play" onclick="openYoutubeModal('results')">
-						<img src="https://avmapping.co/musicians/images/icon-play.png" alt="play" />
+						<a class="button">選擇此方案</a>
 					</div>
 				</div>
 			</div>
-		</section>
-		<section class="section-statistics">
-			<div id="statistics" class="anchor"></div>
-			<div class="container">
-				<div class="title-group">
-					<h2>數據統計</h2>
-					<h4>在我們網頁上瀏覽的時間</h4>
-					<div class="decoration"></div>
+			<div class="container cards-3 with-stitch-button" id="musician-member-yearly-content">
+				<div class="card">
+					<div class="top">
+						<div class="plan-name">基本方案</div>
+						<div class="price">
+							<span class="main">$0</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">單次上架歌曲</div>
+							</div>
+							<div class="item">
+								<div class="text">產業與活動資訊</div>
+							</div>
+							<div class="item">
+								<div class="text">基礎音樂分析</div>
+							</div>
+							<div class="item">
+								<div class="text">音樂人社團資訊</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
+					</div>
 				</div>
-				<div class="content">
-					<div class="item">
-						<div class="count">9503人</div>
-						<div class="description">使用者</div>
+				<div class="card">
+					<div class="top">
+						<div class="label">經濟實惠組</div>
+						<div class="plan-name">進階方案</div>
+						<div class="price">
+							<span class="main">$3,700</span><span class="time">/年</span>
+						</div>
 					</div>
-					<div class="item">
-						<div class="count">5862人</div>
-						<div class="description">使用者</div>
-					</div>
-					<div class="item">
-						<div class="count">196萬</div>
-						<div class="description">使用者</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">專人代管與建置資料庫</div>
+							</div>
+							<div class="item">
+								<div class="text">技術研討會資訊</div>
+							</div>
+							<div class="item">
+								<div class="text">進階音樂分析</div>
+							</div>
+							<div class="item">
+								<div class="text">AI創作優先協作者</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
 					</div>
 				</div>
-				
-				<a class="button" href=""><button type="button">加入我們</button></a>
+				<div class="card">
+					<div class="top">
+						<div class="plan-name">專業方案</div>
+						<div class="price">
+							<span class="main">$17,200</span><span class="time">/年</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">批次上架無限多首音樂</div>
+							</div>
+							<div class="item">
+								<div class="text">專人代管整理音樂庫</div>
+							</div>
+							<div class="item">
+								<div class="text">多元音樂平台串聯宣傳</div>
+							</div>
+							<div class="item">
+								<div class="text">專訪介紹機會</div>
+							</div>
+							<div class="item">
+								<div class="text">客製化連結與頁面設計</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
+					</div>
+				</div>
+			</div>
+			<div class="container cards-3 with-stitch-button" id="musician-member-monthly-content">
+				<div class="card">
+					<div class="top">
+						<div class="plan-name">基本方案</div>
+						<div class="price">
+							<span class="main">$0</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">單次上架歌曲</div>
+							</div>
+							<div class="item">
+								<div class="text">產業與活動資訊</div>
+							</div>
+							<div class="item">
+								<div class="text">基礎音樂分析</div>
+							</div>
+							<div class="item">
+								<div class="text">音樂人社團資訊</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="top">
+						<div class="label">小資族必備</div>
+						<div class="plan-name">進階方案</div>
+						<div class="price">
+							<span class="main">$350</span><span class="time">/月</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">專人代管與建置資料庫</div>
+							</div>
+							<div class="item">
+								<div class="text">技術研討會資訊</div>
+							</div>
+							<div class="item">
+								<div class="text">進階音樂分析</div>
+							</div>
+							<div class="item">
+								<div class="text">AI創作優先協作者</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="top">
+						<div class="plan-name">專業方案</div>
+						<div class="price">
+							<span class="main">$1,600</span><span class="time">/月</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">批次上架無限多首音樂</div>
+							</div>
+							<div class="item">
+								<div class="text">專人代管整理音樂庫</div>
+							</div>
+							<div class="item">
+								<div class="text">多元音樂平台串聯宣傳</div>
+							</div>
+							<div class="item">
+								<div class="text">專訪介紹機會</div>
+							</div>
+							<div class="item">
+								<div class="text">客製化連結與頁面設計</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
+					</div>
+				</div>
+			</div>
+			<div class="container cards-3" id="business-member-content">
+				<div class="card">
+					<div class="top">
+						<div class="label">專人客製化</div>
+						<div class="plan-name">專案方案</div>
+						<div class="price">
+							<span class="main">$6,000起</span><span class="time">/case</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">客製化專案設計</div>
+							</div>
+							<div class="item">
+								<div class="text">依據每次專案報價付費</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="top">
+						<div class="plan-name">API方案</div>
+						<div class="price">
+							<span class="main">$3,900起</span><span class="time">/月</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">客製化專屬API串接設計</div>
+							</div>
+							<div class="item">
+								<div class="text">依據功能API提供報價付費</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="top">
+						<div class="plan-name">採購方案</div>
+						<div class="price">
+							<span class="main">$99,000</span><span class="time">/2年</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">50次使用卷</div>
+							</div>
+							<div class="item">
+								<div class="text">儲值 90,250元</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
+					</div>
+				</div>
 			</div>
 		</section>
 				<section class="section-sign" id="section-sign-up">
@@ -803,6 +903,5 @@
 			</body>
 	<script src="https://avmapping.co/index/js/nav.js"></script>
 	<script src="https://avmapping.co/index/js/event.js"></script>
-	<script src="https://avmapping.co/musicians/js/swiper.js"></script>
-	<script src="https://avmapping.co/musicians/js/youtubeEmbed.js"></script>
+	<script src="https://avmapping.co/member/js/plan.js"></script>
 </html>	

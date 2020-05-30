@@ -1,0 +1,64 @@
+#section-index {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 72px;
+	padding: 100px 26px;
+	min-height: calc(100vh - 72px);
+
+	@media screen and ($phone) {
+		margin-top: 60px;
+		min-height: calc(100vh - 60px);
+		flex-direction: column;
+	}
+
+	& > .content {
+		margin-right: 42px;
+
+		@media screen and ($phone) {
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+
+		& > h1 {
+			font-size: 45px;
+			font-weight: 600;
+			line-height: 0.8;
+			letter-spacing: 4.5px;
+			color: #eeeeee;
+			margin-bottom: 35px;
+
+			@media screen and ($phone) {
+				font-size: 30px;
+				text-align: center;
+			}
+		}
+
+		& > p {
+			font-size: 28px;
+			line-height: 1.79;
+			letter-spacing: 2px;
+			color: #ebebeb;
+
+			@media screen and ($phone) {
+				font-size: 20px;
+				text-align: center;
+				letter-spacing: 1.43px;
+			}
+		}
+	}
+
+	& > .image {
+		width: 100%;
+		max-width: 416px;
+
+		@media screen and (max-width: 500px) {
+			max-width: 238px;
+		}
+
+		& > img {
+			width: 100%;
+		}
+	}
+}
