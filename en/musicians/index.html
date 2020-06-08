@@ -214,7 +214,7 @@
 						
 						<div class="dropdown-menu">
 							
-							<a class="menu-item" href="https://avmapping.onrender.com/#/user/">Profile</a>
+							<a id="user-profile" class="menu-item" target="_blank" href="https://avmapping.onrender.com/#/user/">Profile</a>
 							
 							<div class="menu-item" onclick="switchUser()">Choose Your Role</div>
 							<div class="menu-item" onclick="logout()">Sign Out</div>
@@ -312,7 +312,7 @@
 						
 					
 					</div>
-					<div id="phone-navi-musician" class="navi-item navi-with-accordion">
+					<div id="phone-navi-service" class="navi-item navi-with-accordion">
 						
 						<div class="item">
 							
@@ -321,7 +321,7 @@
 							</a>
 							<i
 								class="icon fas fa-chevron-down"
-								onclick="toggleAccordion('phone-navi-musician')"
+								onclick="toggleAccordion('phone-navi-service')"
 							>
 							</i>
 						</div>
@@ -371,7 +371,7 @@
 					</div>
 				</div>
 
-				<div class="navi-item-wrapper user-login hide">
+				<div class="navi-item-wrapper user-login hide" id="nav-login">
 				
 					<a class="navi-item" href="">About Us</a>
 				
@@ -383,11 +383,11 @@
 				
 				
 					
-					<a class="navi-item" href="https://avmapping.onrender.com/#/user/">Profile</a>
+					<a id="user-profile" class="navi-item" target="_blank" href="https://avmapping.onrender.com/#/user/">Profile</a>
 					
 				
 				
-
+					
 					<div class="navi-item" onclick="switchUser()">Choose Your Role</div>
 					<div class="navi-item" onclick="logout()">Sign Out</div>
 				</div>
@@ -727,7 +727,7 @@
 				<div class="sign-up-form">
 					<div class="left">
 						<div class="title show-on-desktop">Create Your Account</div>
-						<form autocomplete="off" method="post" id="form_signup">
+						<form autocomplete="on" method="post" id="form_signup">
 							<div class="item required">
 								<input type="text" name="username" placeholder='Username' />
 							</div>
@@ -738,13 +738,13 @@
 								<span id='check-signup-email'></span>
 							</div>
 							<div class="item required">
-								<input type="password" name="password" id="password" placeholder='Password' />
+								<input type="password" name="password" id="password-0" placeholder='Password' />
 							</div>
 							<div class="item">
-								<input type="password" name="re-password" id="re-password" placeholder='Confirmed password' onkeyup="checkPassword()" />
+								<input type="password" name="re-password" id="re-password-0" placeholder='Confirmed password' onkeyup="checkPassword()" />
 							</div>
 							<div class="text">
-								<span id='check-password'></span>
+								<span id='check-password-0'></span>
 							</div>
 							<input class="submit" type="button" value='Register' onclick="userSignUp()"/>
 						</form>
@@ -776,10 +776,43 @@
 					</div>
 					<div class="right">
 						<div class="title show-on-desktop">Sign in to A.V. Mapping</div>
-						<form autocomplete="off" method="post" id="form_signin">
+						<form autocomplete="on" method="post" id="form_signin">
 							<input type="email" name="email" placeholder='Email address' />
 							<input type="password" name="password" placeholder='Password' />
+							<button onclick="return resetpwd()">Forgot Password?</button>
 							<input class="submit" type="button" value='Sign In' onclick="userSignIn()" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-sign"  id="section-reset-pwd">
+			<div id="resetpwd" class="anchor"></div>
+			<div class="container">
+				<div class="section-title show-on-phone">Reset Password</div>
+				<button class="close-btn show-on-phone" aria-label="Close" onclick="closeSign()">
+					<i class="fas fa-times"></i>
+				</button>
+				<div class="resetpwd-form">
+					<div class="right">
+						<div class="title show-on-desktop">Reset Password</div>
+						<form autocomplete="on" method="post" id="form_resetpwd">
+							<div class="item required">
+								<input type="email" name="email" id="resetpwd-email" placeholder='Email address' onkeyup="checkEmail()" />
+							</div>
+							<div class="text">
+								<span id='check-signup-email'></span>
+							</div>
+							<div class="item required">
+								<input type="password" name="password" id="password-1" placeholder='New password' />
+							</div>
+							<div class="item required">
+								<input type="password" name="re-password" id="re-password-1" placeholder='Confirmed new password' onkeyup="checkPassword()" />
+							</div>
+							<div class="text">
+								<span id='check-password-1'></span>
+							</div>
+							<input class="submit" type="button" value='Submit' onclick="userReset()" />
 						</form>
 					</div>
 				</div>

@@ -1,8 +1,9 @@
 let userType = 'audio'; // user type can be 'audio', 'video' or ''
 //const baseURL = 'http://localhost:8888';
 const baseURL = 'https://beta.avmapping.co';
-var API = {'signup': baseURL+'/api/signup',
-		   'signin': baseURL+'/api/signin'};
+var API = {'signup': baseURL+'/api/auth/signup',
+		   'signin': baseURL+'/api/auth/signin',
+		   'resetpwd': baseURL+'/api/auth/reset'};
 
 const switchNavDisplay = nextState => {
 	const loginNavEls = Array.from(document.getElementsByClassName('user-login'));
@@ -24,6 +25,7 @@ const login = (type = 'desktop') => {
 	closePhoneNaviMenu();
 	document.getElementById('section-sign-up').style.display = 'none';
 	document.getElementById('section-sign-in').style.display = 'block';
+	document.getElementById('section-reset-pwd').style.display = 'none';
 	/*
 	if ((type = 'phone')) {
 		setTimeout(() => {
@@ -55,6 +57,17 @@ const signup = (type = 'desktop') => {
 	closePhoneNaviMenu();
 	document.getElementById('section-sign-in').style.display = 'none';
 	document.getElementById('section-sign-up').style.display = 'block';
+	document.getElementById('section-reset-pwd').style.display = 'none';
+};
+
+const resetpwd = (type = 'desktop') => {
+	console.log('resetpwd');
+
+	closePhoneNaviMenu();
+	document.getElementById('section-sign-in').style.display = 'none';
+	document.getElementById('section-sign-up').style.display = 'none';
+	document.getElementById('section-reset-pwd').style.display = 'block';
+	return false
 };
 
 const switchUser = (type = 'desktop') => {
@@ -74,12 +87,22 @@ const switchUser = (type = 'desktop') => {
 const closeSign = (type = 'phone') => {
 	document.getElementById('section-sign-in').style.display = 'none';
 	document.getElementById('section-sign-up').style.display = 'none';
+	document.getElementById('section-reset-pwd').style.display = 'none';
+	clearSign();
 };
+
+function clearSign() {
+	for (var i=0; i<2; i++) {
+		var check_pass = document.getElementById('check-password-'+i);
+		check_pass.innerHTML = '';
+	}
+}
 
 function userSignUp() {
 	console.log('commitSignup');
 	var form = $('#form_signup');
 	var url = API['signup'];
+	console.log('url> ',url);
 	var fields = $("#form_signup .required").find("input").serializeArray();
 	var isRequired = false;
 	$.each(fields, function(i, field) {
@@ -88,15 +111,21 @@ function userSignUp() {
 			isRequired = true;
 		} 
 	});
-
-	if (!isRequired) {
+	var check_email = document.getElementById('check-signup-email'),
+		check_pass = document.getElementById('check-password-0');
+	if (!isRequired && check_email.innerHTML=='' && check_pass.innerHTML=='matching!') {
 		$.ajax({
 	        type : "POST",
 	        url  : url,
 	        data : form.serialize(),
 	        success : function(response) {
-	        	console.log(response);
-	        	if (response != 'err') {
+	        	//console.log(response);
+	        	data = JSON.parse(response);
+	        	login_state = true;
+	        	form[0].reset();
+	        	closeSign();
+	        	login_auth();
+	        	/*if (response != 'err') {
 	        		login_state = true;
 	        		form[0].reset();
 	        		$("#check-signup-email").html("");
@@ -108,11 +137,22 @@ function userSignUp() {
 	        		form[0].reset();
 	        		$("#check-signup-email").html("");
 	        		$("#check-password").html("");
-	        	}
+	        	}*/
+	        	document.getElementById('user-profile').href += '?'.concat(data.auth_token);
+	        	document.getElementById('navi-user-profile').href += '?'.concat(data.auth_token);
 			},
-			error: function(error){
+			statusCode: {
+				406: function (response) {
+					console.log(response);
+					error = JSON.parse(response.responseText);
+					alert(error.message);
+					form[0].reset();
+					clearSign();
+				}
+			}
+			/*error: function(error){
 	            console.log(error);
-	        }
+	        }*/
 	    });
 	}
 	//console.log(fields);
@@ -128,9 +168,14 @@ function userSignIn() {
         type : "POST",
         url  : url,
         data : form.serialize(),
-        success : function(response) {
-        	console.log(response);
-        	if (response != 'err') {
+        success: function(response) {
+        	//console.log(response);
+        	data = JSON.parse(response);
+        	login_state = true;
+        	form[0].reset();
+        	closeSign();
+        	login_auth();
+        	/*if (response != 'err') {
         		login_state = true;
         		form[0].reset();
         		closeSign();
@@ -138,12 +183,66 @@ function userSignIn() {
         	} else {
         		alert('Sorry! The email address or password is incorrect.');
         		form[0].reset();
-        	}
+        	}*/
+        	document.getElementById('user-profile').href += '?'.concat(data.auth_token);
+        	document.getElementById('navi-user-profile').href += '?'.concat(data.auth_token);
+        	console.log('user profile> ', document.getElementById('user-profile').href)
 		},
-		error: function(error){
-            console.log(error);
-        }
+		statusCode: {
+			406: function (response) {
+				error = JSON.parse(response.responseText);
+				alert(error.message);
+				form[0].reset();
+			}
+		}
+		/*error: function(error){
+            console.log('err',error);
+        }*/
     });
+};
+
+function userReset() {
+	console.log('commitResetPwd');
+
+	var form = $('#form_resetpwd');
+	var url = API['resetpwd'];
+	console.log('url> ',url);
+
+	var check_pass = document.getElementById('check-password-1');
+	console.log('resetpwd:',check_pass.innerHTML);
+
+	if(check_pass.innerHTML == 'matching!') {
+		$.ajax({
+	        type : "POST",
+	        url  : url,
+	        data : form.serialize(),
+	        success: function(response) {
+	        	console.log(response);
+	        	form[0].reset();
+	        	closeSign();
+	        	/*if (response != 'err') {
+	        		login_state = true;
+	        		form[0].reset();
+	        		closeSign();
+	        		login_auth();
+	        	} else {
+	        		alert('Sorry! The email address or password is incorrect.');
+	        		form[0].reset();
+	        	}*/
+			},
+			statusCode: {
+				406: function (response) {
+					error = JSON.parse(response.responseText);
+					alert(error.message);
+					form[0].reset();
+					clearSign();
+				}
+			}
+			/*error: function(error){
+	            console.log('err',error);
+	        }*/
+	    });
+	}
 };
 
 function checkEmail() {
@@ -158,6 +257,19 @@ function checkEmail() {
 }
 
 function checkPassword() {
+	for (var i=0; i<2; i++) {
+		var pass = document.getElementById('password-'+i),
+			re_pass = document.getElementById('re-password-'+i),
+			check_pass = document.getElementById('check-password-'+i);
+		if (pass.value == re_pass.value) {
+		    	check_pass.style.color = '#30c1b8';
+		    	check_pass.innerHTML = 'matching!';
+		  	} else {
+		    	check_pass.style.color = '#ef7873';
+		    	check_pass.innerHTML = 'not matching!';
+		  	}
+	}
+	/*
 	var pass = document.getElementById('password');
 	var re_pass = document.getElementById('re-password');
 	var check_pass = document.getElementById('check-password');
@@ -168,6 +280,7 @@ function checkPassword() {
     	check_pass.style.color = '#ef7873';
     	check_pass.innerHTML = 'not matching!';
   	}
+  	*/
 };
 
 function login_auth() {
@@ -179,6 +292,7 @@ function login_auth() {
 		} else {
 			switchNavDisplay('login');
 		}
+
 	} else {
 		if ((type = 'phone')) {
 			setTimeout(() => {
@@ -196,15 +310,13 @@ var login_state = false;
 $(document).ready(function()
 {	
 	/*
-	console.log(url);
-	console.log('{{ api/login/auth }}');
 	$.ajax({
         type :"POST",
-        url  :"http://localhost:8888/api/login_auth",
+        url  :"http://localhost:8888/api/auth",
         success : function(response) {
         	console.log('success');
         	console.log(response);
-        	if (response != 'err') {
+        	if (response) {
         		login_state = true;
         		closeSign();
         		login_auth();
@@ -231,8 +343,15 @@ $(document).ready(function()
         mouse_is_inside=false; 
     });
 
+    $('.resetpwd-form').hover(function(){ 
+        mouse_is_inside=true; 
+    }, function(){ 
+        mouse_is_inside=false; 
+    });
+
     $("body").mouseup(function(){ 
         if(! mouse_is_inside) $('#section-sign-in').hide();
         if(! mouse_is_inside) $('#section-sign-up').hide();
+        if(! mouse_is_inside) $('#section-reset-pwd').hide();
     });
 });

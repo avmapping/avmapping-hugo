@@ -152,7 +152,7 @@
 					
 						<div class="navi-item-padding">
 							<a class="navi-item" href="/zh/member">
-								加入會員
+								會員方案
 							</a>
 						</div>
 
@@ -214,7 +214,7 @@
 						
 						<div class="dropdown-menu">
 							
-							<a class="menu-item" href="https://avmapping.onrender.com/#/user/">個人中心</a>
+							<a id="user-profile" class="menu-item" target="_blank" href="https://avmapping.onrender.com/#/user/">個人中心</a>
 							
 							<div class="menu-item" onclick="switchUser()">切換角色</div>
 							<div class="menu-item" onclick="logout()">登出</div>
@@ -312,16 +312,16 @@
 						
 					
 					</div>
-					<div id="phone-navi-musician" class="navi-item navi-with-accordion">
+					<div id="phone-navi-service" class="navi-item navi-with-accordion">
 						
 						<div class="item">
 							
 							<a class="navi-item" href="/zh/member">
-								加入會員
+								會員方案
 							</a>
 							<i
 								class="icon fas fa-chevron-down"
-								onclick="toggleAccordion('phone-navi-musician')"
+								onclick="toggleAccordion('phone-navi-service')"
 							>
 							</i>
 						</div>
@@ -371,7 +371,7 @@
 					</div>
 				</div>
 
-				<div class="navi-item-wrapper user-login hide">
+				<div class="navi-item-wrapper user-login hide" id="nav-login">
 				
 					<a class="navi-item" href="">關於我們</a>
 				
@@ -383,11 +383,11 @@
 				
 				
 					
-					<a class="navi-item" href="https://avmapping.onrender.com/#/user/">個人中心</a>
+					<a id="user-profile" class="navi-item" target="_blank" href="https://avmapping.onrender.com/#/user/">個人中心</a>
 					
 				
 				
-
+					
 					<div class="navi-item" onclick="switchUser()">切換角色</div>
 					<div class="navi-item" onclick="logout()">登出</div>
 				</div>
@@ -727,7 +727,7 @@
 				<div class="sign-up-form">
 					<div class="left">
 						<div class="title show-on-desktop">創建您的帳戶</div>
-						<form autocomplete="off" method="post" id="form_signup">
+						<form autocomplete="on" method="post" id="form_signup">
 							<div class="item required">
 								<input type="text" name="username" placeholder='用戶名稱' />
 							</div>
@@ -738,13 +738,13 @@
 								<span id='check-signup-email'></span>
 							</div>
 							<div class="item required">
-								<input type="password" name="password" id="password" placeholder='建立密碼' />
+								<input type="password" name="password" id="password-0" placeholder='建立密碼' />
 							</div>
 							<div class="item">
-								<input type="password" name="re-password" id="re-password" placeholder='確認密碼' onkeyup="checkPassword()" />
+								<input type="password" name="re-password" id="re-password-0" placeholder='確認密碼' onkeyup="checkPassword()" />
 							</div>
 							<div class="text">
-								<span id='check-password'></span>
+								<span id='check-password-0'></span>
 							</div>
 							<input class="submit" type="button" value='註冊帳號' onclick="userSignUp()"/>
 						</form>
@@ -776,10 +776,43 @@
 					</div>
 					<div class="right">
 						<div class="title show-on-desktop">登入 A.V. Mapping</div>
-						<form autocomplete="off" method="post" id="form_signin">
+						<form autocomplete="on" method="post" id="form_signin">
 							<input type="email" name="email" placeholder='輸入您的電子郵件地址' />
 							<input type="password" name="password" placeholder='輸入密碼' />
+							<button onclick="return resetpwd()">忘記密碼？</button>
 							<input class="submit" type="button" value='登入' onclick="userSignIn()" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section-sign"  id="section-reset-pwd">
+			<div id="resetpwd" class="anchor"></div>
+			<div class="container">
+				<div class="section-title show-on-phone">變更密碼</div>
+				<button class="close-btn show-on-phone" aria-label="Close" onclick="closeSign()">
+					<i class="fas fa-times"></i>
+				</button>
+				<div class="resetpwd-form">
+					<div class="right">
+						<div class="title show-on-desktop">變更密碼</div>
+						<form autocomplete="on" method="post" id="form_resetpwd">
+							<div class="item required">
+								<input type="email" name="email" id="resetpwd-email" placeholder='輸入您的電子郵件地址' onkeyup="checkEmail()" />
+							</div>
+							<div class="text">
+								<span id='check-signup-email'></span>
+							</div>
+							<div class="item required">
+								<input type="password" name="password" id="password-1" placeholder='輸入新密碼' />
+							</div>
+							<div class="item required">
+								<input type="password" name="re-password" id="re-password-1" placeholder='確認新密碼' onkeyup="checkPassword()" />
+							</div>
+							<div class="text">
+								<span id='check-password-1'></span>
+							</div>
+							<input class="submit" type="button" value='送出' onclick="userReset()" />
 						</form>
 					</div>
 				</div>
