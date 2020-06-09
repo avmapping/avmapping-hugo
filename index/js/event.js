@@ -6,6 +6,7 @@ var API = {'signup': baseURL+'/api/auth/signup',
 		   'resetpwd': baseURL+'/api/auth/reset'};
 
 const switchNavDisplay = nextState => {
+	/*
 	const loginNavEls = Array.from(document.getElementsByClassName('user-login'));
 	const notLoginNavEls = Array.from(document.getElementsByClassName('user-not-login'));
 
@@ -15,6 +16,25 @@ const switchNavDisplay = nextState => {
 	} else if (nextState === 'notLogin') {
 		loginNavEls.forEach(el => el.classList.add('hide'));
 		notLoginNavEls.forEach(el => el.classList.remove('hide'));
+	}
+	*/
+	const loginNavElsAttr = ["nav-user-login", "nav-login"];
+	const notloginNavElsAttr = ["navi-user-login", "navi-user-signup", "nav-login", "navi-signup"];
+
+	if (nextState === 'login') {
+		for (var i=0; i<loginNavElsAttr.length; i++) {
+			document.getElementById(loginNavElsAttr[i]).classList.remove('hide');
+		}
+		for (var i=0; i<notloginNavElsAttr.length; i++) {
+			document.getElementById(notloginNavElsAttr[i]).classList.add('hide');
+		}
+	} else if (nextState === 'notLogin') {
+		for (var i=0; i<loginNavElsAttr.length; i++) {
+			document.getElementById(loginNavElsAttr[i]).classList.add('hide');
+		}
+		for (var i=0; i<notloginNavElsAttr.length; i++) {
+			document.getElementById(notloginNavElsAttr[i]).classList.remove('hide');
+		}
 	}
 };
 
@@ -138,8 +158,8 @@ function userSignUp() {
 	        		$("#check-signup-email").html("");
 	        		$("#check-password").html("");
 	        	}*/
-	        	document.getElementById('user-profile').href += '?'.concat(data.auth_token);
-	        	document.getElementById('navi-user-profile').href += '?'.concat(data.auth_token);
+	        	document.getElementById('user-profile').href += '?token='.concat(data.auth_token);
+	        	document.getElementById('navi-user-profile').href += '?token='.concat(data.auth_token);
 			},
 			statusCode: {
 				406: function (response) {
@@ -184,8 +204,8 @@ function userSignIn() {
         		alert('Sorry! The email address or password is incorrect.');
         		form[0].reset();
         	}*/
-        	document.getElementById('user-profile').href += '?'.concat(data.auth_token);
-        	document.getElementById('navi-user-profile').href += '?'.concat(data.auth_token);
+        	document.getElementById('user-profile').href += '?token='.concat(data.auth_token);
+        	document.getElementById('navi-user-profile').href += '?token='.concat(data.auth_token);
         	console.log('user profile> ', document.getElementById('user-profile').href)
 		},
 		statusCode: {
