@@ -378,11 +378,5 @@ $(document).ready(function()
     var searchURL = window.location.search;
     searchURL = searchURL.substring(1, searchURL.length);
     alert(searchURL);
-    $.ajax({
-    	type : "POST",
-    	url  : url,
-    	data : {
-    		searchURL.split("&")[0].split("=")[0]: searchURL.split("&")[0].split("=")[1],
-    	}
-    });
+    
 });
