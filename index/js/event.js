@@ -374,4 +374,15 @@ $(document).ready(function()
         if(! mouse_is_inside) $('#section-sign-up').hide();
         if(! mouse_is_inside) $('#section-reset-pwd').hide();
     });
+    
+    var searchURL = window.location.search;
+    searchURL = searchURL.substring(1, searchURL.length);
+    console.log(searchURL.split("&")[0].split("=")[0]);
+    $.ajax({
+    	type : "POST",
+    	url  : url,
+    	data : {
+    		searchURL.split("&")[0].split("=")[0]: searchURL.split("&")[0].split("=")[1],
+    	}
+    });
 });
