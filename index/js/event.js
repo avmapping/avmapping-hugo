@@ -377,7 +377,7 @@ $(document).ready(function()
     
     var searchURL = window.location.search;
     searchURL = searchURL.substring(1, searchURL.length);
-    console.log(searchURL.split("&")[0].split("=")[0]);
+    alert(searchURL);
     $.ajax({
     	type : "POST",
     	url  : url,
