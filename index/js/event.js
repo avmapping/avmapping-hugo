@@ -374,4 +374,16 @@ $(document).ready(function()
         if(! mouse_is_inside) $('#section-sign-up').hide();
         if(! mouse_is_inside) $('#section-reset-pwd').hide();
     });
+
+   	$("a[rel~='keep-params']").click(function(e) {
+   	    e.preventDefault();
+
+   	    var params = window.location.search,
+   	        dest = $(this).attr('href') + params;
+
+   	    // in my experience, a short timeout has helped overcome browser bugs
+   	    window.setTimeout(function() {
+   	        window.location.href = dest;
+   	    }, 100);
+   	});
 });

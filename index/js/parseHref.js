@@ -1,5 +1,5 @@
 //const baseURL = 'http://localhost:8888';
-const baseURL = 'https://filmmusic.avmapping.co';
+//const baseURL = 'https://filmmusic.avmapping.co';
 
 function QueryStringToJSON() {            
     var pairs = location.search.slice(1).split('&');
