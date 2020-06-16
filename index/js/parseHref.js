@@ -12,7 +12,7 @@ function QueryStringToJSON() {
 
     return JSON.stringify(result);
 }
-
+/*
 $(document).ready(function()
 {   
     var query_string = QueryStringToJSON();
@@ -34,3 +34,4 @@ $(document).ready(function()
 	    });
     
 });
+*/

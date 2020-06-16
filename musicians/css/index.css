@@ -1303,7 +1303,7 @@ section {
     display: none;
     position: fixed; /* Stay in place */
     z-index: 100; /* Sit on top */
-    padding-top: 200px; /* Location of the box */
+    padding-top: 150px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100vw; /* Full width */
