@@ -374,9 +374,4 @@ $(document).ready(function()
         if(! mouse_is_inside) $('#section-sign-up').hide();
         if(! mouse_is_inside) $('#section-reset-pwd').hide();
     });
-    
-    var searchURL = window.location.search;
-    searchURL = searchURL.substring(1, searchURL.length);
-    alert(searchURL);
-    
 });
