@@ -19,7 +19,7 @@ const switchNavDisplay = nextState => {
 	}
 	*/
 	const loginNavElsAttr = ["nav-user-login", "nav-login"];
-	const notloginNavElsAttr = ["navi-user-login", "navi-user-signup", "nav-login", "navi-signup"];
+	const notloginNavElsAttr = ["navi-user-login", "navi-user-signup", "navi-login", "navi-signup"];
 
 	if (nextState === 'login') {
 		for (var i=0; i<loginNavElsAttr.length; i++) {
