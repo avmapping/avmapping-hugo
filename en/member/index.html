@@ -206,7 +206,7 @@
 				</div>
 			</div>
 			<div id="phone-navi-menu" class="phone-navi-menu">
-				<div class="navi-item-wrapper user-not-login">
+				<div class="navi-item-wrapper user-not-login" id="navi-login">
 					<div id="phone-navi-official" class="navi-item navi-with-accordion">
 					
 						<div class="item">
@@ -321,8 +321,8 @@
 						
 					
 					</div>
-					<a class="navi-item" id="navi-login" onclick="login()">Sign In</a>
-					<a class="navi-item" id="navi-signup" onclick="signup()">Sign Up</a>
+					<a class="navi-item" onclick="login()">Sign In</a>
+					<a class="navi-item" onclick="signup()">Sign Up</a>
 					<div id="phone-navi-language" class="navi-item navi-with-accordion">
 						<div class="item">
 							<a href="" rel="keep-params"><i class="fas fa-globe"></i></a>
@@ -353,6 +353,120 @@
 				</div>
 
 				<div class="navi-item-wrapper user-login hide" id="nav-login">
+					<div id="phone-navi-official" class="navi-item navi-with-accordion">
+					
+						<div class="item">
+							<a class="navi-item" href="/en/" rel="keep-params">Home</a>
+							<i
+								class="icon fas fa-chevron-down"
+								onclick="toggleAccordion('phone-navi-official')"
+							>
+							</i>
+						</div>
+						
+						<div class="accordion" style="height: 0">
+							<div class="wrapper">
+								
+								<a class="menu-item" href="/en/#solution" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>The Issue</a>
+								
+								<a class="menu-item" href="/en/#product" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>Our Service</a>
+								
+								<a class="menu-item" href="/en/#advantage" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>Advantage</a>
+								
+								<a class="menu-item" href="/en/#feedback" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>Feedback</a>
+								
+								<a class="menu-item" href="/en/#history" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>Company History</a>
+								
+								<a class="menu-item" href="/en/#offline-service" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>Offline Service</a>
+								
+								<a class="menu-item" href="/en/#contact" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>Contact Us</a>
+								
+							</div>
+						</div>
+						
+					
+					</div>
+					<div id="phone-navi-musician" class="navi-item navi-with-accordion">
+						
+						<div class="item">
+							
+							<a class="navi-item" href="/en/musicians" rel="keep-params">
+								Dear Musician
+							</a>
+							<i
+								class="icon fas fa-chevron-down"
+								onclick="toggleAccordion('phone-navi-musician')"
+							>
+							</i>
+						</div>
+						
+						<div class="accordion" style="height: 0">
+							<div class="wrapper">
+								
+								<a class="menu-item" href="/en/musicians#why-need-us" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>Vision</a>
+								
+								<a class="menu-item" href="/en/musicians#why-select-us" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>Advantage</a>
+								
+								<a class="menu-item" href="/en/musicians#share-with-us" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>Custom Price</a>
+								
+								<a class="menu-item" href="/en/musicians#musician-communicate" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>What Musicians Said</a>
+								
+								<a class="menu-item" href="/en/musicians#feedback" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>Feedback</a>
+								
+								<a class="menu-item" href="/en/musicians#benefit" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>Special Offers</a>
+								
+								<a class="menu-item" href="/en/musicians#results" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>Achievement</a>
+								
+								<a class="menu-item" href="/en/musicians#statistics" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>Statistics</a>
+								
+							</div>
+						</div>
+						
+					
+					</div>
+					<div id="phone-navi-service" class="navi-item navi-with-accordion">
+						
+						<div class="item">
+							
+							<a class="navi-item" href="/en/member" rel="keep-params">
+								Membership
+							</a>
+							<i
+								class="icon fas fa-chevron-down"
+								onclick="toggleAccordion('phone-navi-service')"
+							>
+							</i>
+						</div>
+						
+						<div class="accordion" style="height: 0">
+							<div class="wrapper">
+								
+								<a class="menu-item" href="/en/member#section-payment-method" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>Payment</a>
+								
+								<a class="menu-item" href="/en/member#section-plan" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>Plan and Price</a>
+								
+							</div>
+						</div>
+						
+					
+					</div>
 				
 				
 				
@@ -364,6 +478,33 @@
 					
 					<div class="navi-item" onclick="switchUser()">Choose Your Role</div>
 					<div class="navi-item" onclick="logout()">Sign Out</div>
+					<div id="phone-navi-language" class="navi-item navi-with-accordion">
+						<div class="item">
+							<a href="" rel="keep-params"><i class="fas fa-globe"></i></a>
+							<i
+								class="icon fas fa-chevron-down"
+								onclick="toggleAccordion('phone-navi-language')"
+							>
+							</i>
+						</div>
+						<div class="accordion" style="height: 0">
+							
+							
+							<div class="wrapper">
+								
+								<a class="menu-item" href="/zh/member" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>繁體中文</a
+								>
+								
+								<a class="menu-item" href="/en/member" rel="keep-params" onclick="closePhoneNaviMenu()"
+									>English</a
+								>
+								
+							</div>
+							
+							
+						</div>
+					</div>
 				</div>
 			</div>
 		</nav>
