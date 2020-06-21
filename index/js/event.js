@@ -1,6 +1,6 @@
 let userType = 'audio'; // user type can be 'audio', 'video' or ''
 //const baseURL = 'http://localhost:8888';
-const baseURL = 'https://filmmusic.avmapping.co:5000';
+const baseURL = 'https://filmmusic.avmapping.co:5001';
 var API = {'signup': baseURL+'/api/auth/signup',
 		   'signin': baseURL+'/api/auth/signin',
 		   'resetpwd': baseURL+'/api/auth/reset'};
