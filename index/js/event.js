@@ -1,9 +1,14 @@
 let userType = 'audio'; // user type can be 'audio', 'video' or ''
 //const baseURL = 'http://localhost:8888';
-const baseURL = 'https://filmmusic.avmapping.co:5001';
-var API = {'signup': baseURL+'/api/auth/signup',
-		   'signin': baseURL+'/api/auth/signin',
-		   'resetpwd': baseURL+'/api/auth/reset'};
+const baseURL = 'https://filmmusic.avmapping.co';
+//var API = {'signup': baseURL+'/api/auth/signup',
+//		   'signin': baseURL+'/api/auth/signin',
+//		   'resetpwd': baseURL+'/api/auth/reset'};
+//const baseURL = 'http://ec2-13-251-81-129.ap-southeast-1.compute.amazonaws.com';
+var API = {'signup':   baseURL+'/api/users/signup/',
+		   'signin':   baseURL+'/api/users/login/',
+		   'signout':  baseURL+'/api/users/logout/',
+		   'resetpwd': baseURL+'/users/password/change/'};
 
 const switchNavDisplay = nextState => {
 	/*
@@ -45,7 +50,7 @@ const login = (type = 'desktop') => {
 	closePhoneNaviMenu();
 	document.getElementById('section-sign-up').style.display = 'none';
 	document.getElementById('section-sign-in').style.display = 'block';
-	document.getElementById('section-reset-pwd').style.display = 'none';
+	//document.getElementById('section-reset-pwd').style.display = 'none';
 	/*
 	if ((type = 'phone')) {
 		setTimeout(() => {
@@ -61,6 +66,38 @@ const logout = (type = 'desktop') => {
 	console.log('logout');
 
 	// on logout
+	var url = API['signout'];
+	$.ajax({
+	    type : "POST",
+	    url  : url,
+	    headers: {
+	    	Authorization: "Token "+docCookies.getItem('access_token'),
+	    },
+	    success : function(response) {
+	       	console.log(response);
+	       	//data = JSON.parse(response);
+	       	//console.log(response.key)
+	       	login_state = false;
+	       	//token = "";
+	       	docCookies.removeItem('access_token');
+	       	console.log(docCookies.keys());
+	       	console.log('token', docCookies.getItem('access_token'));
+	       	document.getElementById('user-profile').href = document.getElementById('user-profile').href.split('?')[0];
+	       	document.getElementById('navi-user-profile').href = document.getElementById('navi-user-profile').href.split('?')[0];
+		},
+		statusCode: {
+			401: function (response) {
+				console.log(response);
+				docCookies.removeItem('access_token');
+				console.log(docCookies.keys());
+	       		console.log('token', docCookies.getItem('access_token'));
+			}
+		}
+		/*error: function(error){
+	           console.log(error);
+	       }*/
+	});
+
 	closePhoneNaviMenu();
 	if ((type = 'phone')) {
 		setTimeout(() => {
@@ -77,7 +114,7 @@ const signup = (type = 'desktop') => {
 	closePhoneNaviMenu();
 	document.getElementById('section-sign-in').style.display = 'none';
 	document.getElementById('section-sign-up').style.display = 'block';
-	document.getElementById('section-reset-pwd').style.display = 'none';
+	//document.getElementById('section-reset-pwd').style.display = 'none';
 };
 
 const resetpwd = (type = 'desktop') => {
@@ -86,7 +123,7 @@ const resetpwd = (type = 'desktop') => {
 	closePhoneNaviMenu();
 	document.getElementById('section-sign-in').style.display = 'none';
 	document.getElementById('section-sign-up').style.display = 'none';
-	document.getElementById('section-reset-pwd').style.display = 'block';
+	//document.getElementById('section-reset-pwd').style.display = 'block';
 	return false
 };
 
@@ -107,12 +144,12 @@ const switchUser = (type = 'desktop') => {
 const closeSign = (type = 'phone') => {
 	document.getElementById('section-sign-in').style.display = 'none';
 	document.getElementById('section-sign-up').style.display = 'none';
-	document.getElementById('section-reset-pwd').style.display = 'none';
+	//document.getElementById('section-reset-pwd').style.display = 'none';
 	clearSign();
 };
 
 function clearSign() {
-	for (var i=0; i<2; i++) {
+	for (var i=0; i<1; i++) {
 		var check_pass = document.getElementById('check-password-'+i);
 		check_pass.innerHTML = '';
 	}
@@ -140,11 +177,11 @@ function userSignUp() {
 	        data : form.serialize(),
 	        success : function(response) {
 	        	//console.log(response);
-	        	data = JSON.parse(response);
+	        	//data = JSON.parse(response);
+	        	//console.log(response.key)
 	        	login_state = true;
 	        	form[0].reset();
 	        	closeSign();
-	        	login_auth();
 	        	/*if (response != 'err') {
 	        		login_state = true;
 	        		form[0].reset();
@@ -158,14 +195,19 @@ function userSignUp() {
 	        		$("#check-signup-email").html("");
 	        		$("#check-password").html("");
 	        	}*/
-	        	document.getElementById('user-profile').href += '?token='.concat(data.auth_token);
-	        	document.getElementById('navi-user-profile').href += '?token='.concat(data.auth_token);
+	        	//document.getElementById('user-profile').href += '?token='.concat(data.auth_token);
+	        	//document.getElementById('navi-user-profile').href += '?token='.concat(data.auth_token);
+	        	//token = response.key;
+	        	docCookies.setItem('access_token', response.key);
+	        	login_auth();
+	        	document.getElementById('user-profile').href += '?token='.concat(docCookies.getItem('access_token'));
+	        	document.getElementById('navi-user-profile').href += '?token='.concat(docCookies.getItem('access_token'));
 			},
 			statusCode: {
-				406: function (response) {
+				400: function (response) {
 					console.log(response);
 					error = JSON.parse(response.responseText);
-					alert(error.message);
+					alert(error.password1[0]);
 					form[0].reset();
 					clearSign();
 				}
@@ -190,11 +232,10 @@ function userSignIn() {
         data : form.serialize(),
         success: function(response) {
         	//console.log(response);
-        	data = JSON.parse(response);
+        	//data = JSON.parse(response);
         	login_state = true;
         	form[0].reset();
         	closeSign();
-        	login_auth();
         	/*if (response != 'err') {
         		login_state = true;
         		form[0].reset();
@@ -204,14 +245,20 @@ function userSignIn() {
         		alert('Sorry! The email address or password is incorrect.');
         		form[0].reset();
         	}*/
-        	document.getElementById('user-profile').href += '?token='.concat(data.auth_token);
-        	document.getElementById('navi-user-profile').href += '?token='.concat(data.auth_token);
+        	//document.getElementById('user-profile').href += '?token='.concat(data.auth_token);
+        	//document.getElementById('navi-user-profile').href += '?token='.concat(data.auth_token);
+        	//token = response.key;
+        	docCookies.setItem('access_token', response.key);
+        	login_auth();
+        	document.getElementById('user-profile').href += '?token='.concat(docCookies.getItem('access_token'));
+        	document.getElementById('navi-user-profile').href += '?token='.concat(docCookies.getItem('access_token'));
         	console.log('user profile> ', document.getElementById('user-profile').href)
 		},
 		statusCode: {
-			406: function (response) {
+			400: function (response) {
+				console.log(response)
 				error = JSON.parse(response.responseText);
-				alert(error.message);
+				alert(error.non_field_errors);
 				form[0].reset();
 			}
 		}
@@ -277,7 +324,7 @@ function checkEmail() {
 }
 
 function checkPassword() {
-	for (var i=0; i<2; i++) {
+	for (var i=0; i<1; i++) {
 		var pass = document.getElementById('password-'+i),
 			re_pass = document.getElementById('re-password-'+i),
 			check_pass = document.getElementById('check-password-'+i);
@@ -304,7 +351,16 @@ function checkPassword() {
 };
 
 function login_auth() {
-	if (login_auth) {
+	console.log(docCookies.keys())
+	console.log('token', docCookies.getItem('access_token'));
+	console.log(docCookies.hasItem('access_token'));
+	if (docCookies.getItem('access_token') == null) {
+		login_state = false;	
+	} else {
+		login_state = true;
+	};
+
+	if (login_state) {
 		if ((type = 'phone')) {
 			setTimeout(() => {
 				switchNavDisplay('login');
@@ -350,6 +406,7 @@ $(document).ready(function()
         }
     });
     */
+    login_auth();
 
     $('.sign-in-form').hover(function(){ 
         mouse_is_inside=true; 
@@ -372,7 +429,7 @@ $(document).ready(function()
     $("body").mouseup(function(){ 
         if(! mouse_is_inside) $('#section-sign-in').hide();
         if(! mouse_is_inside) $('#section-sign-up').hide();
-        if(! mouse_is_inside) $('#section-reset-pwd').hide();
+        //if(! mouse_is_inside) $('#section-reset-pwd').hide();
     });
 
    	$("a[rel~='keep-params']").click(function(e) {
