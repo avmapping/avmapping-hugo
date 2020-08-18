@@ -7,7 +7,10 @@ const PLAN_BUTTON_MAP = {
 };
 
 const PLAN_CONTENT_MAP = {
-	video: document.getElementById('video-member-content'),
+	video: {
+		yearly: document.getElementById('video-member-yearly-content'),
+		monthly: document.getElementById('video-member-monthly-content'),
+	},
 	business: document.getElementById('business-member-content'),
 	musician: {
 		yearly: document.getElementById('musician-member-yearly-content'),
@@ -15,25 +18,32 @@ const PLAN_CONTENT_MAP = {
 	},
 };
 
-const switchButton = document.getElementById('plan-switch-button');
-const switchButtonInput = document.getElementById('plan-switch-button-input');
+const switchButton = {
+	video: document.getElementById('video-plan-switch-button'),
+	musician: document.getElementById('musician-plan-switch-button'),
+};
+const switchButtonInput = {
+	video: document.getElementById('video-plan-switch-button-input'),
+	musician: document.getElementById('musician-plan-switch-button-input'),
+};
 
 const clearState = () => {
 	PLAN_LIST.forEach((key) => {
 		PLAN_BUTTON_MAP[key].classList.remove('active');
+		if (key === 'musician' || key === 'video') {
+			switchButton[key].classList.add('hide');
+			switchButtonInput[key].checked = false;
+		}
 	});
 
 	PLAN_LIST.forEach((key) => {
-		if (key === 'musician') {
+		if (key === 'musician' || key === 'video') {
 			PLAN_CONTENT_MAP[key].yearly.classList.remove('active');
 			PLAN_CONTENT_MAP[key].monthly.classList.remove('active');
 		} else {
 			PLAN_CONTENT_MAP[key].classList.remove('active');
 		}
 	});
-
-	switchButtonInput.checked = false;
-	switchButton.classList.add('hide');
 };
 
 const selectPlan = (type) => {
@@ -41,23 +51,24 @@ const selectPlan = (type) => {
 
 	PLAN_BUTTON_MAP[type].classList.add('active');
 
-	if (type === 'musician') {
-		switchButton.classList.remove('hide');
-		PLAN_CONTENT_MAP.musician.monthly.classList.add('active');
+	if (type === 'musician' || type === 'video') {
+		switchButton[type].classList.remove('hide');
+		PLAN_CONTENT_MAP[type].monthly.classList.add('active');
 	} else {
 		PLAN_CONTENT_MAP[type].classList.add('active');
 	}
 };
 
-const onChangeSwitchValue = () => {
+const onChangeSwitchValue = (type) => {
 	console.log('change');
-	console.log(switchButtonInput.checked);
-
-	if (switchButtonInput.checked) {
-		PLAN_CONTENT_MAP.musician.monthly.classList.remove('active');
-		PLAN_CONTENT_MAP.musician.yearly.classList.add('active');
-	} else {
-		PLAN_CONTENT_MAP.musician.monthly.classList.add('active');
-		PLAN_CONTENT_MAP.musician.yearly.classList.remove('active');
+	console.log(switchButtonInput[type].checked);
+	if (type === 'musician' || type === 'video') {	
+		if (switchButtonInput[type].checked) {
+			PLAN_CONTENT_MAP[type].monthly.classList.remove('active');
+			PLAN_CONTENT_MAP[type].yearly.classList.add('active');
+		} else {
+			PLAN_CONTENT_MAP[type].monthly.classList.add('active');
+			PLAN_CONTENT_MAP[type].yearly.classList.remove('active');
+		}
 	}
 };

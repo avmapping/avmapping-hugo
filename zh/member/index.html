@@ -611,57 +611,46 @@
 					音樂會員
 				</div>
 			</div>
-			<div class="switch-button hide" id="plan-switch-button">
+			<div class="switch-button" id="video-plan-switch-button">
 				<div class="selection">計月</div>
 				<label class="switch">
 					<input
 						type="checkbox"
-						id="plan-switch-button-input"
-						onChange="onChangeSwitchValue()"
+						id="video-plan-switch-button-input"
+						onChange="onChangeSwitchValue('video')"
 					/>
 					<span class="slider round"></span>
 				</label>
 				<div class="selection">計年</div>
 			</div>
-			<div class="container cards-4 active" id="video-member-content">
-				<div class="card">
-					<div class="top">
-						<div class="plan-name">教育方案</div>
-						<div class="price">
-							<span class="main">$300</span>
-						</div>
-					</div>
-					<div class="bottom">
-						<div class="item-wrapper">
-							<div class="item">
-								<div class="text">使用卷6張</div>
-							</div>
-							<div class="item">
-								<div class="text">依據每次專案報價付費</div>
-							</div>
-							<div class="item">
-								<div class="text">需提供學校官方證明文件審核</div>
-								<div class="small-text">(例：學生證、在學或教職證明)</div>
-							</div>
-						</div>
-						<a class="button">選擇此方案</a>
-					</div>
-				</div>
+			<div class="switch-button hide" id="musician-plan-switch-button">
+				<div class="selection">計月</div>
+				<label class="switch">
+					<input
+						type="checkbox"
+						id="musician-plan-switch-button-input"
+						onChange="onChangeSwitchValue('musician')"
+					/>
+					<span class="slider round"></span>
+				</label>
+				<div class="selection">計年</div>
+			</div>
+			<div class="container cards-3 with-stitch-button active" id="video-member-monthly-content">
 				<div class="card">
 					<div class="top">
 						<div class="plan-name">基本方案</div>
 						<div class="price">
-							<span class="main">$200</span>
+							<span class="time">NTD</span>
+							<span class="main">$200</span><span class="time">/次</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">單次購買使用卷</div>
-								<div class="small-text">（內含100元程式使用費）</div>
+								<div class="text">單次使用卷</div>
 							</div>
 							<div class="item">
-								<div class="text">依據每次專案報價付費</div>
+								<div class="text">授權與程式依需求系統報價</div>
 							</div>
 						</div>
 						<a class="button">選擇此方案</a>
@@ -672,17 +661,17 @@
 						<div class="label">最划算</div>
 						<div class="plan-name">進階方案</div>
 						<div class="price">
-							<span class="main">$1,900</span><span class="time">/月</span>
+							<span class="time">NTD</span>
+							<span class="main">$900</span><span class="time">/月</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">4次使用卷</div>
-								<div class="small-text">(限一年內使用完畢)</div>
+								<div class="text">無限次使用卷</div>
 							</div>
 							<div class="item">
-								<div class="text">儲值1,180元</div>
+								<div class="text">授權與程式依需求系統報價</div>
 							</div>
 						</div>
 						<a class="button">選擇此方案</a>
@@ -690,19 +679,153 @@
 				</div>
 				<div class="card">
 					<div class="top">
-						<div class="plan-name">專業方案</div>
+						<div class="plan-name">教育方案</div>
 						<div class="price">
-							<span class="main">$10,000</span><span class="time">/年</span>
+							<span class="time">NTD</span>
+							<span class="main">$540</span><span class="time">/月</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">15次使用卷</div>
+								<div class="text">無限次使用卷</div>
 							</div>
 							<div class="item">
-								<div class="text">儲值7,375元</div>
-								<div class="small-text">(限一年內使用完畢)</div>
+								<div class="text">授權與程式依需求系統報價</div>
+							</div>
+							<div class="item">
+								<div class="text">需提供學校官方證明文件審核</div>
+								<div class="small-text">(例：學生證、在學或教職證明)</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
+					</div>
+				</div>
+			</div>
+			<div class="container cards-3 with-stitch-button" id="video-member-yearly-content">
+				<div class="card">
+					<div class="top">
+						<div class="plan-name">基本方案</div>
+						<div class="price">
+							<span class="time">NTD</span>
+							<span class="main">$200</span><span class="time">/次</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">單次使用卷</div>
+							</div>
+							<div class="item">
+								<div class="text">授權與程式依需求系統報價</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="top">
+						<div class="label">最划算</div>
+						<div class="plan-name">進階方案</div>
+						<div class="price">
+							<span class="time">NTD</span>
+							<span class="main">$9,900</span><span class="time">/年</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">無限次使用卷</div>
+							</div>
+							<div class="item">
+								<div class="text">授權與程式依需求系統報價</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="top">
+						<div class="plan-name">教育方案</div>
+						<div class="price">
+							<span class="time">NTD</span>
+							<span class="main">$5400</span><span class="time">/年</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">無限次使用卷</div>
+							</div>
+							<div class="item">
+								<div class="text">授權與程式依需求系統報價</div>
+							</div>
+							<div class="item">
+								<div class="text">需提供學校官方證明文件審核</div>
+								<div class="small-text">(例：學生證、在學或教職證明)</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
+					</div>
+				</div>
+			</div>
+			<div class="container cards-3" id="business-member-content">
+				<div class="card">
+					<div class="top">
+						<div class="label">專人客製化</div>
+						<div class="plan-name">專案方案</div>
+						<div class="price">
+							<span class="time">NTD</span>
+							<span class="main">$6,000起</span><span class="time">/case</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">客製化專案、專屬API</div>
+							</div>
+							<div class="item">
+								<div class="text">依據每次專案報價付費</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="top">
+						<div class="plan-name">專屬作曲家</div>
+						<div class="price">
+							<span class="time">NTD</span>
+							<span class="main">$9,900起</span><span class="time">/case</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">專業作曲家媒合創作</div>
+							</div>
+							<div class="item">
+								<div class="text">依據每次專案報價付費</div>
+							</div>
+						</div>
+						<a class="button">選擇此方案</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="top">
+						<div class="plan-name">採購方案</div>
+						<div class="price">
+							<span class="time">NTD</span>
+							<span class="main">$99,000</span><span class="time">/2年</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">無限次使用卷</div>
+							</div>
+							<div class="item">
+								<div class="text">80,000元 現金抵用券</div>
 							</div>
 						</div>
 						<a class="button">選擇此方案</a>
@@ -720,10 +843,7 @@
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">單次上架歌曲</div>
-							</div>
-							<div class="item">
-								<div class="text">產業與活動資訊</div>
+								<div class="text">單次一首上架歌曲</div>
 							</div>
 							<div class="item">
 								<div class="text">基礎音樂分析</div>
@@ -740,22 +860,23 @@
 						<div class="label">經濟實惠組</div>
 						<div class="plan-name">進階方案</div>
 						<div class="price">
-							<span class="main">$3,700</span><span class="time">/年</span>
+							<span class="time">NTD</span>
+							<span class="main">$3,900</span><span class="time">/年</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">專人代管與建置資料庫</div>
+								<div class="text">單次一首上架歌曲</div>
 							</div>
 							<div class="item">
-								<div class="text">技術研討會資訊</div>
+								<div class="text">進階音樂分析、優先AI協作改作</div>
 							</div>
 							<div class="item">
-								<div class="text">進階音樂分析</div>
+								<div class="text">音樂人社團資訊、多元平台宣傳</div>
 							</div>
 							<div class="item">
-								<div class="text">AI創作優先協作者</div>
+								<div class="text">推薦之合作作曲家</div>
 							</div>
 						</div>
 						<a class="button">選擇此方案</a>
@@ -765,25 +886,29 @@
 					<div class="top">
 						<div class="plan-name">專業方案</div>
 						<div class="price">
-							<span class="main">$17,200</span><span class="time">/年</span>
+							<span class="time">NTD</span>
+							<span class="main">$18,000</span><span class="time">/年</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">批次上架無限多首音樂</div>
+								<div class="text">批次上架多首音樂</div>
 							</div>
 							<div class="item">
-								<div class="text">專人代管整理音樂庫</div>
+								<div class="text">進階音樂分析、優先AI協作改作</div>
 							</div>
 							<div class="item">
-								<div class="text">多元音樂平台串聯宣傳</div>
+								<div class="text">音樂人社團資訊、多元平台宣傳</div>
 							</div>
 							<div class="item">
-								<div class="text">專訪介紹機會</div>
+								<div class="text">推薦之合作作曲家</div>
 							</div>
 							<div class="item">
-								<div class="text">客製化連結與頁面設計</div>
+								<div class="text">專人代管建置音樂庫</div>
+							</div>
+							<div class="item">
+								<div class="text">專訪機會、客製化連結與頁面設計</div>
 							</div>
 						</div>
 						<a class="button">選擇此方案</a>
@@ -801,10 +926,7 @@
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">單次上架歌曲</div>
-							</div>
-							<div class="item">
-								<div class="text">產業與活動資訊</div>
+								<div class="text">單次一首上架歌曲</div>
 							</div>
 							<div class="item">
 								<div class="text">基礎音樂分析</div>
@@ -818,25 +940,26 @@
 				</div>
 				<div class="card">
 					<div class="top">
-						<div class="label">小資族必備</div>
+						<div class="label">經濟實惠組</div>
 						<div class="plan-name">進階方案</div>
 						<div class="price">
-							<span class="main">$350</span><span class="time">/月</span>
+							<span class="time">NTD</span>
+							<span class="main">$360</span><span class="time">/月</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">專人代管與建置資料庫</div>
+								<div class="text">單次一首上架歌曲</div>
 							</div>
 							<div class="item">
-								<div class="text">技術研討會資訊</div>
+								<div class="text">進階音樂分析、優先AI協作改作</div>
 							</div>
 							<div class="item">
-								<div class="text">進階音樂分析</div>
+								<div class="text">音樂人社團資訊、多元平台宣傳</div>
 							</div>
 							<div class="item">
-								<div class="text">AI創作優先協作者</div>
+								<div class="text">推薦之合作作曲家</div>
 							</div>
 						</div>
 						<a class="button">選擇此方案</a>
@@ -846,85 +969,29 @@
 					<div class="top">
 						<div class="plan-name">專業方案</div>
 						<div class="price">
-							<span class="main">$1,600</span><span class="time">/月</span>
+							<span class="time">NTD</span>
+							<span class="main">$1,650</span><span class="time">/月</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">批次上架無限多首音樂</div>
+								<div class="text">批次上架多首音樂</div>
 							</div>
 							<div class="item">
-								<div class="text">專人代管整理音樂庫</div>
+								<div class="text">進階音樂分析、優先AI協作改作</div>
 							</div>
 							<div class="item">
-								<div class="text">多元音樂平台串聯宣傳</div>
+								<div class="text">音樂人社團資訊、多元平台宣傳</div>
 							</div>
 							<div class="item">
-								<div class="text">專訪介紹機會</div>
+								<div class="text">推薦之合作作曲家</div>
 							</div>
 							<div class="item">
-								<div class="text">客製化連結與頁面設計</div>
-							</div>
-						</div>
-						<a class="button">選擇此方案</a>
-					</div>
-				</div>
-			</div>
-			<div class="container cards-3" id="business-member-content">
-				<div class="card">
-					<div class="top">
-						<div class="label">專人客製化</div>
-						<div class="plan-name">專案方案</div>
-						<div class="price">
-							<span class="main">$6,000起</span><span class="time">/case</span>
-						</div>
-					</div>
-					<div class="bottom">
-						<div class="item-wrapper">
-							<div class="item">
-								<div class="text">客製化專案設計</div>
+								<div class="text">專人代管建置音樂庫</div>
 							</div>
 							<div class="item">
-								<div class="text">依據每次專案報價付費</div>
-							</div>
-						</div>
-						<a class="button">選擇此方案</a>
-					</div>
-				</div>
-				<div class="card">
-					<div class="top">
-						<div class="plan-name">API方案</div>
-						<div class="price">
-							<span class="main">$3,900起</span><span class="time">/月</span>
-						</div>
-					</div>
-					<div class="bottom">
-						<div class="item-wrapper">
-							<div class="item">
-								<div class="text">客製化專屬API串接設計</div>
-							</div>
-							<div class="item">
-								<div class="text">依據功能API提供報價付費</div>
-							</div>
-						</div>
-						<a class="button">選擇此方案</a>
-					</div>
-				</div>
-				<div class="card">
-					<div class="top">
-						<div class="plan-name">採購方案</div>
-						<div class="price">
-							<span class="main">$99,000</span><span class="time">/2年</span>
-						</div>
-					</div>
-					<div class="bottom">
-						<div class="item-wrapper">
-							<div class="item">
-								<div class="text">50次使用卷</div>
-							</div>
-							<div class="item">
-								<div class="text">儲值 90,250元</div>
+								<div class="text">專訪機會、客製化連結與頁面設計</div>
 							</div>
 						</div>
 						<a class="button">選擇此方案</a>

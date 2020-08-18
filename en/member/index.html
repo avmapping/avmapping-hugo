@@ -598,336 +598,403 @@
 			</div>
 		</section>
 		<section id="section-plan">
-			<h3 class="section-title">選取方案</h3>
-			<h4 class="section-subtitle">找到最適合您需求的 A.V.Mapping 方案</h4>
+			<h3 class="section-title">Plans &amp; Pricing</h3>
+			<h4 class="section-subtitle">Choose your A.V. Mapping member plan.</h4>
 			<div class="actions">
 				<div class="button active" id="video-member" onClick="selectPlan('video')">
-					影像會員
+					Filmmakers
 				</div>
 				<div class="button" id="business-member" onClick="selectPlan('business')">
-					企業會員
+					Business
 				</div>
 				<div class="button" id="musician-member" onClick="selectPlan('musician')">
-					音樂會員
+					Musicians
 				</div>
 			</div>
-			<div class="switch-button hide" id="plan-switch-button">
-				<div class="selection">計月</div>
+			<div class="switch-button" id="video-plan-switch-button">
+				<div class="selection">Monthly</div>
 				<label class="switch">
 					<input
 						type="checkbox"
-						id="plan-switch-button-input"
-						onChange="onChangeSwitchValue()"
+						id="video-plan-switch-button-input"
+						onChange="onChangeSwitchValue('video')"
 					/>
 					<span class="slider round"></span>
 				</label>
-				<div class="selection">計年</div>
+				<div class="selection">Yearly</div>
 			</div>
-			<div class="container cards-4 active" id="video-member-content">
+			<div class="switch-button hide" id="musician-plan-switch-button">
+				<div class="selection">Monthly</div>
+				<label class="switch">
+					<input
+						type="checkbox"
+						id="musician-plan-switch-button-input"
+						onChange="onChangeSwitchValue('musician')"
+					/>
+					<span class="slider round"></span>
+				</label>
+				<div class="selection">Yearly</div>
+			</div>
+			<div class="container cards-3 with-stitch-button active" id="video-member-monthly-content">
 				<div class="card">
 					<div class="top">
-						<div class="plan-name">教育方案</div>
+						<div class="plan-name">Basic</div>
 						<div class="price">
-							<span class="main">$300</span>
+							<span class="time">USD</span>
+							<span class="main">$7</span><span class="time">/case</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">使用卷6張</div>
+								<div class="text">1 ticket</div>
 							</div>
 							<div class="item">
-								<div class="text">依據每次專案報價付費</div>
-							</div>
-							<div class="item">
-								<div class="text">需提供學校官方證明文件審核</div>
-								<div class="small-text">(例：學生證、在學或教職證明)</div>
+								<div class="text">Any project requirement affects music licenesed and service fee.</div>
 							</div>
 						</div>
-						<a class="button">選擇此方案</a>
+						<a class="button">Choose this plan</a>
 					</div>
 				</div>
 				<div class="card">
 					<div class="top">
-						<div class="plan-name">基本方案</div>
+						<div class="label">A Good Deal</div>
+						<div class="plan-name">Advance</div>
 						<div class="price">
-							<span class="main">$200</span>
+							<span class="time">USD</span>
+							<span class="main">$30</span><span class="time">/month</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">單次購買使用卷</div>
-								<div class="small-text">（內含100元程式使用費）</div>
+								<div class="text">Unlimited tickets</div>
 							</div>
 							<div class="item">
-								<div class="text">依據每次專案報價付費</div>
+								<div class="text">Any project requirement affects music licenesed and service fee.</div>
 							</div>
 						</div>
-						<a class="button">選擇此方案</a>
+						<a class="button">Choose this plan</a>
 					</div>
 				</div>
 				<div class="card">
 					<div class="top">
-						<div class="label">最划算</div>
-						<div class="plan-name">進階方案</div>
+						<div class="plan-name">Student &amp; Teacher</div>
 						<div class="price">
-							<span class="main">$1,900</span><span class="time">/月</span>
+							<span class="time">USD</span>
+							<span class="main">$18</span><span class="time">/month</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">4次使用卷</div>
-								<div class="small-text">(限一年內使用完畢)</div>
+								<div class="text">Unlimited tickets</div>
 							</div>
 							<div class="item">
-								<div class="text">儲值1,180元</div>
-							</div>
-						</div>
-						<a class="button">選擇此方案</a>
-					</div>
-				</div>
-				<div class="card">
-					<div class="top">
-						<div class="plan-name">專業方案</div>
-						<div class="price">
-							<span class="main">$10,000</span><span class="time">/年</span>
-						</div>
-					</div>
-					<div class="bottom">
-						<div class="item-wrapper">
-							<div class="item">
-								<div class="text">15次使用卷</div>
+								<div class="text">Any project requirement affects music licenesed and service fee.</div>
 							</div>
 							<div class="item">
-								<div class="text">儲值7,375元</div>
-								<div class="small-text">(限一年內使用完畢)</div>
+								<div class="text">Requires institutional affliation</div>
+								<div class="small-text">(Ex. School ID card, tuition bill or statement)</div>
 							</div>
 						</div>
-						<a class="button">選擇此方案</a>
+						<a class="button">Choose this plan</a>
 					</div>
 				</div>
 			</div>
-			<div class="container cards-3 with-stitch-button" id="musician-member-yearly-content">
+			<div class="container cards-3 with-stitch-button" id="video-member-yearly-content">
 				<div class="card">
 					<div class="top">
-						<div class="plan-name">基本方案</div>
+						<div class="plan-name">Basic</div>
 						<div class="price">
-							<span class="main">$0</span>
+							<span class="time">USD</span>
+							<span class="main">$7</span><span class="time">/case</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">單次上架歌曲</div>
+								<div class="text">1 ticket</div>
 							</div>
 							<div class="item">
-								<div class="text">產業與活動資訊</div>
-							</div>
-							<div class="item">
-								<div class="text">基礎音樂分析</div>
-							</div>
-							<div class="item">
-								<div class="text">音樂人社團資訊</div>
+								<div class="text">Any project requirement affects music licenesed and service fee.</div>
 							</div>
 						</div>
-						<a class="button">選擇此方案</a>
+						<a class="button">Choose this plan</a>
 					</div>
 				</div>
 				<div class="card">
 					<div class="top">
-						<div class="label">經濟實惠組</div>
-						<div class="plan-name">進階方案</div>
+						<div class="label">A Good Deal</div>
+						<div class="plan-name">Advance</div>
 						<div class="price">
-							<span class="main">$3,700</span><span class="time">/年</span>
+							<span class="time">USD</span>
+							<span class="main">$330</span><span class="time">/year</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">專人代管與建置資料庫</div>
+								<div class="text">Unlimited tickets</div>
 							</div>
 							<div class="item">
-								<div class="text">技術研討會資訊</div>
-							</div>
-							<div class="item">
-								<div class="text">進階音樂分析</div>
-							</div>
-							<div class="item">
-								<div class="text">AI創作優先協作者</div>
+								<div class="text">Any project requirement affects music licenesed and service fee.</div>
 							</div>
 						</div>
-						<a class="button">選擇此方案</a>
+						<a class="button">Choose this plan</a>
 					</div>
 				</div>
 				<div class="card">
 					<div class="top">
-						<div class="plan-name">專業方案</div>
+						<div class="plan-name">Student &amp; Teacher</div>
 						<div class="price">
-							<span class="main">$17,200</span><span class="time">/年</span>
+							<span class="time">USD</span>
+							<span class="main">$180</span><span class="time">/year</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">批次上架無限多首音樂</div>
+								<div class="text">Unlimited tickets</div>
 							</div>
 							<div class="item">
-								<div class="text">專人代管整理音樂庫</div>
+								<div class="text">Any project requirement affects music licenesed and service fee.</div>
 							</div>
 							<div class="item">
-								<div class="text">多元音樂平台串聯宣傳</div>
-							</div>
-							<div class="item">
-								<div class="text">專訪介紹機會</div>
-							</div>
-							<div class="item">
-								<div class="text">客製化連結與頁面設計</div>
+								<div class="text">Requires institutional affliation</div>
+								<div class="small-text">(Ex. School ID card, tuition bill or statement)</div>
 							</div>
 						</div>
-						<a class="button">選擇此方案</a>
-					</div>
-				</div>
-			</div>
-			<div class="container cards-3 with-stitch-button" id="musician-member-monthly-content">
-				<div class="card">
-					<div class="top">
-						<div class="plan-name">基本方案</div>
-						<div class="price">
-							<span class="main">$0</span>
-						</div>
-					</div>
-					<div class="bottom">
-						<div class="item-wrapper">
-							<div class="item">
-								<div class="text">單次上架歌曲</div>
-							</div>
-							<div class="item">
-								<div class="text">產業與活動資訊</div>
-							</div>
-							<div class="item">
-								<div class="text">基礎音樂分析</div>
-							</div>
-							<div class="item">
-								<div class="text">音樂人社團資訊</div>
-							</div>
-						</div>
-						<a class="button">選擇此方案</a>
-					</div>
-				</div>
-				<div class="card">
-					<div class="top">
-						<div class="label">小資族必備</div>
-						<div class="plan-name">進階方案</div>
-						<div class="price">
-							<span class="main">$350</span><span class="time">/月</span>
-						</div>
-					</div>
-					<div class="bottom">
-						<div class="item-wrapper">
-							<div class="item">
-								<div class="text">專人代管與建置資料庫</div>
-							</div>
-							<div class="item">
-								<div class="text">技術研討會資訊</div>
-							</div>
-							<div class="item">
-								<div class="text">進階音樂分析</div>
-							</div>
-							<div class="item">
-								<div class="text">AI創作優先協作者</div>
-							</div>
-						</div>
-						<a class="button">選擇此方案</a>
-					</div>
-				</div>
-				<div class="card">
-					<div class="top">
-						<div class="plan-name">專業方案</div>
-						<div class="price">
-							<span class="main">$1,600</span><span class="time">/月</span>
-						</div>
-					</div>
-					<div class="bottom">
-						<div class="item-wrapper">
-							<div class="item">
-								<div class="text">批次上架無限多首音樂</div>
-							</div>
-							<div class="item">
-								<div class="text">專人代管整理音樂庫</div>
-							</div>
-							<div class="item">
-								<div class="text">多元音樂平台串聯宣傳</div>
-							</div>
-							<div class="item">
-								<div class="text">專訪介紹機會</div>
-							</div>
-							<div class="item">
-								<div class="text">客製化連結與頁面設計</div>
-							</div>
-						</div>
-						<a class="button">選擇此方案</a>
+						<a class="button">Choose this plan</a>
 					</div>
 				</div>
 			</div>
 			<div class="container cards-3" id="business-member-content">
 				<div class="card">
 					<div class="top">
-						<div class="label">專人客製化</div>
-						<div class="plan-name">專案方案</div>
+						<div class="label">Special Offer</div>
+						<div class="plan-name">Customized Project</div>
 						<div class="price">
-							<span class="main">$6,000起</span><span class="time">/case</span>
+							<span class="time">USD</span>
+							<span class="main">&gt; $200</span><span class="time">/case</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">客製化專案設計</div>
+								<div class="text">Customized service, even for developers.</div>
 							</div>
 							<div class="item">
-								<div class="text">依據每次專案報價付費</div>
+								<div class="text">Any project requirement affects the price.</div>
 							</div>
 						</div>
-						<a class="button">選擇此方案</a>
+						<a class="button">Choose this plan</a>
 					</div>
 				</div>
 				<div class="card">
 					<div class="top">
-						<div class="plan-name">API方案</div>
+						<div class="plan-name">Original Composer</div>
 						<div class="price">
-							<span class="main">$3,900起</span><span class="time">/月</span>
+							<span class="time">USD</span>
+							<span class="main">&gt; $300</span><span class="time">/case</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">客製化專屬API串接設計</div>
+								<div class="text">Matching the most suitable composer for your video.</div>
 							</div>
 							<div class="item">
-								<div class="text">依據功能API提供報價付費</div>
+								<div class="text">Any project requirement affects the price.</div>
 							</div>
 						</div>
-						<a class="button">選擇此方案</a>
+						<a class="button">Choose this plan</a>
 					</div>
 				</div>
 				<div class="card">
 					<div class="top">
-						<div class="plan-name">採購方案</div>
+						<div class="plan-name">Government Package</div>
 						<div class="price">
-							<span class="main">$99,000</span><span class="time">/2年</span>
+							<span class="time">USD</span>
+							<span class="main">$3,300</span><span class="time">/2yrs</span>
 						</div>
 					</div>
 					<div class="bottom">
 						<div class="item-wrapper">
 							<div class="item">
-								<div class="text">50次使用卷</div>
+								<div class="text">Unlimited tickets in 2 years</div>
 							</div>
 							<div class="item">
-								<div class="text">儲值 90,250元</div>
+								<div class="text">Deposit $ 2660 USD</div>
 							</div>
 						</div>
-						<a class="button">選擇此方案</a>
+						<a class="button">Choose this plan</a>
+					</div>
+				</div>
+			</div>
+			<div class="container cards-3 with-stitch-button" id="musician-member-yearly-content">
+				<div class="card">
+					<div class="top">
+						<div class="plan-name">Basic</div>
+						<div class="price">
+							<span class="main">$0</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">Upload 1 music per time</div>
+							</div>
+							<div class="item">
+								<div class="text">Basic music analysis</div>
+							</div>
+							<div class="item">
+								<div class="text">Musician group information</div>
+							</div>
+						</div>
+						<a class="button">Choose this plan</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="top">
+						<div class="label">Economical</div>
+						<div class="plan-name">Advance</div>
+						<div class="price">
+							<span class="time">USD</span>
+							<span class="main">$130</span><span class="time">/year</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">Upload 1 music per time</div>
+							</div>
+							<div class="item">
+								<div class="text">Advance music analysis, AI adaption priority</div>
+							</div>
+							<div class="item">
+								<div class="text">Musician group information, multiple platform promotion</div>
+							</div>
+							<div class="item">
+								<div class="text">Recommended composer</div>
+							</div>
+						</div>
+						<a class="button">Choose this plan</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="top">
+						<div class="plan-name">Professional</div>
+						<div class="price">
+							<span class="time">USD</span>
+							<span class="main">$600</span><span class="time">/year</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">Upload lots of music per time</div>
+							</div>
+							<div class="item">
+								<div class="text">Advance music analysis, AI adaption priority</div>
+							</div>
+							<div class="item">
+								<div class="text">Musician group information, multiple platform promotion</div>
+							</div>
+							<div class="item">
+								<div class="text">Recommended composer</div>
+							</div>
+							<div class="item">
+								<div class="text">Personal music database establishment</div>
+							</div>
+							<div class="item">
+								<div class="text">Chance of personal interview, Customized diversion link and page design.</div>
+							</div>
+						</div>
+						<a class="button">Choose this plan</a>
+					</div>
+				</div>
+			</div>
+			<div class="container cards-3 with-stitch-button" id="musician-member-monthly-content">
+				<div class="card">
+					<div class="top">
+						<div class="plan-name">Basic</div>
+						<div class="price">
+							<span class="main">$0</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">Upload 1 music per time</div>
+							</div>
+							<div class="item">
+								<div class="text">Basic music analysis</div>
+							</div>
+							<div class="item">
+								<div class="text">Musician group information</div>
+							</div>
+						</div>
+						<a class="button">Choose this plan</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="top">
+						<div class="label">Economical</div>
+						<div class="plan-name">Advance</div>
+						<div class="price">
+							<span class="time">USD</span>
+							<span class="main">$12</span><span class="time">/month</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">Upload 1 music per time</div>
+							</div>
+							<div class="item">
+								<div class="text">Advance music analysis, AI adaption priority</div>
+							</div>
+							<div class="item">
+								<div class="text">Musician group information, multiple platform promotion</div>
+							</div>
+							<div class="item">
+								<div class="text">Recommended composer</div>
+							</div>
+						</div>
+						<a class="button">Choose this plan</a>
+					</div>
+				</div>
+				<div class="card">
+					<div class="top">
+						<div class="plan-name">Professional</div>
+						<div class="price">
+							<span class="time">uSD</span>
+							<span class="main">$55</span><span class="time">/month</span>
+						</div>
+					</div>
+					<div class="bottom">
+						<div class="item-wrapper">
+							<div class="item">
+								<div class="text">Upload lots of music per time</div>
+							</div>
+							<div class="item">
+								<div class="text">Advance music analysis, AI adaption priority</div>
+							</div>
+							<div class="item">
+								<div class="text">Musician group information, multiple platform promotion</div>
+							</div>
+							<div class="item">
+								<div class="text">Recommended composer</div>
+							</div>
+							<div class="item">
+								<div class="text">Personal music database establishment</div>
+							</div>
+							<div class="item">
+								<div class="text">Chance of personal interview, Customized diversion link and page design.</div>
+							</div>
+						</div>
+						<a class="button">Choose this plan</a>
 					</div>
 				</div>
 			</div>
