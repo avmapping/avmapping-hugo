@@ -3,87 +3,87 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://avmapping.co/beta/en/member/</loc>
+    <loc>https://avmapping.co/en/member/</loc>
     <lastmod>2020-05-30T17:56:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://avmapping.co/beta/zh/member/"
+                href="https://avmapping.co/zh/member/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://avmapping.co/beta/en/member/"
+                href="https://avmapping.co/en/member/"
                 />
   </url>
   
   <url>
-    <loc>https://avmapping.co/beta/en/legal/terms/</loc>
+    <loc>https://avmapping.co/en/legal/terms/</loc>
     <lastmod>2020-04-19T21:38:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://avmapping.co/beta/zh/legal/terms/"
+                href="https://avmapping.co/zh/legal/terms/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://avmapping.co/beta/en/legal/terms/"
+                href="https://avmapping.co/en/legal/terms/"
                 />
   </url>
   
   <url>
-    <loc>https://avmapping.co/beta/en/legal/privacy/</loc>
+    <loc>https://avmapping.co/en/legal/privacy/</loc>
     <lastmod>2020-04-19T19:17:03+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://avmapping.co/beta/zh/legal/privacy/"
+                href="https://avmapping.co/zh/legal/privacy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://avmapping.co/beta/en/legal/privacy/"
+                href="https://avmapping.co/en/legal/privacy/"
                 />
   </url>
   
   <url>
-    <loc>https://avmapping.co/beta/en/musicians/</loc>
+    <loc>https://avmapping.co/en/musicians/</loc>
     <lastmod>2020-04-11T22:46:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://avmapping.co/beta/zh/musicians/"
+                href="https://avmapping.co/zh/musicians/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://avmapping.co/beta/en/musicians/"
+                href="https://avmapping.co/en/musicians/"
                 />
   </url>
   
   <url>
-    <loc>https://avmapping.co/beta/en/</loc>
+    <loc>https://avmapping.co/en/</loc>
     <lastmod>2020-04-11T22:44:58+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://avmapping.co/beta/zh/"
+                href="https://avmapping.co/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://avmapping.co/beta/en/"
+                href="https://avmapping.co/en/"
                 />
   </url>
   
