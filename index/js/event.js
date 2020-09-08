@@ -207,7 +207,9 @@ function userSignUp() {
 				400: function (response) {
 					console.log(response);
 					error = JSON.parse(response.responseText);
-					alert(error.password1[0]);
+					for (var key in error) {
+						alert(error[key][0]);
+					}
 					form[0].reset();
 					clearSign();
 				}
