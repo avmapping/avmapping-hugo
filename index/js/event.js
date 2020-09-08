@@ -1,28 +1,11 @@
 let userType = 'audio'; // user type can be 'audio', 'video' or ''
-//const baseURL = 'http://localhost:8888';
 const baseURL = 'https://filmmusic.avmapping.co';
-//var API = {'signup': baseURL+'/api/auth/signup',
-//		   'signin': baseURL+'/api/auth/signin',
-//		   'resetpwd': baseURL+'/api/auth/reset'};
-//const baseURL = 'http://ec2-13-251-81-129.ap-southeast-1.compute.amazonaws.com';
 var API = {'signup':   baseURL+'/api/users/signup/',
 		   'signin':   baseURL+'/api/users/login/',
 		   'signout':  baseURL+'/api/users/logout/',
 		   'resetpwd': baseURL+'/users/password/change/'};
 
 const switchNavDisplay = nextState => {
-	/*
-	const loginNavEls = Array.from(document.getElementsByClassName('user-login'));
-	const notLoginNavEls = Array.from(document.getElementsByClassName('user-not-login'));
-
-	if (nextState === 'login') {
-		loginNavEls.forEach(el => el.classList.remove('hide'));
-		notLoginNavEls.forEach(el => el.classList.add('hide'));
-	} else if (nextState === 'notLogin') {
-		loginNavEls.forEach(el => el.classList.add('hide'));
-		notLoginNavEls.forEach(el => el.classList.remove('hide'));
-	}
-	*/
 	const loginNavElsAttr = ["nav-user-login", "nav-login"];
 	const notloginNavElsAttr = ["navi-user-login", "navi-user-signup", "navi-login", "navi-signup"];
 
@@ -50,16 +33,6 @@ const login = (type = 'desktop') => {
 	closePhoneNaviMenu();
 	document.getElementById('section-sign-up').style.display = 'none';
 	document.getElementById('section-sign-in').style.display = 'block';
-	//document.getElementById('section-reset-pwd').style.display = 'none';
-	/*
-	if ((type = 'phone')) {
-		setTimeout(() => {
-			switchNavDisplay('login');
-		}, 500);
-	} else {
-		switchNavDisplay('login');
-	}
-	*/
 };
 
 const logout = (type = 'desktop') => {
@@ -75,10 +48,7 @@ const logout = (type = 'desktop') => {
 	    },
 	    success : function(response) {
 	       	console.log(response);
-	       	//data = JSON.parse(response);
-	       	//console.log(response.key)
 	       	login_state = false;
-	       	//token = "";
 	       	docCookies.removeItem('access_token');
 	       	console.log(docCookies.keys());
 	       	console.log('token', docCookies.getItem('access_token'));
@@ -93,9 +63,6 @@ const logout = (type = 'desktop') => {
 	       		console.log('token', docCookies.getItem('access_token'));
 			}
 		}
-		/*error: function(error){
-	           console.log(error);
-	       }*/
 	});
 
 	closePhoneNaviMenu();
@@ -176,28 +143,10 @@ function userSignUp() {
 	        url  : url,
 	        data : form.serialize(),
 	        success : function(response) {
-	        	//console.log(response);
-	        	//data = JSON.parse(response);
-	        	//console.log(response.key)
 	        	login_state = true;
 	        	form[0].reset();
 	        	closeSign();
-	        	/*if (response != 'err') {
-	        		login_state = true;
-	        		form[0].reset();
-	        		$("#check-signup-email").html("");
-	        		$("#check-password").html("");
-	        		closeSign();
-	        		login_auth();
-	        	} else {
-	        		alert('You are already registered!');
-	        		form[0].reset();
-	        		$("#check-signup-email").html("");
-	        		$("#check-password").html("");
-	        	}*/
-	        	//document.getElementById('user-profile').href += '?token='.concat(data.auth_token);
-	        	//document.getElementById('navi-user-profile').href += '?token='.concat(data.auth_token);
-	        	//token = response.key;
+	        	
 	        	docCookies.setItem('access_token', response.key);
 	        	login_auth();
 	        	document.getElementById('user-profile').href += '?token='.concat(docCookies.getItem('access_token'));
@@ -214,12 +163,8 @@ function userSignUp() {
 					clearSign();
 				}
 			}
-			/*error: function(error){
-	            console.log(error);
-	        }*/
 	    });
 	}
-	//console.log(fields);
 };
 
 function userSignIn() {
@@ -233,23 +178,10 @@ function userSignIn() {
         url  : url,
         data : form.serialize(),
         success: function(response) {
-        	//console.log(response);
-        	//data = JSON.parse(response);
         	login_state = true;
         	form[0].reset();
         	closeSign();
-        	/*if (response != 'err') {
-        		login_state = true;
-        		form[0].reset();
-        		closeSign();
-        		login_auth();
-        	} else {
-        		alert('Sorry! The email address or password is incorrect.');
-        		form[0].reset();
-        	}*/
-        	//document.getElementById('user-profile').href += '?token='.concat(data.auth_token);
-        	//document.getElementById('navi-user-profile').href += '?token='.concat(data.auth_token);
-        	//token = response.key;
+
         	docCookies.setItem('access_token', response.key);
         	login_auth();
         	document.getElementById('user-profile').href += '?token='.concat(docCookies.getItem('access_token'));
@@ -264,9 +196,6 @@ function userSignIn() {
 				form[0].reset();
 			}
 		}
-		/*error: function(error){
-            console.log('err',error);
-        }*/
     });
 };
 
@@ -289,15 +218,6 @@ function userReset() {
 	        	console.log(response);
 	        	form[0].reset();
 	        	closeSign();
-	        	/*if (response != 'err') {
-	        		login_state = true;
-	        		form[0].reset();
-	        		closeSign();
-	        		login_auth();
-	        	} else {
-	        		alert('Sorry! The email address or password is incorrect.');
-	        		form[0].reset();
-	        	}*/
 			},
 			statusCode: {
 				406: function (response) {
@@ -307,9 +227,6 @@ function userReset() {
 					clearSign();
 				}
 			}
-			/*error: function(error){
-	            console.log('err',error);
-	        }*/
 	    });
 	}
 };
@@ -338,18 +255,6 @@ function checkPassword() {
 		    	check_pass.innerHTML = 'not matching!';
 		  	}
 	}
-	/*
-	var pass = document.getElementById('password');
-	var re_pass = document.getElementById('re-password');
-	var check_pass = document.getElementById('check-password');
-  	if (pass.value == re_pass.value) {
-    	check_pass.style.color = '#30c1b8';
-    	check_pass.innerHTML = 'matching!';
-  	} else {
-    	check_pass.style.color = '#ef7873';
-    	check_pass.innerHTML = 'not matching!';
-  	}
-  	*/
 };
 
 function login_auth() {
@@ -387,27 +292,6 @@ var login_state = false;
 
 $(document).ready(function()
 {	
-	/*
-	$.ajax({
-        type :"POST",
-        url  :"http://localhost:8888/api/auth",
-        success : function(response) {
-        	console.log('success');
-        	console.log(response);
-        	if (response) {
-        		login_state = true;
-        		closeSign();
-        		login_auth();
-        	} else {
-        		closeSign();
-        		alert('Oops! Something went wrong.');
-        	}
-		},
-		error: function(error){
-            console.log(error);
-        }
-    });
-    */
     login_auth();
 
     $('.sign-in-form').hover(function(){ 
