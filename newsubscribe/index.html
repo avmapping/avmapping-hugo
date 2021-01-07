@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>A.V. Mapping Newsletter Subscription</title>
   <meta charset="utf-8">
@@ -8,57 +9,42 @@
   <meta name="description" content="Video music newsletter">
   <meta name="keywords" content="video,music,videonewsletter,newsletter,musicnews,videonews">
   <link rel="stylesheet" href="assets/css/news.css">
-    <link rel="icon" href="assets/img/LOGOOOOh.png">
+  <link rel="icon" href="assets/img/LOGOOOOh.png">
 </head>
+
 <body>
+<div id="viewport" class="l-viewport">
+  <div class="l-wrapper">
+    <header class="header">
+      <a class="header--logo" href="assets/img/LOGOOOO.png">
+        <img src="assets/img/LOGOOOO.png" alt="A.V. Mapping">
+        <p>A.V. Mapping</p>
+      </a>
+    </header>
+    <ul class="l-main-content main-content">
+      <li class="l-section section section--is-active">
+        <div class="hire">
+          <h2>歡迎訂閱A.V. Mapping電子報</h2>
 
-<!-- notification for small viewports and landscape oriented smartphones -->
-
-<div class="perspective effect-rotate-left">
-  <div class="container"><div class="outer-nav--return"></div>
-    <div id="viewport" class="l-viewport">
-      <div class="l-wrapper">
-        <header class="header">
-          <a class="header--logo" href="assets/img/LOGOOOO.png">
-            <img src="assets/img/LOGOOOO.png" alt="A.V. Mapping">
-            <p>A.V. Mapping</p>
-          </a>
-          <!--<button class="header--cta cta">歡迎訂閱A.V. Mapping電子報</button>!-->
-        </header>
-        <ul class="l-main-content main-content">
-          <li class="l-section section section--is-active">
-            <div class="hire">
-              <h2>歡迎訂閱A.V. Mapping電子報</h2>
-              
-              <form class="work-request" form action="/letter/a/" method="post">
-
-                <div class="work-request--information">
-                    <div class="information-name"><input type="hidden" name="csrfmiddlewaretoken" value="Rv109AiPmbUhXYIxTP3sAwQM6dPdufJsNfbFd9FMVmNueg7IiVTD1r3pMXLQfw7u">
-                    <input id="name" type="text" spellcheck="false" name="name">
-                    <label for="name">Name</label>
-                  </div>
-                  <div class="information-email">
-                    <input id="email" type="email" spellcheck="false"name="email">
-                    <label for="email">Email</label>
-                  </div>
-                </div>
-                <input type="submit" value="Subscribe">
-              </form>
-              </form>
+          <form class="work-request" form action="/letter/a/" method="post">
+            <div class="work-request--information">
+              <div class="information-name">
+                <input id="name" type="text" spellcheck="false" name="name">
+                <label for="name">Name</label>
+              </div>
+              <div class="information-email">
+                <input id="email" type="email" spellcheck="false"name="email">
+                <label for="email">Email</label>
+              </div>
             </div>
-          </li>
-        </ul>
-      </div>
-    </div>
+            <input type="submit" value="Subscribe">
+          </form>
+
+        </div>
+      </li>
+    </ul>
   </div>
-  <!--<ul class="outer-nav">
-    <li class="is-active">Home</li>
-  </ul>!-->
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
-<script src="assets/js/functions-min.js"></script>
 </body>
-</html>
 
+</html>
