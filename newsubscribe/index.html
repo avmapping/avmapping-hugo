@@ -15,6 +15,13 @@
 </head>
 
 <body>
+
+<script type="text/javascript">
+  function bang() {
+    document.getElementById('form').action = `https://filmmusic.avmapping.co/${window.location.search.slice(1)}/`
+  }
+</script>
+
 <div id="viewport" class="l-viewport">
   <div class="l-wrapper">
     <header class="header">
@@ -28,7 +35,7 @@
         <div class="hire">
           <h2>歡迎訂閱A.V. Mapping電子報</h2>
 
-          <form class="work-request" form action="/letter/a/" method="post">
+          <form id="form" class="work-request" action="" method="post" onSubmit="return bang()">
             <div class="work-request--information">
               <div class="information-name">
                 <input id="name" type="text" spellcheck="false" name="name" required>
