@@ -10,6 +10,8 @@
   <meta name="keywords" content="video,music,videonewsletter,newsletter,musicnews,videonews">
   <link rel="stylesheet" href="assets/css/news.css">
   <link rel="icon" href="assets/img/LOGOOOOh.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="assets/js/functions-min.js"></script>
 </head>
 
 <body>
@@ -29,11 +31,11 @@
           <form class="work-request" form action="/letter/a/" method="post">
             <div class="work-request--information">
               <div class="information-name">
-                <input id="name" type="text" spellcheck="false" name="name">
+                <input id="name" type="text" spellcheck="false" name="name" required>
                 <label for="name">Name</label>
               </div>
               <div class="information-email">
-                <input id="email" type="email" spellcheck="false"name="email">
+                <input id="mail" type="email" spellcheck="false" name="mail" required>
                 <label for="email">Email</label>
               </div>
             </div>
