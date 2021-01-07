@@ -30,10 +30,10 @@
             <div class="hire">
               <h2>歡迎訂閱A.V. Mapping電子報</h2>
               
-              <form class="work-request" form action="{{ path }}" method="post">
+              <form class="work-request" form action="/letter/a/" method="post">
 
                 <div class="work-request--information">
-                    <div class="information-name">
+                    <div class="information-name"><input type="hidden" name="csrfmiddlewaretoken" value="Rv109AiPmbUhXYIxTP3sAwQM6dPdufJsNfbFd9FMVmNueg7IiVTD1r3pMXLQfw7u">
                     <input id="name" type="text" spellcheck="false" name="name">
                     <label for="name">Name</label>
                   </div>
