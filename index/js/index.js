@@ -1,5 +1,5 @@
-$(document).ready(function() {
-	new Swiper('#swiper-feedback', {
+$(document).ready(async function() {
+	await new Swiper('#swiper-feedback', {
 		loop: true,
 		navigation: {
 			nextEl: '.feedback-next',
@@ -7,7 +7,14 @@ $(document).ready(function() {
 		},
 	});
 
-	new Swiper('#swiper-partner', {
+	await new Swiper('.history-swiper-container', {
+		slidesPerView: screen.width > 799 ? 3 : 1,
+		initialSlide: 4,
+		spaceBetween: 0,
+		freeMode: true,
+	});
+
+	await new Swiper('#swiper-partner', {
 		loop: true,
 		slidesPerView: 3,
 		centeredSlides: true,

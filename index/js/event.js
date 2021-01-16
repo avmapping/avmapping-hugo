@@ -3,11 +3,16 @@ const baseURL = 'https://filmmusic.avmapping.co';
 var API = {'signup':   baseURL+'/api/users/signup/',
 		   'signin':   baseURL+'/api/users/login/',
 		   'signout':  baseURL+'/api/users/logout/',
-		   'resetpwd': baseURL+'/users/password/change/'};
+		   'resetpwd': baseURL+'/api/users/password/reset/',
+		   'resetpwd_confirm': baseURL+'/api/users/password/reset/confirm/',
+		   'subscribe_video_member':   baseURL+'/api/main/subscribe_video_member/',
+		   'user_profile': baseURL+'/api/users/user/'
+		};
+let params = window.location.search;
 
 const switchNavDisplay = nextState => {
 	const loginNavElsAttr = ["nav-user-login", "nav-login"];
-	const notloginNavElsAttr = ["navi-user-login", "navi-user-signup", "navi-login", "navi-signup"];
+	const notloginNavElsAttr = ["navi-user-login", "navi-user-signup", "navi-login"];
 
 	if (nextState === 'login') {
 		for (var i=0; i<loginNavElsAttr.length; i++) {
@@ -24,6 +29,8 @@ const switchNavDisplay = nextState => {
 			document.getElementById(notloginNavElsAttr[i]).classList.remove('hide');
 		}
 	}
+
+	document.getElementById("nav-user-not-login").classList.remove('hide');
 };
 
 const login = (type = 'desktop') => {
@@ -53,7 +60,6 @@ const logout = (type = 'desktop') => {
 	       	console.log(docCookies.keys());
 	       	console.log('token', docCookies.getItem('access_token'));
 	       	document.getElementById('user-profile').href = document.getElementById('user-profile').href.split('?')[0];
-	       	document.getElementById('navi-user-profile').href = document.getElementById('navi-user-profile').href.split('?')[0];
 		},
 		statusCode: {
 			401: function (response) {
@@ -81,7 +87,7 @@ const signup = (type = 'desktop') => {
 	closePhoneNaviMenu();
 	document.getElementById('section-sign-in').style.display = 'none';
 	document.getElementById('section-sign-up').style.display = 'block';
-	//document.getElementById('section-reset-pwd').style.display = 'none';
+	document.getElementById('section-reset-pwd').style.display = 'none';
 };
 
 const resetpwd = (type = 'desktop') => {
@@ -90,7 +96,7 @@ const resetpwd = (type = 'desktop') => {
 	closePhoneNaviMenu();
 	document.getElementById('section-sign-in').style.display = 'none';
 	document.getElementById('section-sign-up').style.display = 'none';
-	//document.getElementById('section-reset-pwd').style.display = 'block';
+	document.getElementById('section-reset-pwd').style.display = 'block';
 	return false
 };
 
@@ -116,7 +122,7 @@ const closeSign = (type = 'phone') => {
 };
 
 function clearSign() {
-	for (var i=0; i<1; i++) {
+	for (var i=0; i<2; i++) {
 		var check_pass = document.getElementById('check-password-'+i);
 		check_pass.innerHTML = '';
 	}
@@ -146,11 +152,10 @@ function userSignUp() {
 	        	login_state = true;
 	        	form[0].reset();
 	        	closeSign();
-	        	
+
 	        	docCookies.setItem('access_token', response.key);
 	        	login_auth();
-	        	document.getElementById('user-profile').href += '?token='.concat(docCookies.getItem('access_token'));
-	        	document.getElementById('navi-user-profile').href += '?token='.concat(docCookies.getItem('access_token'));
+	        	appendToken(document.getElementById('user-profile'));
 			},
 			statusCode: {
 				400: function (response) {
@@ -181,11 +186,10 @@ function userSignIn() {
         	login_state = true;
         	form[0].reset();
         	closeSign();
-
+        	
         	docCookies.setItem('access_token', response.key);
         	login_auth();
-        	document.getElementById('user-profile').href += '?token='.concat(docCookies.getItem('access_token'));
-        	document.getElementById('navi-user-profile').href += '?token='.concat(docCookies.getItem('access_token'));
+        	appendToken(document.getElementById('user-profile'));
         	console.log('user profile> ', document.getElementById('user-profile').href)
 		},
 		statusCode: {
@@ -206,10 +210,18 @@ function userReset() {
 	var url = API['resetpwd'];
 	console.log('url> ',url);
 
-	var check_pass = document.getElementById('check-password-1');
-	console.log('resetpwd:',check_pass.innerHTML);
+	// var check_pass = document.getElementById('check-password-1');
+	// console.log('resetpwd:',check_pass.innerHTML);
 
-	if(check_pass.innerHTML == 'matching!') {
+	var href = window.location.href;
+	if (href.includes('zh')) {
+		form[0].lang.value = 'zh';
+	}
+	else if (href.includes('en')) {
+		form[0].lang.value = 'en';
+	}
+	form[0].target_url.value = href;
+
 		$.ajax({
 	        type : "POST",
 	        url  : url,
@@ -218,6 +230,46 @@ function userReset() {
 	        	console.log(response);
 	        	form[0].reset();
 	        	closeSign();
+			},
+			statusCode: {
+				406: function (response) {
+					error = JSON.parse(response.responseText);
+					alert(error.message);
+					form[0].reset();
+					clearSign();
+				}
+			}
+	    });
+};
+
+function appendToken(element) {
+	let index = element.href.indexOf('?')
+	element.href += (index >= 0 ? '&token=' : '?token=').concat(docCookies.getItem('access_token'));
+}
+
+function userResetConfirm() {
+	console.log('commitResetPwdConfirm');
+
+	var form = $('#form_resetpwd_confirm');
+	var url = API['resetpwd_confirm'];
+	console.log('url> ',url);
+
+	var check_pass = document.getElementById('check-password-1');
+	console.log('resetpwd:',check_pass.innerHTML);
+
+	form[0].uid.value = params.split('forget=')[1].split('/')[0];
+	form[0].token.value = params.split('forget=')[1].split('/')[1];
+
+	if (check_pass.innerHTML=='matching!') {
+		$.ajax({
+	        type : "POST",
+	        url  : url,
+	        data : form.serialize(),
+	        success: function(response) {
+	        	console.log(response);
+	        	form[0].reset();
+	        	closeSign();
+	        	document.getElementById('section-sign-in').style.display = 'block';
 			},
 			statusCode: {
 				406: function (response) {
@@ -242,11 +294,10 @@ function checkEmail() {
 	}
 }
 
-function checkPassword() {
-	for (var i=0; i<1; i++) {
-		var pass = document.getElementById('password-'+i),
-			re_pass = document.getElementById('re-password-'+i),
-			check_pass = document.getElementById('check-password-'+i);
+function checkPassword(number) {
+		var pass = document.getElementById('password-'+number),
+			re_pass = document.getElementById('re-password-'+number),
+			check_pass = document.getElementById('check-password-'+number);
 		if (pass.value == re_pass.value) {
 		    	check_pass.style.color = '#30c1b8';
 		    	check_pass.innerHTML = 'matching!';
@@ -254,7 +305,6 @@ function checkPassword() {
 		    	check_pass.style.color = '#ef7873';
 		    	check_pass.innerHTML = 'not matching!';
 		  	}
-	}
 };
 
 function login_auth() {
@@ -312,10 +362,17 @@ $(document).ready(function()
         mouse_is_inside=false; 
     });
 
+    $('.resetpwd-confirm-form').hover(function(){ 
+        mouse_is_inside=true; 
+    }, function(){ 
+        mouse_is_inside=false; 
+    });
+
     $("body").mouseup(function(){ 
         if(! mouse_is_inside) $('#section-sign-in').hide();
         if(! mouse_is_inside) $('#section-sign-up').hide();
-        //if(! mouse_is_inside) $('#section-reset-pwd').hide();
+        if(! mouse_is_inside) $('#section-reset-pwd').hide();
+        if(! mouse_is_inside) $('#section-reset-pwd-confirm').hide();
     });
 
    	$("a[rel~='keep-params']").click(function(e) {
@@ -329,4 +386,23 @@ $(document).ready(function()
    	        window.location.href = dest;
    	    }, 100);
    	});
+
+   	if (params.includes('forget=')) {
+   		console.log('forgetpwd');
+   		document.getElementById('section-reset-pwd-confirm').style.display = 'block';
+   	}
 });
+
+window.onload = () => {
+	//判斷網址上有#register 就打開註冊彈窗
+	if(location.hash === '#register'){
+		document.getElementById('section-sign-up').style.display = 'block';
+	}
+	//置入 登入的註冊連結
+	$("#signup_a").attr("href",`${location.href}#register`); 
+
+	const ref = window.location.href;
+	const lang = ref.includes('zh') ? 'zh':'en';
+	const access_token = docCookies.getItem('access_token')
+	$("#user-profile").attr("href",`https://app.avmapping.co/#/?lang=${lang}`+ (access_token ? `&token=${access_token}` : '')); 
+  };

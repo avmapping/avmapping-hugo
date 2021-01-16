@@ -45,6 +45,7 @@ const stopAllUserVideo = callback => {
 };
 
 const checkIsInView = el => {
+	console.log('el',el);
 	const scroll = window.scrollY || window.pageYOffset;
 	const boundsTop = el.getBoundingClientRect().top + scroll;
 
