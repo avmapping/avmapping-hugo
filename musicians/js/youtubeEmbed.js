@@ -1,9 +1,9 @@
 const YOUTUBE_SRC_MAP = {
-	musician: 'https://www.youtube.com/embed/QvW61K2s0tA?enablejsapi=1',
-	noncreatorFeedback: 'https://www.youtube.com/embed/LgmxMuW6Fsc?enablejsapi=1',
+	musician: 'https://www.youtube.com/embed/p4Xagacbxog?enablejsapi=1',
+	noncreatorFeedback: 'https://www.youtube.com/embed/KV8HcqO-dv4?enablejsapi=1',
 	videomanFeedback: 'https://www.youtube.com/embed/hr_OjNV5plA?enablejsapi=1',
 	studioFeedback: 'https://www.youtube.com/embed/m86ae_e_ptU?enablejsapi=1',
-	results: 'https://www.youtube.com/embed/m86ae_e_ptU?enablejsapi=1',
+	results: 'https://www.youtube.com/embed/gi8akMvMzi4?enablejsapi=1',
 };
 
 const openYoutubeModal = videoType => {
