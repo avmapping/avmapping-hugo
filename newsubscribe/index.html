@@ -17,42 +17,65 @@
 <body>
 
 <script type="text/javascript">
-  function bang() {
-    document.getElementById('form').action = `https://filmmusic.avmapping.co/${window.location.search.slice(1)}/`
+  function subscribe() {
+    let formData = $('form').serializeArray().reduce((obj, item) => {
+      obj[item.name] = item.value
+      return obj
+    }, {})
+    document.getElementById('subscribe_button').disabled = true
+
+    $.ajax({
+      method: 'POST',
+      url: `https://filmmusic.avmapping.co/letter/${window.location.search.slice(1)}/`,
+      contentType : 'application/json; charset=utf-8',
+      data: JSON.stringify(formData),
+      success: () => {
+        alert('訂閱成功')
+        document.getElementById('subscribe_button').disabled = false
+      },
+      error: () => {
+        alert('訂閱失敗請再試一次')
+        document.getElementById('subscribe_button').disabled = false
+      }
+    })
+    return false
   }
 </script>
 
-<div id="viewport" class="l-viewport">
-  <div class="l-wrapper">
-    <header class="header">
-      <a class="header--logo" href="assets/img/LOGOOOO.png">
-        <img src="assets/img/LOGOOOO.png" alt="A.V. Mapping">
-        <p>A.V. Mapping</p>
-      </a>
-    </header>
-    <ul class="l-main-content main-content">
-      <li class="l-section section section--is-active">
-        <div class="hire">
-          <h2>歡迎訂閱A.V. Mapping電子報</h2>
-
-          <form id="form" class="work-request" action="" method="post" onSubmit="return bang()">
-            <div class="work-request--information">
-              <div class="information-name">
-                <input id="name" type="text" spellcheck="false" name="name" required>
-                <label for="name">Name</label>
-              </div>
-              <div class="information-email">
-                <input id="mail" type="email" spellcheck="false" name="mail" required>
-                <label for="email">Email</label>
-              </div>
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="assets/img/LOGOOOO.png">
+            <img src="assets/img/LOGOOOO.png" alt="A.V. Mapping">
+            <p>A.V. Mapping</p>
+          </a>
+        </header>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="hire">
+              <h2>歡迎訂閱A.V. Mapping電子報</h2>
+    
+              <form id="form" class="work-request" action="" method="post" onSubmit="return subscribe()">
+                <div class="work-request--information">
+                  <div class="information-name">
+                    <input id="name" type="text" spellcheck="false" name="name" required>
+                    <label for="name">Name</label>
+                  </div>
+                  <div class="information-email">
+                    <input id="mail" type="email" spellcheck="false" name="mail" required>
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <input id="subscribe_button" type="submit" value="Subscribe">
+              </form>
             </div>
-            <input type="submit" value="Subscribe">
-          </form>
-
-        </div>
-      </li>
-    </ul>
-  </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+	</div>
 </div>
 </body>
 
