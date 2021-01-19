@@ -75,7 +75,7 @@
 				>
 					<i class="fas fa-times-circle"></i>
 				</div>
-				<div id="nav-user-not-login" class="right user-not-login show-on-desktop">
+				<div id="nav-user-not-login" class="right user-not-login show-on-desktop hide">
 					<div
 						id="navi-item-offical-website"
 						class="navi-item-container"
@@ -205,6 +205,10 @@
 						</div>
 						<div class="dropdown-menu">
 						
+						
+							
+							<a id="user-profile" class="menu-item" target="_blank" href="https://app.avmapping.co/#/" rel="keep-params">個人中心</a>
+							
 						
 						
 							<div class="menu-item" onclick="switchUser()">切換角色</div>
@@ -478,6 +482,10 @@
 				
 				
 				
+					
+					<a id="user-profile" class="navi-item" target="_blank" href="https://app.avmapping.co/#/" rel="keep-params">個人中心</a>
+					
+				
 				
 					
 					<div class="navi-item" onclick="switchUser()">切換角色</div>
@@ -682,7 +690,7 @@
 		<section class="section-musician-communicate">
 			<div id="musician-communicate" class="anchor"></div>
 			<div class="container">
-				<h2 class="section-title">音樂人交流</h2>
+				<h2 class="section-title">影音社群連結</h2>
 				<div class="content">
 					<div class="text show-on-desktop">出專(合)輯</div>
 					<div class="play" onClick="openYoutubeModal('musician')">
@@ -709,9 +717,8 @@
 						</div>
 						<div class="title">非創作者</div>
 						<div class="content">
-							音樂要怎麼製作<br/ >
-							音樂要怎麼製作<br/ >
-							不知道音樂人多苦
+							一般樂迷<br/ >
+							對於影像配樂的重要性與新奇感到有趣<br/ >
 						</div>
 					</div>
 					<div class="block play mid" onclick="openYoutubeModal('videomanFeedback')">
@@ -725,15 +732,15 @@
 							更多選擇
 						</div>
 					</div>
-					<div class="block play" onclick="openYoutubeModal('studioFeedback')">
+					<div class="block play" onclick="location.href='https://www.facebook.com/av.mapping/posts/353327546011441'">
 						<div class="play">
 							<img class="icon" src="https://avmapping.co/musicians/images/icon-play.png" alt="" />
 						</div>
 						<div class="title">錄音室</div>
 						<div class="content">
-							工作更快<br/ >
-							更多選擇<br/ >
-							認識新音樂人
+							專業創作者<br/ >
+							有更快速省時的幫手<br/ >
+							也能透過平台產生更多火花
 						</div>
 					</div>
 				</div>
@@ -747,9 +754,8 @@
 							</div>
 							<div class="title">非創作者</div>
 							<div class="content">
-								音樂要怎麼製作<br/ >
-								音樂要怎麼製作<br/ >
-								不知道音樂人多苦
+								一般樂迷<br/ >
+								對於影像配樂的重要性與新奇感到有趣<br/ >
 							</div>
 						</div>
 					</div>
@@ -773,9 +779,9 @@
 							</div>
 							<div class="title">錄音室</div>
 							<div class="content">
-								工作更快<br/ >
-								更多選擇<br/ >
-								認識新音樂人
+								專業創作者<br/ >
+								有更快速省時的幫手<br/ >
+								也能透過平台產生更多火花
 							</div>
 						</div>
 					</div>
@@ -820,16 +826,16 @@
 				</div>
 				<div class="content">
 					<div class="item">
-						<div class="count">3,856人</div>
-						<div class="description">等待使用者數</div>
+						<div class="count">9503人</div>
+						<div class="description">使用者</div>
 					</div>
 					<div class="item">
-						<div class="count">19,865首</div>
-						<div class="description">上傳音樂數</div>
+						<div class="count">5862人</div>
+						<div class="description">使用者</div>
 					</div>
 					<div class="item">
-						<div class="count">132萬</div>
-						<div class="description">媒合成功影片總觀看次數</div>
+						<div class="count">196萬</div>
+						<div class="description">使用者</div>
 					</div>
 				</div>
 				
@@ -858,7 +864,7 @@
 								<input type="password" name="password1" id="password-0" placeholder='建立密碼' />
 							</div>
 							<div class="item">
-								<input type="password" name="password2" id="re-password-0" placeholder='確認密碼' onkeyup="checkPassword()" />
+								<input type="password" name="password2" id="re-password-0" placeholder='確認密碼' onkeyup="checkPassword(0)" />
 							</div>
 							<div class="text">
 								<span id='check-password-0'></span>
@@ -887,7 +893,7 @@
 						<img src="https://avmapping.co/index/images/section-solution.png"/>
 						<div class="text">
 							<span>還不是會員嗎？</span>
-							<button onclick="signup()">立即加入</button>
+							<a id="signup_a"  style="color:white" onclick="signup()" >立即加入</a>
 							<span>吧！</span>
 						</div>
 					</div>
@@ -896,15 +902,71 @@
 						<form autocomplete="on" method="post" id="form_signin">
 							<input type="email" name="email" placeholder='輸入您的電子郵件地址' />
 							<input type="password" name="password" placeholder='輸入密碼' />
+							<button type="button" onclick="resetpwd()">忘記密碼？</button>
 							
-							<button onclick="return false">忘記密碼？</button>
 							<input class="submit" type="button" value='登入' onclick="userSignIn()" />
 						</form>
 					</div>
 				</div>
 			</div>
 		</section>
-			
+		
+		<section class="section-sign"  id="section-reset-pwd">
+			<div id="resetpwd" class="anchor"></div>
+			<div class="container">
+				<div class="section-title show-on-phone">變更密碼</div>
+				<button class="close-btn show-on-phone" aria-label="Close" onclick="closeSign()">
+					<i class="fas fa-times"></i>
+				</button>
+				<div class="resetpwd-form">
+					<div class="right">
+						<div class="title show-on-desktop">變更密碼</div>
+						<form autocomplete="on" method="post" id="form_resetpwd">
+							<div><input type="text" name="lang" id="lang" style="display: none;"/></div>
+							<div><input type="text" name="target_url" id="target_url" style="display: none;"/></div>
+							<div class="item required">
+								<input type="email" name="email" id="resetpwd" placeholder='輸入您的電子郵件地址' onkeyup="checkEmail()" />
+							</div>
+							<div class="text">
+								<span id='check-signup-email'></span>
+							</div>
+							<input class="submit" type="button" value='送出' onclick="userReset()" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-sign"  id="section-reset-pwd-confirm">
+			<div id="resetpwd-confirm" class="anchor"></div>
+			<div class="container">
+				<div class="section-title show-on-phone">變更密碼</div>
+				<button class="close-btn show-on-phone" aria-label="Close" onclick="closeSign()">
+					<i class="fas fa-times"></i>
+				</button>
+				<div class="resetpwd-confirm-form">
+					<div class="right">
+						<div class="title show-on-desktop">變更密碼</div>
+						<form autocomplete="on" method="post" id="form_resetpwd_confirm">
+							<div><input type="text" name="uid" id="uid" style="display: none;"/></div>
+							<div><input type="text" name="token" id="token" style="display: none;"/></div>
+							<div class="item required">
+								<input type="password" name="new_password1" id="password-1" placeholder='輸入新密碼' />
+							</div>
+							<div class="item required">
+								<input type="password" name="new_password2" id="re-password-1" placeholder='確認新密碼' onkeyup="checkPassword(1)" />
+							</div>
+							<div class="text">
+								<span id='check-password-1'></span>
+							</div>
+							<input class="submit" type="button" value='送出' onclick="userResetConfirm()" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	
 			<footer class="footer">
 		<div class="content">
 			<div class="left">

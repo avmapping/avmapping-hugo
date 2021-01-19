@@ -75,7 +75,7 @@
 				>
 					<i class="fas fa-times-circle"></i>
 				</div>
-				<div id="nav-user-not-login" class="right user-not-login show-on-desktop">
+				<div id="nav-user-not-login" class="right user-not-login show-on-desktop hide">
 					<div
 						id="navi-item-offical-website"
 						class="navi-item-container"
@@ -205,6 +205,10 @@
 						</div>
 						<div class="dropdown-menu">
 						
+						
+							
+							<a id="user-profile" class="menu-item" target="_blank" href="https://app.avmapping.co/#/" rel="keep-params">Profile</a>
+							
 						
 						
 							<div class="menu-item" onclick="switchUser()">Choose Your Role</div>
@@ -478,6 +482,10 @@
 				
 				
 				
+					
+					<a id="user-profile" class="navi-item" target="_blank" href="https://app.avmapping.co/#/" rel="keep-params">Profile</a>
+					
+				
 				
 					
 					<div class="navi-item" onclick="switchUser()">Choose Your Role</div>
@@ -711,7 +719,6 @@
 						<div class="content">
 							How to make music<br/ >
 							The importance of film music<br/ >
-							Understand the hardships of musicians
 						</div>
 					</div>
 					<div class="block play mid" onclick="openYoutubeModal('videomanFeedback')">
@@ -725,7 +732,7 @@
 							More music options
 						</div>
 					</div>
-					<div class="block play" onclick="openYoutubeModal('studioFeedback')">
+					<div class="block play" onclick="location.href='https://www.facebook.com/av.mapping/posts/353327546011441'">
 						<div class="play">
 							<img class="icon" src="https://avmapping.co/musicians/images/icon-play.png" alt="" />
 						</div>
@@ -749,7 +756,6 @@
 							<div class="content">
 								How to make music<br/ >
 								The importance of film music<br/ >
-								Understand the hardships of musicians
 							</div>
 						</div>
 					</div>
@@ -820,16 +826,16 @@
 				</div>
 				<div class="content">
 					<div class="item">
-						<div class="count">3,856</div>
-						<div class="description">Users on Waitlist</div>
+						<div class="count">9503</div>
+						<div class="description">Users</div>
 					</div>
 					<div class="item">
-						<div class="count">19,865</div>
-						<div class="description">Music</div>
+						<div class="count">5862</div>
+						<div class="description">Users</div>
 					</div>
 					<div class="item">
-						<div class="count">1.32M</div>
-						<div class="description">Mapped videos clicks</div>
+						<div class="count">1.96M</div>
+						<div class="description">Users</div>
 					</div>
 				</div>
 				
@@ -858,7 +864,7 @@
 								<input type="password" name="password1" id="password-0" placeholder='Password' />
 							</div>
 							<div class="item">
-								<input type="password" name="password2" id="re-password-0" placeholder='Confirmed password' onkeyup="checkPassword()" />
+								<input type="password" name="password2" id="re-password-0" placeholder='Confirmed password' onkeyup="checkPassword(0)" />
 							</div>
 							<div class="text">
 								<span id='check-password-0'></span>
@@ -887,7 +893,7 @@
 						<img src="https://avmapping.co/index/images/section-solution.png"/>
 						<div class="text">
 							<span>New to A.V. Mapping?</span>
-							<button onclick="signup()">Create an accont.</button>
+							<a id="signup_a"  style="color:white" onclick="signup()" >Create an accont.</a>
 							<span> </span>
 						</div>
 					</div>
@@ -896,15 +902,71 @@
 						<form autocomplete="on" method="post" id="form_signin">
 							<input type="email" name="email" placeholder='Email address' />
 							<input type="password" name="password" placeholder='Password' />
+							<button type="button" onclick="resetpwd()">Forgot Password?</button>
 							
-							<button onclick="return false">Forgot Password?</button>
 							<input class="submit" type="button" value='Sign In' onclick="userSignIn()" />
 						</form>
 					</div>
 				</div>
 			</div>
 		</section>
-			
+		
+		<section class="section-sign"  id="section-reset-pwd">
+			<div id="resetpwd" class="anchor"></div>
+			<div class="container">
+				<div class="section-title show-on-phone">Reset Password</div>
+				<button class="close-btn show-on-phone" aria-label="Close" onclick="closeSign()">
+					<i class="fas fa-times"></i>
+				</button>
+				<div class="resetpwd-form">
+					<div class="right">
+						<div class="title show-on-desktop">Reset Password</div>
+						<form autocomplete="on" method="post" id="form_resetpwd">
+							<div><input type="text" name="lang" id="lang" style="display: none;"/></div>
+							<div><input type="text" name="target_url" id="target_url" style="display: none;"/></div>
+							<div class="item required">
+								<input type="email" name="email" id="resetpwd" placeholder='Email address' onkeyup="checkEmail()" />
+							</div>
+							<div class="text">
+								<span id='check-signup-email'></span>
+							</div>
+							<input class="submit" type="button" value='Submit' onclick="userReset()" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-sign"  id="section-reset-pwd-confirm">
+			<div id="resetpwd-confirm" class="anchor"></div>
+			<div class="container">
+				<div class="section-title show-on-phone">Reset Password</div>
+				<button class="close-btn show-on-phone" aria-label="Close" onclick="closeSign()">
+					<i class="fas fa-times"></i>
+				</button>
+				<div class="resetpwd-confirm-form">
+					<div class="right">
+						<div class="title show-on-desktop">Reset Password</div>
+						<form autocomplete="on" method="post" id="form_resetpwd_confirm">
+							<div><input type="text" name="uid" id="uid" style="display: none;"/></div>
+							<div><input type="text" name="token" id="token" style="display: none;"/></div>
+							<div class="item required">
+								<input type="password" name="new_password1" id="password-1" placeholder='New password' />
+							</div>
+							<div class="item required">
+								<input type="password" name="new_password2" id="re-password-1" placeholder='Confirmed new password' onkeyup="checkPassword(1)" />
+							</div>
+							<div class="text">
+								<span id='check-password-1'></span>
+							</div>
+							<input class="submit" type="button" value='Submit' onclick="userResetConfirm()" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	
 			<footer class="footer">
 		<div class="content">
 			<div class="left">

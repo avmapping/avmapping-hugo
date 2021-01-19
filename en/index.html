@@ -1,7 +1,7 @@
 	<!DOCTYPE html>
 <html lang="">
 	<head>
-	<meta name="generator" content="Hugo 0.71.1" />
+	<meta name="generator" content="Hugo 0.75.1" />
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -65,7 +65,7 @@
 				>
 					<i class="fas fa-times-circle"></i>
 				</div>
-				<div id="nav-user-not-login" class="right user-not-login show-on-desktop">
+				<div id="nav-user-not-login" class="right user-not-login show-on-desktop hide">
 					<div
 						id="navi-item-offical-website"
 						class="navi-item-container"
@@ -158,7 +158,7 @@
 					
 					</div>
 					<a class="navi-item" id="navi-user-login" onclick="login()">Sign In</a>
-					<a class="navi-item" id="navi-user-signup" onclick="signup()">Sign Up</a>
+					<a class="navi-item" href="#register" id="navi-user-signup" onclick="signup()">Sign Up</a>
 					<div
 						id="navi-item-language"
 						class="navi-item-container"
@@ -195,6 +195,10 @@
 						</div>
 						<div class="dropdown-menu">
 						
+						
+							
+							<a id="user-profile" class="menu-item" target="_blank" href="https://app.avmapping.co/#/" rel="keep-params">Profile</a>
+							
 						
 						
 							<div class="menu-item" onclick="switchUser()">Choose Your Role</div>
@@ -468,6 +472,10 @@
 				
 				
 				
+					
+					<a id="navi-user-profile" class="navi-item" target="_blank" href="https://app.avmapping.co/#/" rel="keep-params">Profile</a>
+					
+				
 				
 					<div class="navi-item" onclick="switchUser()">Choose Your Role</div>
 					<div class="navi-item" onclick="logout()">Sign Out</div>
@@ -510,114 +518,117 @@
 					Cooperate with technology to save 95% of sound engineering time, to make better arts and perfection, and to gain more working opportunities.
 				</p>
 				
-				<a class="button" href="">Try It Now</a>
+				<a class="button" href="https://app.avmapping.co/#/dynamicAnalysis/step1">Try It Now</a>
 			</div>
 		</section>
 		<section class="section-intro-video">
 			<div class="container">
-				<div class="youtube-contianer">
-					
-					<iframe
-						class="youtube-iframe"
-						src='https://www.youtube.com/embed/Uzk0qZyZSKc'
-						frameborder="0"
-						allow="encrypted-media"
-						allowfullscreen
-					></iframe>
-				</div>
 				<div class="text">
 					<span>Spend too much time on your video music? </span
 					><span>Too difficult to find the one and get the license?</span>
 				</div>
 				<div class="button">
-					<span>A.V. Mapping finds your music, </span><span>quick and easy!<span style="font-size:14pt; vertical-align: top;">&trade;</span></span>
+					<span>A.V. Mapping finds your music, </span><span>quick and easy!<span class="tm" style="font-size:14pt; vertical-align: top;">&trade;</span></span>
 				</div>
 			</div>
 		</section>
-		<section class="section-solution">
-			<div id="solution" class="anchor"></div>
+		<img class="gradient" src="https://avmapping.co/index/images/bg＿gradient_dark_right.png" />
+		<section class="section-advantage linearBG">
+			<div id="advantage" class="anchor"></div>
 			<div class="container">
-				<div class="section-title">We Have Solved</div>
-				<div class="content">
-					<div class="left"><img src="https://avmapping.co/index/images/section-solution.png" /></div>
-					<div class="right">
-						<div class="block">
-							<div class="block-title">Long working time on filmmakers.</div>
-							<div class="item">
-								<i class="icon fas fa-angle-right"></i>
-								<div class="text">Spend more than 8 hours to half year to find music and its license</div>
-							</div>
-							<div class="item">
-								<i class="icon fas fa-angle-right"></i>
-								<div class="text">
-									Require high sensitivity and engineering technics to get high quality video music
-								</div>
-							</div>
-						</div>
-						<div class="block">
-							<div class="block-title">Higher cost on musicians</div>
-							<div class="item">
-								<i class="icon fas fa-angle-right"></i>
-								<div class="text">Complete a matched video music with the rest of several music pieces</div>
-							</div>
-							<div class="item">
-								<i class="icon fas fa-angle-right"></i>
-								<div class="text">
-									The opportunities to meet the consensual films and directors
-								</div>
-							</div>
-						</div>
-						
-						<a class="button-small" href="">Join Us</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="section-product">
-			<div id="product" class="anchor"></div>
-			<div class="container">
-				<div class="section-title">Our Service</div>
-				<div class="function-wrapper">
-					<div class="main">
-						<div class="content">
-							<img class="icon" src="https://avmapping.co/index/images/product-icon-1.png" />
-							<div class="title">A.I. Mapping Platform</div>
-							<div class="text">
-								Film music &ensp; Image music
-								<br />
-								Script music &ensp; Sound editing
-							</div>
+				<div class="section-title">Advantage</div>
+				<div class="advantages">
+					<div class="item">
+						<div class="icon"><img src="https://avmapping.co/index/images/icon-advantage-1.png" /></div>
+						<div class="title">Exclusive film music A.I.</div>
+						<div class="highlight">Efficiency gains 1960 times</div>
+						<div class="text">
+							The AI algorithm has applied for patents in Taiwan, the United States, and China, and can analyze storyboards, plots, emotions, actions, text, musical emotions, speed, and genre.
 						</div>
 					</div>
-					<div class="others">
-						<div class="item">
-							<div class="content">
-								<img class="icon" src="https://avmapping.co/index/images/product-icon-3.png" />
-								<div class="title">For you</div>
-								<div class="text">Film music</div>
-							</div>
+					<div class="item">
+						<div class="icon"><img src="https://avmapping.co/index/images/icon-advantage-2.png" /></div>
+						<div class="title">Low cost</div>
+						<div class="highlight">Save time to reduce hidden costs of 300 USD/time</div>
+						<div class="text">
+							Musicians can join our community to have equal competition. Our objective algorithm can find suitable buyers and serve music and sound service directly. Better opportunities for A/V works.
 						</div>
-						<div class="item">
-							<div class="content">
-								<img class="icon" src="https://avmapping.co/index/images/product-icon-4.png" />
-								<div class="title">For film</div>
-								<div class="text">Scene cutting</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="content">
-								<img class="icon" src="https://avmapping.co/index/images/product-icon-2.png" />
-								<div class="title">For image</div>
-								<div class="text">Color analysis</div>
-							</div>
+					</div>
+					<div class="item">
+						<div class="icon"><img src="https://avmapping.co/index/images/icon-advantage-3.png" /></div>
+						<div class="title">24/7</div>
+						<div class="text">
+							Online A.I. can serve you anytime, anywhere.
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="section-instruction">
-			<div class="container">
-				<div id="upload-instruction" class="instruction">
+			<div class="container mobile-container">
+				
+				<div class="mobileUploadInstruction   pcHidden">
+					<div class="mobile-title">
+						How to Use
+					</div>
+					<div class="upload-swiper-container">
+						<div class="upload-swiper-wrapper">
+							<div class="gifGroup-slide">
+								<img class="slide-img" src="https://avmapping.co/index/images/upload-instruction-1.gif" />
+								<p>
+									Upload your video
+								</p>
+							</div>
+							<div class="gifGroup-slide">
+								<img class="slide-img" src="https://avmapping.co/index/images/upload-instruction-2.gif" />
+								<p>
+									Obtain recommended film music
+								</p>
+							</div>
+							<div class="gifGroup-slide">
+								<img class="slide-img" src="https://avmapping.co/index/images/upload-instruction-3.png" />
+								<p>
+									Communicate with the system and re-analyze
+								</p>
+							</div>
+							<div class="gifGroup-slide">
+								<img class="slide-img" src="https://avmapping.co/index/images/upload-instruction-4.gif" />
+								<p>
+									Confirm the contract and complete the transaction
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mobileUploadInstruction   pcHidden">
+					<div class="mobile-title">
+						Document Manage System
+					</div>
+					<div class="upload-swiper-container">
+						<div class="upload-swiper-wrapper threepic">
+							<div class="gifGroup-slide">
+								<img class="slide-img" src="https://avmapping.co/index/images/manage-instruction-1.gif" />
+								<p>
+									Choose your role
+								</p>
+							</div>
+							<div class="gifGroup-slide">
+								<img class="slide-img" src="https://avmapping.co/index/images/manage-instruction-2.gif" />
+								<p>
+									Upload file information
+								</p>
+							</div>
+							<div class="gifGroup-slide">
+								<img class="slide-img" src="https://avmapping.co/index/images/manage-instruction-3.gif" />
+								<p>
+									Manage shared information
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="upload-instruction" class="instruction mobileHidden">
 					<div class="gif">
 						<img class="active" src="https://avmapping.co/index/images/upload-instruction-1.gif" />
 						<img src="https://avmapping.co/index/images/upload-instruction-2.gif" />
@@ -688,7 +699,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="manage-instruction" class="instruction">
+				<div id="manage-instruction" class="instruction mobileHidden">
 					<div class="gif">
 						<img class="active" src="https://avmapping.co/index/images/manage-instruction-1.gif" />
 						<img src="https://avmapping.co/index/images/manage-instruction-2.gif" />
@@ -742,60 +753,18 @@
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-				<div id="manage-files-instruction" class="instruction">
-					<div class="gif">
-						<img class="active" src="https://avmapping.co/index/images/how-to-use-gif-1.png" />
-						<img src="https://avmapping.co/index/images/how-to-use-gif-2.png" />
-						<img src="https://avmapping.co/index/images/how-to-use-gif-3.png" />
-					</div>
-					<div class="content">
-						<div class="title">Personal Library</div>
-						<div class="tips-wrapper">
-							<div
-								class="tip active"
-								onclick="changeTutorial('manageFiles', 1)"
-								onmouseover="changeTutorial('manageFiles', 1)"
-							>
-								<div class="icon">
-									<img src="https://avmapping.co/index/images/icon-video.png" />
-								</div>
-								<div class="content">
-									<div class="title">Share your video works</div>
-									<div class="text">
-										Increase the publicity of your video works
-									</div>
-								</div>
-							</div>
 							<div
 								class="tip"
-								onclick="changeTutorial('manageFiles', 2)"
-								onmouseover="changeTutorial('manageFiles', 2)"
-							>
-								<div class="icon">
-									<img src="https://avmapping.co/index/images/icon-music-3.png" />
-								</div>
-								<div class="content">
-									<div class="title">Share your music works</div>
-									<div class="text">
-										Increase the publicity of your music works
-									</div>
-								</div>
-							</div>
-							<div
-								class="tip"
-								onclick="changeTutorial('manageFiles', 3)"
-								onmouseover="changeTutorial('manageFiles', 3)"
+								onclick="changeTutorial('manage', 4)"
+								onmouseover="changeTutorial('manage', 4)"
 							>
 								<div class="icon">
 									<img src="https://avmapping.co/index/images/icon-share.png" />
 								</div>
 								<div class="content">
-									<div class="title">Community influence</div>
+									<div class="title">Offline service</div>
 									<div class="text">
-										Promote the awareness of audio and video creators, create personal brand and revenue
+										Customized film music and mapping with composers, sound editing, music technology projects, A/V activties
 									</div>
 								</div>
 							</div>
@@ -804,57 +773,31 @@
 				</div>
 			</div>
 		</section>
+		<img class="gradient" src="https://avmapping.co/index/images/bg-gradient-dark-left.png" />
 		<section class="section-advantage">
 			<div id="advantage" class="anchor"></div>
 			<div class="container">
-				<div class="section-title">Advantage</div>
-				<div class="advantages">
-					<div class="item">
-						<div class="icon"><img src="https://avmapping.co/index/images/icon-advantage-1.png" /></div>
-						<div class="title">Exclusive film music A.I.</div>
-						<div class="highlight">Efficiency gains 1960 times</div>
-						<div class="text">
-							The AI algorithm has applied for patents in Taiwan, the United States, and China, and can analyze storyboards, plots, emotions, actions, text, musical emotions, speed, and genre.
-						</div>
-					</div>
-					<div class="item">
-						<div class="icon"><img src="https://avmapping.co/index/images/icon-advantage-2.png" /></div>
-						<div class="title">Low cost</div>
-						<div class="text">
-							Save time to reduce hidden costs of 10,000 NTD/time
-						</div>
-					</div>
-					<div class="item">
-						<div class="icon"><img src="https://avmapping.co/index/images/icon-advantage-3.png" /></div>
-						<div class="title">24/7</div>
-						<div class="text">
-							Online A.I. can serve you anytime, anywhere.
-						</div>
-					</div>
-				</div>
-				<div class="section-title show-on-phone">What A.I. Did</div>
+				<div class="section-title">Our Service</div>
+				<div class="section-title show-on-phone ">What A.I. Did</div>
 				<div class="what-ai-do">
 					<div class="left">
-						<div class="title show-on-desktop">What A.I. Did</div>
+						<div class="title show-on-desktop hightLight-title">What A.I. Did</div>
 						<div class="wrapper">
 							<div class="item">
-								<div class="icon"><img src="https://avmapping.co/index/images/icon-play.png" /></div>
 								<div class="content">
-									<div class="item-title">Video Analysis</div>
+									<div class="item-title"><img src="https://avmapping.co/index/images/oval.png" />Video Analysis</div>
 									<div class="item-text">5W1H, storyboard, hue</div>
 								</div>
 							</div>
 							<div class="item">
-								<div class="icon"><img src="https://avmapping.co/index/images/icon-text.png" /></div>
 								<div class="content">
-									<div class="item-title">Text analysis</div>
+									<div class="item-title"><img src="https://avmapping.co/index/images/oval.png" />Text analysis</div>
 									<div class="item-text">Synopsis, CUE sheet</div>
 								</div>
 							</div>
 							<div class="item">
-								<div class="icon"><img src="https://avmapping.co/index/images/icon-music.png" /></div>
 								<div class="content">
-									<div class="item-title">Music analysis</div>
+									<div class="item-title"><img src="https://avmapping.co/index/images/oval.png" />Music analysis</div>
 									<div class="item-text">Emotion, genre, musicality</div>
 								</div>
 							</div>
@@ -863,45 +806,112 @@
 					<div class="right">
 						<img src="https://avmapping.co/index/images/ai-do.gif" />
 					</div>
+					<div class="bottom">
+						<a class="ExperienceNow" href="https://app.avmapping.co/#/dynamicAnalysis/step1">Let&#39;s Go</a>
+					</div>
 				</div>
-				<div class="section-title show-on-phone">We Care About Artists</div>
-				<div class="we-care">
-					<div class="left"><img src="https://avmapping.co/index/images/section-advantage.png" /></div>
-					<div class="right">
-						<div class="title show-on-desktop">We Care About Artists</div>
-						<div class="item-wrapper">
-							<div class="item">
-								<div class="item-title">Fair competition</div>
-								<div class="item-text">
-									Find suitable video buyers by objective algorithm and provide automatic film music service. This allows your audio and video to have better sales channels.
-								</div>
-							</div>
-							<div class="item">
-								<div class="item-title">Music database Integration Aound the World</div>
-								<div class="item-text">
-									There are 20,000 pieces of 60 types of music, including pop, EDM, back-swing, Irish music, etc., and continue to expand.
-								</div>
-							</div>
-							<div class="item">
-								<div class="item-title">Musicians can set custom prices and pursue decentralization</div>
-								<div class="item-text">
-									Musicians must defend the dignity of their works, track the transaction process, and use technology to make transactions transparent.
-								</div>
-							</div>
-							<div class="item">
-								<div class="item-title">Join our community easily</div>
-								<div class="item-text">
-									EDM, back shaking, Irish music, etc., and continue expanding.
-								</div>
-							</div>
+			</div>
+			<img class="gradient" src="https://avmapping.co/index/images/bg-gradient-gray-right.png" />
+		</section>
+		<section class="section-offline-service">
+			<div id="offline-service" class="anchor"></div>
+			<div class="container">
+				<div class="titleWrap">
+					<div class="leftIcon">
+						<img class="leftImg" src="https://avmapping.co/index/images/Img＿otherProduct.png" />
+					</div>
+					<div class="rightWrap">
+						<div class="topTitle">
+							More Products
 						</div>
-						
-						<a class="button-small" href="musicians">More</a>
+						<div class="bottomInfo">
+							不只是影像配樂分析，我們為影像人著想的更多。主程式還可以拆分成許多副產品，多了更多的應用場景，都是為了讓影像人有更完善的創作與學習環境。
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<div class="top">
+						<a class="itemWrap" href="mailto:av.imapping@gmail.com">
+							<div class="icon">
+								<img class="miniIcon" src="https://avmapping.co/index/images/offline-1.png" />
+							</div>
+							<div class="title">
+								Find your music
+							</div>
+							<div class="info">
+								Do you know what your music is?<br>
+								&#34;Find Your Music&#34; with our face detection AI.<br>
+							</div>
+						</a>
+						<a class="itemWrap" href="mailto:av.imapping@gmail.com">
+							<div class="icon">
+								<img class="miniIcon" src="https://avmapping.co/index/images/offline-2.png" />
+							</div>
+							<div class="title">
+								Auto Storyboard Cutting
+							</div>
+							<div class="info">
+								
+<br>
+								To accelerate the process learning video analysis in frames.<br>
+							</div>
+						</a>
+						<a class="itemWrap" href="mailto:av.imapping@gmail.com">
+							<div class="icon">
+								<img class="miniIcon" src="https://avmapping.co/index/images/offline-3.png" />
+							</div>
+							<div class="title">
+								Photo/Images color card
+							</div>
+							<div class="info">
+								
+<br>
+								Each image has Its unique color code!<br>
+							</div>
+						</a>
+						<a class="itemWrap" href="mailto:av.imapping@gmail.com">
+							<div class="icon">
+								<img class="miniIcon" src="https://avmapping.co/index/images/offline-4.png" />
+							</div>
+							<div class="title">
+								Noise Reduction
+							</div>
+							<div class="info">
+								Our AI noise reduction rip your video&#39;s audio off the noise. <br>
+								15 mins for our AI can erase the noise out of 10K mins audio clips.<br>
+								 <br>
+							</div>
+						</a>
+						<a class="itemWrap" href="mailto:av.imapping@gmail.com">
+							<div class="icon">
+								<img class="miniIcon" src="https://avmapping.co/index/images/offline-5.png" />
+							</div>
+							<div class="title">
+								Sound Effects AI Designer
+							</div>
+							<div class="info">
+								
+<br>
+								It takes a long time on editing sound effects....AI can help!<br>
+							</div>
+						</a>
+						<a class="itemWrap" href="mailto:av.imapping@gmail.com">
+							<div class="icon">
+								<img class="miniIcon" src="https://avmapping.co/index/images/offline-6.png" />
+							</div>
+							<div class="title">
+								Pro Audio Editing Development
+							</div>
+							<div class="info">
+								
+<br>
+								Try out cooperate with AI on tedious audio editing works.<br>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
 		</section>
-		
 		<section class="section-feedback">
 			<div id="feedback" class="anchor"></div>
 			<div class="section-title">Let&#39;s Listen to What Others Said</div>
@@ -957,142 +967,93 @@
 				<div class="feedback-prev"><img src="https://avmapping.co/index/images/icon-play-prev.png" /></div>
 			</div>
 		</section>
-		<section class="section-user-video">
-			<div class="section-title">Videos Shared by Users</div>
-			<div id="swiper-user-video" class="swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="youtube-contianer">
-							<iframe
-								id="user-video-1"
-								class="youtube-iframe"
-								src="https://www.youtube.com/embed/hr_OjNV5plA?enablejsapi=1"
-								frameborder="0"
-								allow="encrypted-media"
-								allowfullscreen
-							></iframe>
+
+		<div class="history-title">
+			<h5 class="titleH">
+				Company History
+			</h5>
+			<div class="dragWrap">
+				<p class="dragP">Drag</p>
+				<img src="https://avmapping.co/index/images/icon-right-drag-copy.png">
+			</div>
+		</div>
+		<div class="historyWrap history-swiper-container">
+			<div class="listGroup swiper-wrapper">
+				<div class="listItem swiper-slide">
+					<div class="circle"></div>
+					<p class="year">2016</p>
+					<div class="history-info">
+						<div class="infoP">
+							Memuriesic Co., LTD" Established
 						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="youtube-contianer">
-							<iframe
-								id="user-video-2"
-								class="youtube-iframe"
-								src="https://www.youtube.com/embed/5eyRp8IA2QU?enablejsapi=1"
-								frameborder="0"
-								allow="encrypted-media"
-								allowfullscreen
-							></iframe>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="youtube-contianer">
-							<iframe
-								id="user-video-4"
-								class="youtube-iframe"
-								src="https://www.youtube.com/embed/PURezkKJE6I?enablejsapi=1&t=10s"
-								frameborder="0"
-								allow="encrypted-media"
-								allowfullscreen
-							></iframe>
-						</div>
-					</div>
-					<div class="swiper-slide">
-						<div class="youtube-contianer">
-							<iframe
-								id="user-video-5"
-								class="youtube-iframe"
-								src="https://www.youtube.com/embed/7EEW0p7fA8w?enablejsapi=1&t=4s"
-								frameborder="0"
-								allow="encrypted-media"
-								allowfullscreen
-							></iframe>
+						<div class="infoP">
+							Licensing Music API Finished
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section class="section-history">
-			<div id="history" class="anchor"></div>
-			<div class="container">
-				<div class="section-title">Company History</div>
-				<div class="content">
-					<div class="item">
-						<div class="decoration">
-							<div class="circle"></div>
-							<div class="line"></div>
-						</div>
-						<div class="content">
-							<div class="year">2016</div>
-							<div class="list-item">"Memuriesic Co., LTD" Established</div>
-							<div class="list-item">Licensing Music API Finished</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="decoration">
-							<div class="circle"></div>
-							<div class="line"></div>
-						</div>
-						<div class="content">
-							<div class="year">2017</div>
-							<div class="list-item">Combining Blockchain Concept</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="decoration">
-							<div class="circle"></div>
-							<div class="line"></div>
-						</div>
-						<div class="content">
-							<div class="year">2018</div>
-							<div class="list-item">Building A.I. tools</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="decoration">
-							<div class="circle"></div>
-							<div class="line"></div>
-						</div>
-						<div class="content">
-							<div class="year">2019</div>
-							<div class="list-item">A.I. Tools 1st version Finished</div>
-							<div class="list-item">MEA - Women Entrepeneur Accelerator</div>
-							<div class="list-item">MOST - FITI Program</div>
-							<div class="list-item">MOST - Southern Taiwan Science Park project</div>
-							<div class="list-item">Taiwan Tech Arena ( TTA ) selected team</div>
-						</div>
-					</div>
-					<div class="item">
-						<div class="decoration">
-							<div class="circle"></div>
-							<div class="line"></div>
-						</div>
-						<div class="content">
-							<div class="year">2020</div>
-							<div class="list-item">"A.V. Mapping Co., LTD" Established</div>
+				<div class="listItem swiper-slide">
+					<div class="circle"></div>
+					<p class="year">2017</p>
+					<div class="history-info">
+						<div class="infoP">
+							Combining Blockchain Concept
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		
-		<section class="section-offline-service">
-			<div id="offline-service" class="anchor"></div>
-			<div class="container">
-				<div class="section-title">Offline Service</div>
-				<div class="content">
-					<div class="top">
-						<a class="item" href="mailto:av.imapping@gmail.com">Customized Film Music</a>
-						<a class="item" href="mailto:av.imapping@gmail.com">Customized Sound Post-processing</a>
-						<a class="item" href="mailto:av.imapping@gmail.com">Customized Video Production</a>
+				<div class="listItem swiper-slide">
+					<div class="circle"></div>
+					<p class="year">2018</p>
+					<div class="history-info">
+						<div class="infoP">
+							From A.I. concept to testament
+						</div>
 					</div>
-					<div class="bottom">
-						<a class="item" href="mailto:av.imapping@gmail.com">Music Technology Project Cooperation</a>
-						<a class="item" href="mailto:av.imapping@gmail.com">Audio-visual Communication and Exhibition Activities</a>
+				</div>
+				<div class="listItem swiper-slide">
+					<div class="circle"></div>
+					<div class="topWrap">
+						<div class="circle"></div>
+						<p class="year">2019</p>
+						<div class="history-info">
+							<div class="infoP">
+								A.I. Tools <p class="focus">1st version</p> Finished
+							</div>
+							<div class="infoP">
+								MEA - <p class="focus"> Women</p> Entrepreneur Accelerator
+							</div>
+							<div class="infoP">
+								MOST -<p class="focus"> FITI</p> Program
+							</div>
+						</div>
+					</div>
+					<div class="history-img">
+						<img src="https://avmapping.co/index/images/img-company-logos-2019.png">
+					</div>
+				</div>
+				<div class="listItem swiper-slide mobileBorder">
+					<div class="circle"></div>
+					<div class="topWrap">
+						<p class="year">2020</p>
+					<div class="history-info">
+						<div class="infoP">
+							<p class="focus"> A.V. Mapping Co., LTD</p> Established
+						</div>
+						<div class="infoP">
+							Branch<p class="focus">office</p> in Southern Taiwan Science 
+						</div>
+						<div class="infoP">Park Established</div>
+						<div class="infoP">
+							1st<p class="focus">Webinar</p>- “Collaborating trend of video 
+						</div>
+						<div class="infoP">music creators and A.I. technology”</div>
+					</div>
+					</div>
+					<div class="history-img">
+						<img src="https://avmapping.co/index/images/img-company-logos-2020.png">
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 		<section class="section-newsletter">
 			<div class="container">
 				<div class="text">Wanna catch up on the latest news?</div>
@@ -1154,7 +1115,7 @@
 								<input type="password" name="password1" id="password-0" placeholder='Password' />
 							</div>
 							<div class="item">
-								<input type="password" name="password2" id="re-password-0" placeholder='Confirmed password' onkeyup="checkPassword()" />
+								<input type="password" name="password2" id="re-password-0" placeholder='Confirmed password' onkeyup="checkPassword(0)" />
 							</div>
 							<div class="text">
 								<span id='check-password-0'></span>
@@ -1183,7 +1144,7 @@
 						<img src="https://avmapping.co/index/images/section-solution.png"/>
 						<div class="text">
 							<span>New to A.V. Mapping?</span>
-							<button onclick="signup()">Create an accont.</button>
+							<a id="signup_a"  style="color:white" onclick="signup()" >Create an accont.</a>
 							<span> </span>
 						</div>
 					</div>
@@ -1192,15 +1153,71 @@
 						<form autocomplete="on" method="post" id="form_signin">
 							<input type="email" name="email" placeholder='Email address' />
 							<input type="password" name="password" placeholder='Password' />
+							<button type="button" onclick="resetpwd()">Forgot Password?</button>
 							
-							<button onclick="return false">Forgot Password?</button>
 							<input class="submit" type="button" value='Sign In' onclick="userSignIn()" />
 						</form>
 					</div>
 				</div>
 			</div>
 		</section>
-			
+		
+		<section class="section-sign"  id="section-reset-pwd">
+			<div id="resetpwd" class="anchor"></div>
+			<div class="container">
+				<div class="section-title show-on-phone">Reset Password</div>
+				<button class="close-btn show-on-phone" aria-label="Close" onclick="closeSign()">
+					<i class="fas fa-times"></i>
+				</button>
+				<div class="resetpwd-form">
+					<div class="right">
+						<div class="title show-on-desktop">Reset Password</div>
+						<form autocomplete="on" method="post" id="form_resetpwd">
+							<div><input type="text" name="lang" id="lang" style="display: none;"/></div>
+							<div><input type="text" name="target_url" id="target_url" style="display: none;"/></div>
+							<div class="item required">
+								<input type="email" name="email" id="resetpwd" placeholder='Email address' onkeyup="checkEmail()" />
+							</div>
+							<div class="text">
+								<span id='check-signup-email'></span>
+							</div>
+							<input class="submit" type="button" value='Submit' onclick="userReset()" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-sign"  id="section-reset-pwd-confirm">
+			<div id="resetpwd-confirm" class="anchor"></div>
+			<div class="container">
+				<div class="section-title show-on-phone">Reset Password</div>
+				<button class="close-btn show-on-phone" aria-label="Close" onclick="closeSign()">
+					<i class="fas fa-times"></i>
+				</button>
+				<div class="resetpwd-confirm-form">
+					<div class="right">
+						<div class="title show-on-desktop">Reset Password</div>
+						<form autocomplete="on" method="post" id="form_resetpwd_confirm">
+							<div><input type="text" name="uid" id="uid" style="display: none;"/></div>
+							<div><input type="text" name="token" id="token" style="display: none;"/></div>
+							<div class="item required">
+								<input type="password" name="new_password1" id="password-1" placeholder='New password' />
+							</div>
+							<div class="item required">
+								<input type="password" name="new_password2" id="re-password-1" placeholder='Confirmed new password' onkeyup="checkPassword(1)" />
+							</div>
+							<div class="text">
+								<span id='check-password-1'></span>
+							</div>
+							<input class="submit" type="button" value='Submit' onclick="userResetConfirm()" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	
 		<footer class="footer">
 		<div class="content">
 			<div class="left">
@@ -1223,5 +1240,6 @@
 	<script src="https://avmapping.co/index/js/parseHref.js"></script>
 	<script src="https://avmapping.co/index/js/event.js"></script>
 	<script src="https://avmapping.co/index/js/instruction.js"></script>
-	<script src="https://avmapping.co/index/js/userVideo.js"></script>
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDE4QkjaQbS9yRkpkmyc-dCkXRw5ckcUMQ&amp;callback=myMap"></script>
 </html>	
