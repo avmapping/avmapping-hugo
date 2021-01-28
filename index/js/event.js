@@ -405,4 +405,5 @@ window.onload = () => {
 	const lang = ref.includes('zh') ? 'zh':'en';
 	const access_token = docCookies.getItem('access_token')
 	$("#user-profile").attr("href",`https://app.avmapping.co/#/?lang=${lang}`+ (access_token ? `&token=${access_token}` : '')); 
-  };
+	$("#user-profile").remove();
+};
