@@ -6,7 +6,8 @@ var API = {'signup':   baseURL+'/api/users/signup/',
 		   'resetpwd': baseURL+'/api/users/password/reset/',
 		   'resetpwd_confirm': baseURL+'/api/users/password/reset/confirm/',
 		   'subscribe_video_member':   baseURL+'/api/main/subscribe_video_member/',
-		   'user_profile': baseURL+'/api/users/user/'
+		   'user_profile': baseURL+'/api/users/user/',
+		   'subscribe_letter': baseURL+'/letter/ca201-1/'
 		};
 let params = window.location.search;
 
@@ -337,6 +338,30 @@ function login_auth() {
 	}
 };
 
+let subscribing = false
+function subscribe() {
+	if (subscribing) return
+	const email = $('#newsletter-input').val()
+	const url = API['subscribe_letter']
+	subscribing = true
+
+    $.ajax({
+      method: 'POST',
+      url: url,
+      contentType : 'application/json; charset=utf-8',
+      data: JSON.stringify({mail: email, name: ''}),
+      success: () => {
+		alert('訂閱成功')
+		subscribing = false
+      },
+      error: () => {
+        alert('訂閱失敗請再試一次')
+        subscribing = false
+      }
+    })
+    return false
+  }
+  
 var mouse_is_inside = true;
 var login_state = false;
 
@@ -405,4 +430,5 @@ window.onload = () => {
 	const lang = ref.includes('zh') ? 'zh':'en';
 	const access_token = docCookies.getItem('access_token')
 	$("#user-profile").attr("href",`https://app.avmapping.co/#/?lang=${lang}`+ (access_token ? `&token=${access_token}` : '')); 
-  };
+	$("#user-profile").remove();
+};
